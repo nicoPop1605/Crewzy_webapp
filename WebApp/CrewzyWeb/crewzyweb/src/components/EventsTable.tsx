@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Edit2, Trash2, Eye, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Edit2, Trash2, Eye, ChevronLeft, ChevronRight, CheckCircle, HelpCircle, XCircle } from 'lucide-react';
 import type { MyEvent } from './MyEventCard';
 
 interface EventsTableProps {
@@ -7,9 +7,10 @@ interface EventsTableProps {
     onEdit: (event: MyEvent) => void;
     onDelete: (id: string) => void;
     onViewDetails: (event: MyEvent) => void;
+    onUpdateRsvp?: (id: string, status: 'accepted' | 'pending' | 'declined') => void;
 }
 
-export function EventsTable({ events, onEdit, onDelete, onViewDetails }: EventsTableProps) {
+export function EventsTable({ events, onEdit, onDelete, onViewDetails, onUpdateRsvp }: EventsTableProps) {
     // Logica de paginare
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 3; // Câte evenimente arătăm pe o pagină
@@ -43,38 +44,75 @@ export function EventsTable({ events, onEdit, onDelete, onViewDetails }: EventsT
                             <th className="p-4 text-sm font-semibold text-gray-600">Event Title</th>
                             <th className="p-4 text-sm font-semibold text-gray-600">Date & Time</th>
                             <th className="p-4 text-sm font-semibold text-gray-600">Location</th>
+                            <th className="p-4 text-sm font-semibold text-gray-600 text-center">My RSVP</th> {/* Coloana NOUĂ */}
                             <th className="p-4 text-sm font-semibold text-gray-600 text-right">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {paginatedEvents.map((event) => (
-                            <tr key={event.id} className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                                <td className="p-4">
-                                    <div className="font-semibold text-gray-900">{event.title}</div>
-                                    <div className="text-xs text-gray-500">{event.visibility}</div>
-                                </td>
-                                <td className="p-4 text-sm text-gray-700">
-                                    <div>{event.date}</div>
-                                    <div className="text-gray-500">{event.time}</div>
-                                </td>
-                                <td className="p-4 text-sm text-gray-700">
-                                    {event.locationType === 'suggestions' ? 'Suggestions open' : event.location || '-'}
-                                </td>
-                                <td className="p-4 text-right">
-                                    <div className="flex justify-end gap-2">
-                                        <button onClick={() => onViewDetails(event)} className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg" title="View Details">
-                                            <Eye className="w-4 h-4" />
-                                        </button>
-                                        <button onClick={() => onEdit(event)} className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg" title="Edit">
-                                            <Edit2 className="w-4 h-4" />
-                                        </button>
-                                        <button onClick={() => onDelete(event.id)} className="p-2 text-red-600 hover:bg-red-50 rounded-lg" title="Delete">
-                                            <Trash2 className="w-4 h-4" />
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                        ))}
+                        {paginatedEvents.map((event) => {
+                            // Aflăm statusul curent al utilizatorului
+                            const myRsvp = event.attendees.find(a => a.id === 'me')?.status || 'pending';
+
+                            return (
+                                <tr key={event.id} className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                    <td className="p-4">
+                                        <div className="font-semibold text-gray-900 flex items-center gap-2">
+                                            <div className={`w-3 h-3 rounded-full ${event.color}`} />
+                                            {event.title}
+                                        </div>
+                                        <div className="text-xs text-gray-500 mt-1">{event.visibility}</div>
+                                    </td>
+                                    <td className="p-4 text-sm text-gray-700">
+                                        <div>{event.date}</div>
+                                        <div className="text-gray-500">{event.time}</div>
+                                    </td>
+                                    <td className="p-4 text-sm text-gray-700">
+                                        {event.locationType === 'suggestions' ? 'Suggestions open' : event.location || '-'}
+                                    </td>
+
+                                    {/* BUTOANELE INTERACTIVE RSVP PENTRU GRAFIC */}
+                                    <td className="p-4">
+                                        <div className="flex items-center justify-center gap-1">
+                                            <button
+                                                onClick={() => onUpdateRsvp && onUpdateRsvp(event.id, 'accepted')}
+                                                title="Accept"
+                                                className={`p-1.5 rounded-md transition-colors ${myRsvp === 'accepted' ? 'bg-green-500 text-white shadow-sm' : 'bg-green-50 text-green-600 hover:bg-green-100'}`}
+                                            >
+                                                <CheckCircle className="w-4 h-4" />
+                                            </button>
+                                            <button
+                                                onClick={() => onUpdateRsvp && onUpdateRsvp(event.id, 'pending')}
+                                                title="Maybe"
+                                                className={`p-1.5 rounded-md transition-colors ${myRsvp === 'pending' ? 'bg-yellow-500 text-white shadow-sm' : 'bg-yellow-50 text-yellow-600 hover:bg-yellow-100'}`}
+                                            >
+                                                <HelpCircle className="w-4 h-4" />
+                                            </button>
+                                            <button
+                                                onClick={() => onUpdateRsvp && onUpdateRsvp(event.id, 'declined')}
+                                                title="Decline"
+                                                className={`p-1.5 rounded-md transition-colors ${myRsvp === 'declined' ? 'bg-red-500 text-white shadow-sm' : 'bg-red-50 text-red-600 hover:bg-red-100'}`}
+                                            >
+                                                <XCircle className="w-4 h-4" />
+                                            </button>
+                                        </div>
+                                    </td>
+
+                                    <td className="p-4 text-right">
+                                        <div className="flex justify-end gap-2">
+                                            <button onClick={() => onViewDetails(event)} className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg" title="View Details">
+                                                <Eye className="w-4 h-4" />
+                                            </button>
+                                            <button onClick={() => onEdit(event)} className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg" title="Edit">
+                                                <Edit2 className="w-4 h-4" />
+                                            </button>
+                                            <button onClick={() => onDelete(event.id)} className="p-2 text-red-600 hover:bg-red-50 rounded-lg" title="Delete">
+                                                <Trash2 className="w-4 h-4" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            );
+                        })}
                     </tbody>
                 </table>
             </div>
@@ -92,7 +130,7 @@ export function EventsTable({ events, onEdit, onDelete, onViewDetails }: EventsT
                     >
                         <ChevronLeft className="w-4 h-4" />
                     </button>
-                    <span className="px-4 py-2 text-sm font-medium">
+                    <span className="px-4 py-2 text-sm font-medium flex items-center">
                         Page {currentPage} of {totalPages || 1}
                     </span>
                     <button
