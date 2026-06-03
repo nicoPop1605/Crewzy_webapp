@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { Plus, Users, UserCheck, Zap,  ChevronLeft, ChevronRight, Bell, Search, CheckCircle, HelpCircle, LayoutGrid, List as ListIcon } from 'lucide-react';
 
 import { CreateEventModal } from '../components/CreateEventModal';
 import { MyEventCard } from '../components/MyEventCard';
@@ -15,8 +14,10 @@ import type { Friend } from '../components/FriendCard';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
 import { io } from 'socket.io-client';
 
+import { Plus, Users, UserCheck, Zap, ChevronLeft, ChevronRight, Bell, Search, CheckCircle, HelpCircle, LayoutGrid, List as ListIcon, Shield } from 'lucide-react';
+
 // Conexiunea WebSocket pentru Silver Challenge
-const socket = io('http://localhost:4000');
+const socket = io('https://localhost:4000');
 
 let globalMyEvents: MyEvent[] = [
     {
@@ -62,11 +63,16 @@ export function CalendarPage() {
     const [isLoadingGql, setIsLoadingGql] = useState(false);
     const observer = useRef<IntersectionObserver | null>(null);
 
+    const [showAdminLogs, setShowAdminLogs] = useState(false);
+    const [sysLogs, setSysLogs] = useState<any[]>([]);
+    const [isCurrentUserAdmin, setIsCurrentUserAdmin] = useState(false);
+
+    const [suspiciousUsers, setSuspiciousUsers] = useState<any[]>([]);
     // REPARATIE ESLINT: Folosim fetch curat în efect, FĂRĂ să apelăm setState direct în corpul lui
     useEffect(() => {
         let isMounted = true;
 
-        fetch('http://localhost:4000/graphql', {
+        fetch('https://localhost:4000/graphql', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -130,11 +136,11 @@ export function CalendarPage() {
     }, []);
 
     const startFakerLoop = () => {
-        fetch('http://localhost:4000/api/start-loop').catch(() => console.log("Server off"));
+        fetch('https://localhost:4000/api/start-loop').catch(() => console.log("Server off"));
     };
 
     const stopFakerLoop = () => {
-        fetch('http://localhost:4000/api/stop-loop').catch(() => console.log("Server off"));
+        fetch('https://localhost:4000/api/stop-loop').catch(() => console.log("Server off"));
     };
 
     const changeViewAndTrack = (mode: 'cards' | 'table') => {
@@ -212,26 +218,126 @@ export function CalendarPage() {
         }
     };
 
-    const handleCreateOrEditEvent = (newEventData: NewEvent) => {
-        let updatedEvents;
-        if (eventToEdit) {
-            updatedEvents = myEvents.map(event => event.id === eventToEdit.id ? { ...event, ...newEventData } : event);
+    const handleCreateOrEditEvent = async (newEventData: NewEvent) => {
+        if (!eventToEdit) {
+            // 1. GOLD CHALLENGE: Trimitem evenimentul nou către Baza de Date via GraphQL
+            try {
+                const response = await fetch('http://localhost:4000/graphql', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        query: `
+                            mutation AddEvent($title: String!, $date: String, $time: String, $location: String, $description: String) {
+                                addEvent(title: $title, date: $date, time: $time, location: $location, description: $description) {
+                                    id
+                                    title
+                                    date
+                                    time
+                                    location
+                                    color
+                                }
+                            }
+                        `,
+                        variables: {
+                            title: newEventData.title,
+                            date: newEventData.date,
+                            time: newEventData.time,
+                            location: newEventData.location,
+                            description: newEventData.description
+                        }
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.errors) {
+                    console.error("🔴 GraphQL Error:", result.errors);
+                    return; // Ne oprim dacă serverul a refuzat salvarea
+                }
+
+                // 2. Extragem evenimentul salvat de server (care acum are un ID real din DB)
+                const savedEvent = result.data.addEvent;
+
+                // 3. Îl completăm cu datele locale necesare pentru afișare și îl punem pe ecran
+                const completeEventForUI: MyEvent = {
+                    ...savedEvent,
+                    locationType: newEventData.locationType,
+                    visibility: newEventData.visibility,
+                    attendees: [{ id: 'me', name: 'Me', avatar: 'https://images.unsplash.com/photo-1546961329-78bef0414d7c?w=100', status: 'accepted' }]
+                };
+
+                const updatedEvents = [...myEvents, completeEventForUI];
+                globalMyEvents = updatedEvents;
+                setMyEvents(updatedEvents);
+
+            } catch (error) {
+                console.error("🔴 Network Error:", error);
+            }
         } else {
-            const event: MyEvent = {
-                id: Date.now().toString(), title: newEventData.title, date: newEventData.date, time: newEventData.time, location: newEventData.location, locationType: newEventData.locationType, visibility: newEventData.visibility, description: newEventData.description, attendees: [{ id: 'me', name: 'Me', avatar: 'https://images.unsplash.com/photo-1546961329-78bef0414d7c?w=100', status: 'accepted' }], color: 'bg-blue-500',
-            };
-            updatedEvents = [...myEvents, event];
+            // Logica PENTRU EDITARE via GraphQL
+            try {
+                const response = await fetch('http://localhost:4000/graphql', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        query: `
+                            mutation UpdateEvent($id: ID!, $title: String!, $date: String, $time: String, $location: String, $description: String) {
+                                updateEvent(id: $id, title: $title, date: $date, time: $time, location: $location, description: $description) {
+                                    id title date time location description
+                                }
+                            }
+                        `,
+                        variables: {
+                            id: eventToEdit.id,
+                            title: newEventData.title,
+                            date: newEventData.date,
+                            time: newEventData.time,
+                            location: newEventData.location,
+                            description: newEventData.description
+                        }
+                    })
+                });
+
+                const result = await response.json();
+                if (!result.errors) {
+                    const updatedEvents = myEvents.map(event =>
+                        event.id === eventToEdit.id ? { ...event, ...newEventData } : event
+                    );
+                    globalMyEvents = updatedEvents;
+                    setMyEvents(updatedEvents);
+                }
+            } catch (error) {
+                console.error("🔴 Network Error la Update:", error);
+            }
         }
-        globalMyEvents = updatedEvents;
-        setMyEvents(updatedEvents);
-        setEventToEdit(null);
-        setShowCreateModal(false);
     };
 
-    const handleDeleteEvent = (id: string) => {
-        const updatedEvents = myEvents.filter((event) => event.id !== id);
-        globalMyEvents = updatedEvents;
-        setMyEvents(updatedEvents);
+    const handleDeleteEvent = async (id: string) => {
+        try {
+            const response = await fetch('http://localhost:4000/graphql', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    query: `
+                        mutation DeleteEvent($id: ID!) {
+                            deleteEvent(id: $id)
+                        }
+                    `,
+                    variables: { id }
+                })
+            });
+
+            const result = await response.json();
+
+            if (result.data?.deleteEvent) {
+                // Dacă serverul zice "True" (sters cu succes), îl scoatem și de pe ecran
+                const updatedEvents = myEvents.filter((event) => event.id !== id);
+                globalMyEvents = updatedEvents;
+                setMyEvents(updatedEvents);
+            }
+        } catch (error) {
+            console.error("🔴 Eroare la ștergerea evenimentului:", error);
+        }
     };
 
     const handleOpenEdit = (event: MyEvent) => {
@@ -239,24 +345,101 @@ export function CalendarPage() {
         setShowCreateModal(true);
     };
 
-    const handleJoinEvent = (eventId: string) => {
-        setMyEvents(myEvents.map((event) => event.id === eventId ? { ...event, attendees: [...event.attendees, { id: 'me', name: 'Me', avatar: 'https://images.unsplash.com/photo-1546961329-78bef0414d7c?w=100', status: 'accepted' }] } : event));
+    const handleJoinEvent = async (eventId: string) => {
+        try {
+            await fetch('https://localhost:4000/graphql', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    query: `
+                        mutation JoinEvent($eventId: ID!) {
+                            joinEvent(eventId: $eventId)
+                        }
+                    `,
+                    variables: { eventId }
+                })
+            });
+
+            // Adăugăm "as const" la status pentru a satisface TypeScript
+            const updatedEvents = myEvents.map((event) =>
+                event.id === eventId
+                    ? {
+                        ...event,
+                        attendees: [
+                            ...event.attendees,
+                            {
+                                id: 'me',
+                                name: 'Me',
+                                avatar: 'https://images.unsplash.com/photo-1546961329-78bef0414d7c?w=100',
+                                status: 'accepted' as const // <--- REPARAȚIA AICI
+                            }
+                        ]
+                    }
+                    : event
+            );
+            globalMyEvents = updatedEvents;
+            setMyEvents(updatedEvents);
+        } catch (error) {
+            console.error("🔴 Eroare la Join:", error);
+        }
     };
 
-    const handleLeaveEvent = (eventId: string) => {
-        setMyEvents(myEvents.map((event) => event.id === eventId ? { ...event, attendees: event.attendees.filter((a) => a.id !== 'me') } : event));
+    const handleLeaveEvent = async (eventId: string) => {
+        try {
+            await fetch('https://localhost:4000/graphql', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    query: `
+                        mutation LeaveEvent($eventId: ID!) {
+                            leaveEvent(eventId: $eventId)
+                        }
+                    `,
+                    variables: { eventId }
+                })
+            });
+
+            // Actualizăm interfața locală
+            const updatedEvents = myEvents.map((event) =>
+                event.id === eventId
+                    ? { ...event, attendees: event.attendees.filter((a) => a.id !== 'me') }
+                    : event
+            );
+            globalMyEvents = updatedEvents;
+            setMyEvents(updatedEvents);
+        } catch (error) {
+            console.error("🔴 Eroare la Leave:", error);
+        }
     };
 
-    const handleUpdateRsvp = (eventId: string, newStatus: 'accepted' | 'pending' | 'declined') => {
-        const updatedEvents = myEvents.map(event => {
-            if (event.id === eventId) {
-                const attendees = event.attendees.map(a => a.id === 'me' ? { ...a, status: newStatus } : a);
-                return { ...event, attendees };
-            }
-            return event;
-        });
-        globalMyEvents = updatedEvents;
-        setMyEvents(updatedEvents);
+    const handleUpdateRsvp = async (eventId: string, newStatus: 'accepted' | 'pending' | 'declined') => {
+        try {
+            await fetch('https://localhost:4000/graphql', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    query: `
+                        mutation UpdateRsvp($eventId: ID!, $status: String!) {
+                            updateRsvp(eventId: $eventId, status: $status)
+                        }
+                    `,
+                    variables: { eventId, status: newStatus }
+                })
+            });
+
+            // Actualizăm UI-ul instantaneu pentru utilizator
+            const updatedEvents = myEvents.map(event => {
+                if (event.id === eventId) {
+                    const attendees = event.attendees.map(a => a.id === 'me' ? { ...a, status: newStatus } : a);
+                    return { ...event, attendees };
+                }
+                return event;
+            });
+            globalMyEvents = updatedEvents;
+            setMyEvents(updatedEvents);
+        } catch (error) {
+            console.error("🔴 Network Error la RSVP:", error);
+        }
     };
 
     const days = getDaysInMonth(currentDate);
@@ -290,6 +473,26 @@ export function CalendarPage() {
         { name: 'Declined', value: rsvpStats.declined, color: '#ef4444' },
     ].filter(item => item.value > 0);
 
+    const fetchAdminLogs = async () => {
+        try {
+            const res = await fetch('https://localhost:4000/graphql', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    query: `query { 
+                        getLogs { id action details timestamp } 
+                        getSuspiciousUsers { id userId reason detectedAt } 
+                    }`
+                })
+            });
+            const result = await res.json();
+            if (result.data) {
+                setSysLogs(result.data.getLogs || []);
+                setSuspiciousUsers(result.data.getSuspiciousUsers || []);
+            }
+        } catch (e) { console.error("🔴 Eroare fetching logs:", e); }
+    };
+
     return (
         <div className="flex-1 flex flex-col overflow-auto">
             {/* Header */}
@@ -300,11 +503,33 @@ export function CalendarPage() {
                         <h1 className="text-2xl font-bold text-gray-900">Calendar</h1>
                     </div>
                     <div className="flex items-center gap-4">
+                        {/* --- BUTON DEMO PENTRU SCHIMBARE ROL --- */}
+                        <div className="flex flex-col items-end mr-2">
+                            <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Simulate Role</span>
+                            <button
+                                onClick={() => setIsCurrentUserAdmin(!isCurrentUserAdmin)}
+                                className={`text-xs px-2 py-1 rounded-md font-semibold transition-colors ${isCurrentUserAdmin ? 'bg-red-100 text-red-700' : 'bg-gray-100 text-gray-600'}`}
+                            >
+                                {isCurrentUserAdmin ? 'View as: ADMIN' : 'View as: USER'}
+                            </button>
+                        </div>
+
+                        {/* --- BUTONUL REAL DE DASHBOARD (Apare doar pt Admin) --- */}
+                        {isCurrentUserAdmin && (
+                            <button
+                                onClick={() => { fetchAdminLogs(); setShowAdminLogs(true); }}
+                                className="flex items-center gap-2 px-3 py-2 bg-red-50 text-red-600 rounded-lg font-bold hover:bg-red-100 transition-colors shadow-sm"
+                            >
+                                <Shield className="w-5 h-5" /> Admin
+                            </button>
+                        )}
+
                         <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
                             <Bell className="w-6 h-6 text-gray-700" />
                         </button>
-                        <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold">M</div>
-                        <button onClick={() => { setEventToEdit(null); setShowCreateModal(true); }} className="p-2 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors">
+                        <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold shadow-sm">M</div>
+
+                        <button onClick={() => { setEventToEdit(null); setShowCreateModal(true); }} className="p-2 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors shadow-sm">
                             <Plus className="w-5 h-5" />
                         </button>
                     </div>
@@ -531,6 +756,68 @@ export function CalendarPage() {
                         <button onClick={() => { setEventToEdit(null); setShowCreateModal(true); }} className="w-full flex items-center justify-center gap-2 py-4 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 shadow-md mt-6 border-t border-gray-100">
                             <Plus className="w-6 h-6" /> Create Event on this Day
                         </button>
+                    </div>
+                </div>
+            )}
+
+            {/* --- ADMIN DASHBOARD MODAL --- */}
+            {showAdminLogs && (
+                <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+                    <div className="bg-white rounded-3xl shadow-2xl max-w-4xl w-full max-h-[85vh] flex flex-col overflow-hidden border border-gray-100">
+
+                        <div className="bg-gray-900 px-6 py-4 flex justify-between items-center text-white">
+                            <div className="flex items-center gap-3">
+                                <Shield className="w-6 h-6 text-red-400" />
+                                <h2 className="text-xl font-bold">System Security & Audit</h2>
+                            </div>
+                            <button onClick={() => setShowAdminLogs(false)} className="text-gray-400 hover:text-white text-2xl font-bold">✕</button>
+                        </div>
+
+                        <div className="flex-1 overflow-y-auto p-6 bg-gray-50 flex flex-col gap-6">
+
+                            {/* OBSERVATION LIST (Apare doar dacă sunt utilizatori suspecți) */}
+                            {suspiciousUsers.length > 0 && (
+                                <div className="bg-red-50 border border-red-200 rounded-2xl p-5 shadow-sm">
+                                    <h3 className="text-red-800 font-bold text-lg mb-3 flex items-center gap-2">
+                                        <Zap className="w-5 h-5 animate-pulse" />
+                                        OBSERVATION LIST - MALEVOLENT BEHAVIOUR DETECTED
+                                    </h3>
+                                    <div className="space-y-3">
+                                        {suspiciousUsers.map(suspect => (
+                                            <div key={suspect.id} className="bg-white border border-red-200 rounded-xl p-4 shadow-sm flex flex-col sm:flex-row justify-between sm:items-center gap-2 border-l-4 border-l-red-500">
+                                                <div>
+                                                    <span className="font-mono text-sm font-bold text-gray-900 bg-gray-100 px-2 py-1 rounded">USER_ID: {suspect.userId}</span>
+                                                    <p className="text-sm font-semibold text-red-600 mt-2">{suspect.reason}</p>
+                                                </div>
+                                                <span className="text-xs text-gray-500 font-mono bg-white px-2 py-1 border rounded">{suspect.detectedAt}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* AUDIT LOGS NORMALE ÎN FORMAT STRICT */}
+                            <div>
+                                <h3 className="text-gray-800 font-bold text-lg mb-3">System Audit Trail</h3>
+                                {sysLogs.length === 0 ? (
+                                    <p className="text-center text-gray-500 mt-4">No logs recorded yet.</p>
+                                ) : (
+                                    <div className="space-y-3">
+                                        {sysLogs.map((log) => (
+                                            <div key={log.id} className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:border-gray-300 transition-colors">
+                                                <div className="flex flex-col gap-1">
+                                                    {/* FORMATUL STRICT CERUT */}
+                                                    <div className="font-mono text-xs sm:text-sm text-gray-700 bg-gray-100 p-3 rounded break-all border border-gray-200 shadow-inner">
+                                                        {log.details}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             )}

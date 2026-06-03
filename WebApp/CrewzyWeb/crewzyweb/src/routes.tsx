@@ -1,21 +1,13 @@
-import React from 'react';
-import { createBrowserRouter, Navigate } from "react-router-dom";
+//import React from 'react';
+import { createBrowserRouter } from "react-router-dom";
 import { CalendarPage } from "./pages/CalendarPage";
 import { DiscoverPage } from "./pages/DiscoverPage";
 import { FriendsPage } from "./pages/FriendsPage";
 import { HomePage } from "./pages/HomePage";
 import { ProfilePage } from "./pages/ProfilePage";
 import { LoginPage } from "./pages/LoginPage";
-import { Sidebar } from "./components/Sidebar";
+import { Layout } from "./components/Layout"; // <--- Importăm Layout-ul nou creat
 
-function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="size-full flex bg-gradient-to-br from-purple-100 via-blue-50 to-purple-50">
-      <Sidebar />
-      {children}
-    </div>
-  );
-}
 
 export const router = createBrowserRouter([
   {

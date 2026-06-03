@@ -1,0 +1,90 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// ==========================================
+// SILVER CHALLENGE: ROLE & PERMISSION MANAGEMENT
+// ==========================================
+
+model Role {
+  id          String       @id @default(uuid())
+  name        String       @unique
+  description String?
+  
+  // Relatii
+  users       User[]       
+  permissions Permission[] 
+}
+
+model Permission {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  description String?
+  
+  // Relatii
+  roles       Role[]   
+}
+
+// ==========================================
+// BRONZE CHALLENGE: CORE ENTITIES & 3NF
+// ==========================================
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  password  String   // Necesar pentru implementarea login-ului (Silver)
+  createdAt DateTime @default(now())
+
+  // Relatia catre Role (Silver Challenge)
+  roleId    String
+  role      Role     @relation(fields: [roleId], references: [id])
+
+  // Relatii (Bronze)
+  venues    Venue[]  
+  rsvps     RSVP[]   
+}
+
+model Venue {
+  id          String   @id @default(uuid())
+  name        String
+  address     String
+  ownerId     String
+  
+  // Relatii
+  owner       User     @relation(fields: [ownerId], references: [id])
+  events      Event[]  
+}
+
+model Event {
+  id       String @id @default(uuid())
+  title    String
+  location String 
+  date     String
+  status   String @default("pending")
+
+  // Relatii
+  rsvps    RSVP[] 
+  venueId  String? 
+  venue    Venue?  @relation(fields: [venueId], references: [id])
+}
+
+model RSVP {
+  id        String   @id @default(uuid())
+  userId    String
+  eventId   String
+  status    String   @default("going") 
+
+  // Relatii
+  user      User     @relation(fields: [userId], references: [id])
+  event     Event    @relation(fields: [eventId], references: [id])
+
+  @@unique([userId, eventId]) 
+}

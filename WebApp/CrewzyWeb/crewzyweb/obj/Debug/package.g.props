@@ -9,6 +9,8 @@
     <PackageJsonScriptsBuild Condition="$(PackageJsonScriptsBuild) == ''">tsc -b &amp;&amp; vite build</PackageJsonScriptsBuild>
     <PackageJsonScriptsLint Condition="$(PackageJsonScriptsLint) == ''">eslint .</PackageJsonScriptsLint>
     <PackageJsonScriptsPreview Condition="$(PackageJsonScriptsPreview) == ''">vite preview</PackageJsonScriptsPreview>
+    <PackageJsonScriptsTest Condition="$(PackageJsonScriptsTest) == ''">vitest</PackageJsonScriptsTest>
+    <PackageJsonScriptsCoverage Condition="$(PackageJsonScriptsCoverage) == ''">vitest run --coverage</PackageJsonScriptsCoverage>
     <PackageJsonDependenciesApolloClient Condition="$(PackageJsonDependenciesApolloClient) == ''">^4.1.7</PackageJsonDependenciesApolloClient>
     <PackageJsonDependenciesGraphql Condition="$(PackageJsonDependenciesGraphql) == ''">^16.13.2</PackageJsonDependenciesGraphql>
     <PackageJsonDependenciesLucideReact Condition="$(PackageJsonDependenciesLucideReact) == ''">^1.7.0</PackageJsonDependenciesLucideReact>
@@ -28,6 +30,7 @@
     <PackageJsonDevdependenciesTypesReact Condition="$(PackageJsonDevdependenciesTypesReact) == ''">^19.2.14</PackageJsonDevdependenciesTypesReact>
     <PackageJsonDevdependenciesTypesReactDom Condition="$(PackageJsonDevdependenciesTypesReactDom) == ''">^19.2.3</PackageJsonDevdependenciesTypesReactDom>
     <PackageJsonDevdependenciesVitejsPluginReact Condition="$(PackageJsonDevdependenciesVitejsPluginReact) == ''">^6.0.1</PackageJsonDevdependenciesVitejsPluginReact>
+    <PackageJsonDevdependenciesVitestCoverageV8 Condition="$(PackageJsonDevdependenciesVitestCoverageV8) == ''">^4.1.5</PackageJsonDevdependenciesVitestCoverageV8>
     <PackageJsonDevdependenciesEslint Condition="$(PackageJsonDevdependenciesEslint) == ''">^9.39.4</PackageJsonDevdependenciesEslint>
     <PackageJsonDevdependenciesEslintPluginReactHooks Condition="$(PackageJsonDevdependenciesEslintPluginReactHooks) == ''">^7.0.1</PackageJsonDevdependenciesEslintPluginReactHooks>
     <PackageJsonDevdependenciesEslintPluginReactRefresh Condition="$(PackageJsonDevdependenciesEslintPluginReactRefresh) == ''">^0.5.2</PackageJsonDevdependenciesEslintPluginReactRefresh>
