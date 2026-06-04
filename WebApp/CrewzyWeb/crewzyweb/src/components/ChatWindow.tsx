@@ -2,10 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { io, Socket } from 'socket.io-client'; // Am adăugat tipul Socket
 import { Send, X, User } from 'lucide-react';
 
-const currentHost = window.location.hostname;
 // Tipizăm instanța de socket
-const socket: Socket = io(`https://${currentHost}:4000`);
-
+// AȘA TREBUIE SĂ FIE:
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+const socket: Socket = io(API_URL);
 interface Message {
     userId: string;
     userName: string;

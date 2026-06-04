@@ -24,7 +24,7 @@ export default function SessionTimeout() {
         const resetTimer = () => {
             clearTimeout(timeoutId);
             // Când prezinți, poți să iei mâinile de pe mouse 1 minut ca să se vadă efectul.
-            timeoutId = setTimeout(logoutUser, 60000);
+            timeoutId = setTimeout(logoutUser, 3600000);
         };
 
         // Orice interacțiune a utilizatorului resetează cronometrul
