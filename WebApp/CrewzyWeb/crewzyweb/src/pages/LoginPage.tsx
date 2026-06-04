@@ -6,6 +6,9 @@ import { LogoWithText } from '../components/Logo';
 export function LoginPage() {
     const navigate = useNavigate();
 
+    // --- ADRESA BACKEND-ULUI ---
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+
     // State-uri pentru câmpurile de input
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -21,8 +24,6 @@ export function LoginPage() {
     const [error, setError] = useState('');
     const [message, setMessage] = useState('');
 
-    const currentHost = window.location.hostname;
-
     const [role, setRole] = useState('USER'); // Default este USER
 
     // 1. MANIPULARE LOGIN / REGISTER (PASUL 1)
@@ -33,7 +34,7 @@ export function LoginPage() {
 
         try {
             const endpoint = isSignUp ? 'register' : 'login';
-            const backendUrl = `https://${currentHost}:4000/api/auth/${endpoint}`;
+            const backendUrl = `${API_URL}/api/auth/${endpoint}`;
 
             const bodyData = isSignUp ? { email, password, name, role } : { email, password };
             const response = await fetch(backendUrl, {
@@ -58,7 +59,7 @@ export function LoginPage() {
                 setError(data.error || 'Autentificare eșuată');
             }
         } catch {
-            setError('Eroare de conexiune HTTPS. Verifică dacă ai acceptat certificatul pe portul 4000.');
+            setError('Eroare de conexiune la server.');
         }
     };
 
@@ -68,7 +69,7 @@ export function LoginPage() {
         setError('');
 
         try {
-            const backendUrl = `https://${currentHost}:4000/api/auth/verify-otp`;
+            const backendUrl = `${API_URL}/api/auth/verify-otp`;
             const response = await fetch(backendUrl, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -98,7 +99,7 @@ export function LoginPage() {
         setMessage('');
 
         try {
-            const backendUrl = `https://${currentHost}:4000/api/auth/forgot-password`;
+            const backendUrl = `${API_URL}/api/auth/forgot-password`;
             const response = await fetch(backendUrl, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -124,7 +125,7 @@ export function LoginPage() {
         setError('');
 
         try {
-            const backendUrl = `https://${currentHost}:4000/api/auth/reset-password`;
+            const backendUrl = `${API_URL}/api/auth/reset-password`;
             const response = await fetch(backendUrl, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -231,8 +232,6 @@ export function LoginPage() {
                                             {/* ----------------------------------------- */}
                                         </>
                                     )}
-
-                 
 
                                     <div>
                                         <label className="text-sm font-semibold text-gray-900 mb-2 block">Email Address</label>
