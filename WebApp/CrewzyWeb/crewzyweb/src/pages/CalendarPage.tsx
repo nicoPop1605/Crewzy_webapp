@@ -16,8 +16,11 @@ import { io } from 'socket.io-client';
 
 import { Plus, Users, UserCheck, Zap, ChevronLeft, ChevronRight, Bell, Search, CheckCircle, HelpCircle, LayoutGrid, List as ListIcon, Shield } from 'lucide-react';
 
+// --- DEFINIM API_URL O SINGURĂ DATĂ GLOBAL ---
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+
 // Conexiunea WebSocket pentru Silver Challenge
-const socket = io('https://localhost:4000');
+const socket = io(API_URL);
 
 let globalMyEvents: MyEvent[] = [
     {
@@ -68,15 +71,15 @@ export function CalendarPage() {
     const [isCurrentUserAdmin, setIsCurrentUserAdmin] = useState(false);
 
     const [suspiciousUsers, setSuspiciousUsers] = useState<any[]>([]);
-    // REPARATIE ESLINT: Folosim fetch curat în efect, FĂRĂ să apelăm setState direct în corpul lui
+
     useEffect(() => {
         let isMounted = true;
-
-        fetch('https://localhost:4000/graphql', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                query: `
+        
+        fetch(`${ API_URL }/graphql`, {
+method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({
+    query: `
                     query GetEvents($offset: Int, $limit: Int) {
                         getEvents(offset: $offset, limit: $limit) {
                             id title date time location color
@@ -86,147 +89,141 @@ export function CalendarPage() {
                         }
                     }
                 `,
-                variables: { offset, limit: 10 }
-            })
+    variables: { offset, limit: 10 }
+})
         })
             .then(res => res.json())
-            .then(result => {
-                if (isMounted) {
-                    console.log("GraphQL fetched data successfully:", result);
+    .then(result => {
+        if (isMounted) {
+            console.log("GraphQL fetched data successfully:", result);
+            const newEvents = result.data?.getEvents;
 
-                    // 1. Extract the newly fetched events from the GraphQL response
-                    const newEvents = result.data.getEvents;
+            if (newEvents && newEvents.length > 0) {
+                setMyEvents(prev => [...prev, ...newEvents]);
+            }
 
-                    // 2. Add them to your existing events state!
-                    if (newEvents && newEvents.length > 0) {
-                        setMyEvents(prev => [...prev, ...newEvents]);
-                    }
+            setIsLoadingGql(false);
+        }
+    })
+    .catch(() => {
+        if (isMounted) {
+            console.log("GraphQL server offline (expected if Node.js backend isn't running yet).");
+            setIsLoadingGql(false);
+        }
+    });
 
-                    setIsLoadingGql(false);
-                }
-            })
-            .catch(() => {
-                if (isMounted) {
-                    console.log("GraphQL server offline (expected if Node.js backend isn't running yet).");
-                    setIsLoadingGql(false);
-                }
-            });
-
-        return () => { isMounted = false; };
+return () => { isMounted = false; };
     }, [offset]);
 
-    // Setăm starea de încărcare DOAR la evenimentul de scroll
-    const lastEventElementRef = useCallback((node: HTMLDivElement | null) => {
-        if (observer.current) observer.current.disconnect();
-        observer.current = new IntersectionObserver(entries => {
-            if (entries[0].isIntersecting) {
-                setIsLoadingGql(true); // <--- Aici e locul corect pentru setState!
-                setOffset(prev => prev + 10);
-            }
-        });
-        if (node) observer.current.observe(node);
-    }, []);
-
-    // --- SILVER CHALLENGE: WEBSOCKETS LISTENER ---
-    useEffect(() => {
-        socket.on('new_fake_event', (fakeEvent: MyEvent) => {
-            setMyEvents(prev => [fakeEvent, ...prev]);
-        });
-        return () => { socket.off('new_fake_event'); };
-    }, []);
-
-    const startFakerLoop = () => {
-        fetch('https://localhost:4000/api/start-loop').catch(() => console.log("Server off"));
-    };
-
-    const stopFakerLoop = () => {
-        fetch('https://localhost:4000/api/stop-loop').catch(() => console.log("Server off"));
-    };
-
-    const changeViewAndTrack = (mode: 'cards' | 'table') => {
-        setViewMode(mode);
-        document.cookie = `crewzy_view_mode=${mode}; max-age=604800; path=/`;
-    };
-
-    const [freeDays, setFreeDays] = useState<FreeDay[]>([
-        { date: '2026-03-17', status: 'free', message: 'Free all day! Anyone down for coffee?' },
-        { date: '2026-03-20', status: 'free', message: 'Free evening after 6pm' },
-        { date: '2026-03-22', status: 'maybe' },
-    ]);
-
-    const [friendsAvailability] = useState<FriendAvailability[]>([
-        { id: '1', name: 'Sarah Johnson', avatar: 'https://images.unsplash.com/photo-1546961329-78bef0414d7c?w=100', date: '2026-03-17', status: 'free', message: 'Down for anything!' },
-    ]);
-
-    const groups: Group[] = [{ id: '1', name: 'Weekend Warriors', description: 'Friends who love weekend adventures', members: 8, isAdmin: true, avatars: [] }];
-    const friends: Friend[] = [{ id: '1', name: 'Sarah Johnson', username: 'sarahj', avatar: 'https://images.unsplash.com/photo-1546961329-78bef0414d7c?w=100', status: 'online' }];
-
-    const getDaysInMonth = (date: Date) => {
-        const year = date.getFullYear();
-        const month = date.getMonth();
-        const firstDay = new Date(year, month, 1);
-        const lastDay = new Date(year, month + 1, 0);
-        const daysInMonth = lastDay.getDate();
-        const startingDayOfWeek = firstDay.getDay();
-
-        const days = [];
-        for (let i = 0; i < startingDayOfWeek; i++) { days.push(null); }
-        for (let i = 1; i <= daysInMonth; i++) { days.push(i); }
-        return days;
-    };
-
-    const formatDateKey = (day: number) => {
-        const year = currentDate.getFullYear();
-        const month = String(currentDate.getMonth() + 1).padStart(2, '0');
-        const dayStr = String(day).padStart(2, '0');
-        return `${year}-${month}-${dayStr}`;
-    };
-
-    const isToday = (day: number) => {
-        const today = new Date();
-        return day === today.getDate() && currentDate.getMonth() === today.getMonth() && currentDate.getFullYear() === today.getFullYear();
-    };
-
-    const getDayStatus = (day: number) => freeDays.find((fd) => fd.date === formatDateKey(day));
-    const getEventsOnDay = (day: number) => myEvents.filter(event => event.date === formatDateKey(day));
-    const handleDayClick = (day: number) => setSelectedDate(formatDateKey(day));
-
-    // REPARATIE: Aici folosim funcția în Modal
-    const toggleFreeStatus = (status: 'free' | 'maybe', message?: string) => {
-        if (!selectedDate) return;
-        const existingIndex = freeDays.findIndex((fd) => fd.date === selectedDate);
-        if (existingIndex >= 0) {
-            if (freeDays[existingIndex].status === status) {
-                setFreeDays(freeDays.filter((fd) => fd.date !== selectedDate));
-            } else {
-                setFreeDays(freeDays.map((fd) => fd.date === selectedDate ? { ...fd, status, message } : fd));
-            }
-        } else {
-            setFreeDays([...freeDays, { date: selectedDate, status, message }]);
+const lastEventElementRef = useCallback((node: HTMLDivElement | null) => {
+    if (observer.current) observer.current.disconnect();
+    observer.current = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
+            setIsLoadingGql(true);
+            setOffset(prev => prev + 10);
         }
-    };
+    });
+    if (node) observer.current.observe(node);
+}, []);
 
-    const markTodayFree = () => {
-        const today = new Date();
-        const dateKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-        const existingIndex = freeDays.findIndex((fd) => fd.date === dateKey);
-        if (existingIndex >= 0) {
-            setFreeDays(freeDays.filter((fd) => fd.date !== dateKey));
+// --- SILVER CHALLENGE: WEBSOCKETS LISTENER ---
+useEffect(() => {
+    socket.on('new_fake_event', (fakeEvent: MyEvent) => {
+        setMyEvents(prev => [fakeEvent, ...prev]);
+    });
+    return () => { socket.off('new_fake_event'); };
+}, []);
+
+const startFakerLoop = () => {
+    fetch(`${API_URL}/api/start-loop`).catch(() => console.log("Server off"));
+};
+
+const stopFakerLoop = () => {
+    fetch(`${API_URL}/api/stop-loop`).catch(() => console.log("Server off"));
+};
+
+const changeViewAndTrack = (mode: 'cards' | 'table') => {
+    setViewMode(mode);
+    document.cookie = `crewzy_view_mode=${mode}; max-age=604800; path=/`;
+};
+
+const [freeDays, setFreeDays] = useState<FreeDay[]>([
+    { date: '2026-03-17', status: 'free', message: 'Free all day! Anyone down for coffee?' },
+    { date: '2026-03-20', status: 'free', message: 'Free evening after 6pm' },
+    { date: '2026-03-22', status: 'maybe' },
+]);
+
+const [friendsAvailability] = useState<FriendAvailability[]>([
+    { id: '1', name: 'Sarah Johnson', avatar: 'https://images.unsplash.com/photo-1546961329-78bef0414d7c?w=100', date: '2026-03-17', status: 'free', message: 'Down for anything!' },
+]);
+
+const groups: Group[] = [{ id: '1', name: 'Weekend Warriors', description: 'Friends who love weekend adventures', members: 8, isAdmin: true, avatars: [] }];
+const friends: Friend[] = [{ id: '1', name: 'Sarah Johnson', username: 'sarahj', avatar: 'https://images.unsplash.com/photo-1546961329-78bef0414d7c?w=100', status: 'online' }];
+
+const getDaysInMonth = (date: Date) => {
+    const year = date.getFullYear();
+    const month = date.getMonth();
+    const firstDay = new Date(year, month, 1);
+    const lastDay = new Date(year, month + 1, 0);
+    const daysInMonth = lastDay.getDate();
+    const startingDayOfWeek = firstDay.getDay();
+
+    const days = [];
+    for (let i = 0; i < startingDayOfWeek; i++) { days.push(null); }
+    for (let i = 1; i <= daysInMonth; i++) { days.push(i); }
+    return days;
+};
+
+const formatDateKey = (day: number) => {
+    const year = currentDate.getFullYear();
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+    const dayStr = String(day).padStart(2, '0');
+    return `${year}-${month}-${dayStr}`;
+};
+
+const isToday = (day: number) => {
+    const today = new Date();
+    return day === today.getDate() && currentDate.getMonth() === today.getMonth() && currentDate.getFullYear() === today.getFullYear();
+};
+
+const getDayStatus = (day: number) => freeDays.find((fd) => fd.date === formatDateKey(day));
+const getEventsOnDay = (day: number) => myEvents.filter(event => event.date === formatDateKey(day));
+const handleDayClick = (day: number) => setSelectedDate(formatDateKey(day));
+
+const toggleFreeStatus = (status: 'free' | 'maybe', message?: string) => {
+    if (!selectedDate) return;
+    const existingIndex = freeDays.findIndex((fd) => fd.date === selectedDate);
+    if (existingIndex >= 0) {
+        if (freeDays[existingIndex].status === status) {
+            setFreeDays(freeDays.filter((fd) => fd.date !== selectedDate));
         } else {
-            setFreeDays([...freeDays, { date: dateKey, status: 'free', message: 'Free today! Who wants to hang out?' }]);
-            setSelectedDate(dateKey);
+            setFreeDays(freeDays.map((fd) => fd.date === selectedDate ? { ...fd, status, message } : fd));
         }
-    };
+    } else {
+        setFreeDays([...freeDays, { date: selectedDate, status, message }]);
+    }
+};
 
-    const handleCreateOrEditEvent = async (newEventData: NewEvent) => {
-        if (!eventToEdit) {
-            // 1. GOLD CHALLENGE: Trimitem evenimentul nou către Baza de Date via GraphQL
-            try {
-                const response = await fetch('http://localhost:4000/graphql', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        query: `
+const markTodayFree = () => {
+    const today = new Date();
+    const dateKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+    const existingIndex = freeDays.findIndex((fd) => fd.date === dateKey);
+    if (existingIndex >= 0) {
+        setFreeDays(freeDays.filter((fd) => fd.date !== dateKey));
+    } else {
+        setFreeDays([...freeDays, { date: dateKey, status: 'free', message: 'Free today! Who wants to hang out?' }]);
+        setSelectedDate(dateKey);
+    }
+};
+
+const handleCreateOrEditEvent = async (newEventData: NewEvent) => {
+    if (!eventToEdit) {
+        try {
+            const response = await fetch(`${API_URL}/graphql`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    query: `
                             mutation AddEvent($title: String!, $date: String, $time: String, $location: String, $description: String) {
                                 addEvent(title: $title, date: $date, time: $time, location: $location, description: $description) {
                                     id
@@ -238,592 +235,585 @@ export function CalendarPage() {
                                 }
                             }
                         `,
-                        variables: {
-                            title: newEventData.title,
-                            date: newEventData.date,
-                            time: newEventData.time,
-                            location: newEventData.location,
-                            description: newEventData.description
-                        }
-                    })
-                });
+                    variables: {
+                        title: newEventData.title,
+                        date: newEventData.date,
+                        time: newEventData.time,
+                        location: newEventData.location,
+                        description: newEventData.description
+                    }
+                })
+            });
 
-                const result = await response.json();
+            const result = await response.json();
 
-                if (result.errors) {
-                    console.error("🔴 GraphQL Error:", result.errors);
-                    return; // Ne oprim dacă serverul a refuzat salvarea
-                }
-
-                // 2. Extragem evenimentul salvat de server (care acum are un ID real din DB)
-                const savedEvent = result.data.addEvent;
-
-                // 3. Îl completăm cu datele locale necesare pentru afișare și îl punem pe ecran
-                const completeEventForUI: MyEvent = {
-                    ...savedEvent,
-                    locationType: newEventData.locationType,
-                    visibility: newEventData.visibility,
-                    attendees: [{ id: 'me', name: 'Me', avatar: 'https://images.unsplash.com/photo-1546961329-78bef0414d7c?w=100', status: 'accepted' }]
-                };
-
-                const updatedEvents = [...myEvents, completeEventForUI];
-                globalMyEvents = updatedEvents;
-                setMyEvents(updatedEvents);
-
-            } catch (error) {
-                console.error("🔴 Network Error:", error);
+            if (result.errors) {
+                console.error("🔴 GraphQL Error:", result.errors);
+                return;
             }
-        } else {
-            // Logica PENTRU EDITARE via GraphQL
-            try {
-                const response = await fetch('http://localhost:4000/graphql', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        query: `
+
+            const savedEvent = result.data.addEvent;
+
+            const completeEventForUI: MyEvent = {
+                ...savedEvent,
+                locationType: newEventData.locationType,
+                visibility: newEventData.visibility,
+                attendees: [{ id: 'me', name: 'Me', avatar: 'https://images.unsplash.com/photo-1546961329-78bef0414d7c?w=100', status: 'accepted' }]
+            };
+
+            const updatedEvents = [...myEvents, completeEventForUI];
+            globalMyEvents = updatedEvents;
+            setMyEvents(updatedEvents);
+
+        } catch (error) {
+            console.error("🔴 Network Error:", error);
+        }
+    } else {
+        try {
+            const response = await fetch(`${API_URL}/graphql`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    query: `
                             mutation UpdateEvent($id: ID!, $title: String!, $date: String, $time: String, $location: String, $description: String) {
                                 updateEvent(id: $id, title: $title, date: $date, time: $time, location: $location, description: $description) {
                                     id title date time location description
                                 }
                             }
                         `,
-                        variables: {
-                            id: eventToEdit.id,
-                            title: newEventData.title,
-                            date: newEventData.date,
-                            time: newEventData.time,
-                            location: newEventData.location,
-                            description: newEventData.description
-                        }
-                    })
-                });
-
-                const result = await response.json();
-                if (!result.errors) {
-                    const updatedEvents = myEvents.map(event =>
-                        event.id === eventToEdit.id ? { ...event, ...newEventData } : event
-                    );
-                    globalMyEvents = updatedEvents;
-                    setMyEvents(updatedEvents);
-                }
-            } catch (error) {
-                console.error("🔴 Network Error la Update:", error);
-            }
-        }
-    };
-
-    const handleDeleteEvent = async (id: string) => {
-        try {
-            const response = await fetch('http://localhost:4000/graphql', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    query: `
-                        mutation DeleteEvent($id: ID!) {
-                            deleteEvent(id: $id)
-                        }
-                    `,
-                    variables: { id }
+                    variables: {
+                        id: eventToEdit.id,
+                        title: newEventData.title,
+                        date: newEventData.date,
+                        time: newEventData.time,
+                        location: newEventData.location,
+                        description: newEventData.description
+                    }
                 })
             });
 
             const result = await response.json();
-
-            if (result.data?.deleteEvent) {
-                // Dacă serverul zice "True" (sters cu succes), îl scoatem și de pe ecran
-                const updatedEvents = myEvents.filter((event) => event.id !== id);
+            if (!result.errors) {
+                const updatedEvents = myEvents.map(event =>
+                    event.id === eventToEdit.id ? { ...event, ...newEventData } : event
+                );
                 globalMyEvents = updatedEvents;
                 setMyEvents(updatedEvents);
             }
         } catch (error) {
-            console.error("🔴 Eroare la ștergerea evenimentului:", error);
+            console.error("🔴 Network Error la Update:", error);
         }
-    };
+    }
+};
 
-    const handleOpenEdit = (event: MyEvent) => {
-        setEventToEdit(event);
-        setShowCreateModal(true);
-    };
+const handleDeleteEvent = async (id: string) => {
+    try {
+        const response = await fetch(`${API_URL}/graphql`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                query: `
+                        mutation DeleteEvent($id: ID!) {
+                            deleteEvent(id: $id)
+                        }
+                    `,
+                variables: { id }
+            })
+        });
 
-    const handleJoinEvent = async (eventId: string) => {
-        try {
-            await fetch('https://localhost:4000/graphql', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    query: `
+        const result = await response.json();
+
+        if (result.data?.deleteEvent) {
+            const updatedEvents = myEvents.filter((event) => event.id !== id);
+            globalMyEvents = updatedEvents;
+            setMyEvents(updatedEvents);
+        }
+    } catch (error) {
+        console.error("🔴 Eroare la ștergerea evenimentului:", error);
+    }
+};
+
+const handleOpenEdit = (event: MyEvent) => {
+    setEventToEdit(event);
+    setShowCreateModal(true);
+};
+
+const handleJoinEvent = async (eventId: string) => {
+    try {
+        await fetch(`${API_URL}/graphql`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                query: `
                         mutation JoinEvent($eventId: ID!) {
                             joinEvent(eventId: $eventId)
                         }
                     `,
-                    variables: { eventId }
-                })
-            });
+                variables: { eventId }
+            })
+        });
 
-            // Adăugăm "as const" la status pentru a satisface TypeScript
-            const updatedEvents = myEvents.map((event) =>
-                event.id === eventId
-                    ? {
-                        ...event,
-                        attendees: [
-                            ...event.attendees,
-                            {
-                                id: 'me',
-                                name: 'Me',
-                                avatar: 'https://images.unsplash.com/photo-1546961329-78bef0414d7c?w=100',
-                                status: 'accepted' as const // <--- REPARAȚIA AICI
-                            }
-                        ]
-                    }
-                    : event
-            );
-            globalMyEvents = updatedEvents;
-            setMyEvents(updatedEvents);
-        } catch (error) {
-            console.error("🔴 Eroare la Join:", error);
-        }
-    };
+        const updatedEvents = myEvents.map((event) =>
+            event.id === eventId
+                ? {
+                    ...event,
+                    attendees: [
+                        ...event.attendees,
+                        {
+                            id: 'me',
+                            name: 'Me',
+                            avatar: 'https://images.unsplash.com/photo-1546961329-78bef0414d7c?w=100',
+                            status: 'accepted' as const
+                        }
+                    ]
+                }
+                : event
+        );
+        globalMyEvents = updatedEvents;
+        setMyEvents(updatedEvents);
+    } catch (error) {
+        console.error("🔴 Eroare la Join:", error);
+    }
+};
 
-    const handleLeaveEvent = async (eventId: string) => {
-        try {
-            await fetch('https://localhost:4000/graphql', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    query: `
+const handleLeaveEvent = async (eventId: string) => {
+    try {
+        await fetch(`${API_URL}/graphql`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                query: `
                         mutation LeaveEvent($eventId: ID!) {
                             leaveEvent(eventId: $eventId)
                         }
                     `,
-                    variables: { eventId }
-                })
-            });
+                variables: { eventId }
+            })
+        });
 
-            // Actualizăm interfața locală
-            const updatedEvents = myEvents.map((event) =>
-                event.id === eventId
-                    ? { ...event, attendees: event.attendees.filter((a) => a.id !== 'me') }
-                    : event
-            );
-            globalMyEvents = updatedEvents;
-            setMyEvents(updatedEvents);
-        } catch (error) {
-            console.error("🔴 Eroare la Leave:", error);
-        }
-    };
+        const updatedEvents = myEvents.map((event) =>
+            event.id === eventId
+                ? { ...event, attendees: event.attendees.filter((a) => a.id !== 'me') }
+                : event
+        );
+        globalMyEvents = updatedEvents;
+        setMyEvents(updatedEvents);
+    } catch (error) {
+        console.error("🔴 Eroare la Leave:", error);
+    }
+};
 
-    const handleUpdateRsvp = async (eventId: string, newStatus: 'accepted' | 'pending' | 'declined') => {
-        try {
-            await fetch('https://localhost:4000/graphql', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    query: `
+const handleUpdateRsvp = async (eventId: string, newStatus: 'accepted' | 'pending' | 'declined') => {
+    try {
+        await fetch(`${API_URL}/graphql`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                query: `
                         mutation UpdateRsvp($eventId: ID!, $status: String!) {
                             updateRsvp(eventId: $eventId, status: $status)
                         }
                     `,
-                    variables: { eventId, status: newStatus }
-                })
-            });
-
-            // Actualizăm UI-ul instantaneu pentru utilizator
-            const updatedEvents = myEvents.map(event => {
-                if (event.id === eventId) {
-                    const attendees = event.attendees.map(a => a.id === 'me' ? { ...a, status: newStatus } : a);
-                    return { ...event, attendees };
-                }
-                return event;
-            });
-            globalMyEvents = updatedEvents;
-            setMyEvents(updatedEvents);
-        } catch (error) {
-            console.error("🔴 Network Error la RSVP:", error);
-        }
-    };
-
-    const days = getDaysInMonth(currentDate);
-    const monthName = currentDate.toLocaleString('default', { month: 'long' });
-    const year = currentDate.getFullYear();
-
-    const selectedDayData = selectedDate ? {
-        day: parseInt(selectedDate.split('-')[2]),
-        status: freeDays.find((fd) => fd.date === selectedDate),
-        friends: friendsAvailability.filter((fa) => fa.date === selectedDate),
-    } : null;
-
-    // --- LOGICA PENTRU GOLD & SILVER CHALLENGE  ---
-    const visibleEvents = myEvents.filter((event) => {
-        if (!event) return false; // Safely ignore null events
-        const eventAttendees = event.attendees || [];
-        return rsvpFilter === 'all' ? true : eventAttendees.some((a) => a.status === rsvpFilter);
-    });
-    const rsvpStats = visibleEvents.reduce((acc, event) => {
-        const eventAttendees = event.attendees || []; // Prevenim eroarea de 'undefined'
-        eventAttendees.forEach(a => {
-            if (a.status === 'accepted') acc.accepted++;
-            else if (a.status === 'pending') acc.pending++;
-            else if (a.status === 'declined') acc.declined++;
+                variables: { eventId, status: newStatus }
+            })
         });
-        return acc;
-    }, { accepted: 0, pending: 0, declined: 0 });
-    const chartData = [
-        { name: 'Accepted', value: rsvpStats.accepted, color: '#22c55e' },
-        { name: 'Pending', value: rsvpStats.pending, color: '#eab308' },
-        { name: 'Declined', value: rsvpStats.declined, color: '#ef4444' },
-    ].filter(item => item.value > 0);
 
-    const fetchAdminLogs = async () => {
-        try {
-            const res = await fetch('https://localhost:4000/graphql', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    query: `query { 
+        const updatedEvents = myEvents.map(event => {
+            if (event.id === eventId) {
+                const attendees = event.attendees.map(a => a.id === 'me' ? { ...a, status: newStatus } : a);
+                return { ...event, attendees };
+            }
+            return event;
+        });
+        globalMyEvents = updatedEvents;
+        setMyEvents(updatedEvents);
+    } catch (error) {
+        console.error("🔴 Network Error la RSVP:", error);
+    }
+};
+
+const days = getDaysInMonth(currentDate);
+const monthName = currentDate.toLocaleString('default', { month: 'long' });
+const year = currentDate.getFullYear();
+
+const selectedDayData = selectedDate ? {
+    day: parseInt(selectedDate.split('-')[2]),
+    status: freeDays.find((fd) => fd.date === selectedDate),
+    friends: friendsAvailability.filter((fa) => fa.date === selectedDate),
+} : null;
+
+const visibleEvents = myEvents.filter((event) => {
+    if (!event) return false;
+    const eventAttendees = event.attendees || [];
+    return rsvpFilter === 'all' ? true : eventAttendees.some((a) => a.status === rsvpFilter);
+});
+const rsvpStats = visibleEvents.reduce((acc, event) => {
+    const eventAttendees = event.attendees || [];
+    eventAttendees.forEach(a => {
+        if (a.status === 'accepted') acc.accepted++;
+        else if (a.status === 'pending') acc.pending++;
+        else if (a.status === 'declined') acc.declined++;
+    });
+    return acc;
+}, { accepted: 0, pending: 0, declined: 0 });
+const chartData = [
+    { name: 'Accepted', value: rsvpStats.accepted, color: '#22c55e' },
+    { name: 'Pending', value: rsvpStats.pending, color: '#eab308' },
+    { name: 'Declined', value: rsvpStats.declined, color: '#ef4444' },
+].filter(item => item.value > 0);
+
+const fetchAdminLogs = async () => {
+    try {
+        const res = await fetch(`${API_URL}/graphql`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                query: `query { 
                         getLogs { id action details timestamp } 
                         getSuspiciousUsers { id userId reason detectedAt } 
                     }`
-                })
-            });
-            const result = await res.json();
-            if (result.data) {
-                setSysLogs(result.data.getLogs || []);
-                setSuspiciousUsers(result.data.getSuspiciousUsers || []);
-            }
-        } catch (e) { console.error("🔴 Eroare fetching logs:", e); }
-    };
+            })
+        });
+        const result = await res.json();
+        if (result.data) {
+            setSysLogs(result.data.getLogs || []);
+            setSuspiciousUsers(result.data.getSuspiciousUsers || []);
+        }
+    } catch (e) { console.error("🔴 Eroare fetching logs:", e); }
+};
 
-    return (
-        <div className="flex-1 flex flex-col overflow-auto">
-            {/* Header */}
-            <div className="bg-white/60 backdrop-blur-md border-b border-gray-200 px-8 py-4">
-                <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                        <Logo size={40} />
-                        <h1 className="text-2xl font-bold text-gray-900">Calendar</h1>
-                    </div>
-                    <div className="flex items-center gap-4">
-                        {/* --- BUTON DEMO PENTRU SCHIMBARE ROL --- */}
-                        <div className="flex flex-col items-end mr-2">
-                            <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Simulate Role</span>
-                            <button
-                                onClick={() => setIsCurrentUserAdmin(!isCurrentUserAdmin)}
-                                className={`text-xs px-2 py-1 rounded-md font-semibold transition-colors ${isCurrentUserAdmin ? 'bg-red-100 text-red-700' : 'bg-gray-100 text-gray-600'}`}
-                            >
-                                {isCurrentUserAdmin ? 'View as: ADMIN' : 'View as: USER'}
-                            </button>
-                        </div>
-
-                        {/* --- BUTONUL REAL DE DASHBOARD (Apare doar pt Admin) --- */}
-                        {isCurrentUserAdmin && (
-                            <button
-                                onClick={() => { fetchAdminLogs(); setShowAdminLogs(true); }}
-                                className="flex items-center gap-2 px-3 py-2 bg-red-50 text-red-600 rounded-lg font-bold hover:bg-red-100 transition-colors shadow-sm"
-                            >
-                                <Shield className="w-5 h-5" /> Admin
-                            </button>
-                        )}
-
-                        <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
-                            <Bell className="w-6 h-6 text-gray-700" />
-                        </button>
-                        <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold shadow-sm">M</div>
-
-                        <button onClick={() => { setEventToEdit(null); setShowCreateModal(true); }} className="p-2 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors shadow-sm">
-                            <Plus className="w-5 h-5" />
+return (
+    <div className="flex-1 flex flex-col overflow-auto">
+        {/* Header */}
+        <div className="bg-white/60 backdrop-blur-md border-b border-gray-200 px-8 py-4">
+            <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                    <Logo size={40} />
+                    <h1 className="text-2xl font-bold text-gray-900">Calendar</h1>
+                </div>
+                <div className="flex items-center gap-4">
+                    {/* --- BUTON DEMO PENTRU SCHIMBARE ROL --- */}
+                    <div className="flex flex-col items-end mr-2">
+                        <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Simulate Role</span>
+                        <button
+                            onClick={() => setIsCurrentUserAdmin(!isCurrentUserAdmin)}
+                            className={`text-xs px-2 py-1 rounded-md font-semibold transition-colors ${isCurrentUserAdmin ? 'bg-red-100 text-red-700' : 'bg-gray-100 text-gray-600'}`}
+                        >
+                            {isCurrentUserAdmin ? 'View as: ADMIN' : 'View as: USER'}
                         </button>
                     </div>
+
+                    {/* --- BUTONUL REAL DE DASHBOARD (Apare doar pt Admin) --- */}
+                    {isCurrentUserAdmin && (
+                        <button
+                            onClick={() => { fetchAdminLogs(); setShowAdminLogs(true); }}
+                            className="flex items-center gap-2 px-3 py-2 bg-red-50 text-red-600 rounded-lg font-bold hover:bg-red-100 transition-colors shadow-sm"
+                        >
+                            <Shield className="w-5 h-5" /> Admin
+                        </button>
+                    )}
+
+                    <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                        <Bell className="w-6 h-6 text-gray-700" />
+                    </button>
+                    <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold shadow-sm">M</div>
+
+                    <button onClick={() => { setEventToEdit(null); setShowCreateModal(true); }} className="p-2 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors shadow-sm">
+                        <Plus className="w-5 h-5" />
+                    </button>
+                </div>
+            </div>
+
+            <div className="flex items-center gap-4 mt-4">
+                <button className="px-4 py-2 bg-gray-100 text-gray-900 rounded-lg font-medium hover:bg-gray-200 transition-colors">My Plans</button>
+                <div className="flex-1 relative max-w-md">
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                    <input type="text" placeholder="Search events" className="w-full pl-10 pr-4 py-2 bg-white border border-gray-200 rounded-lg outline-none focus:border-gray-400 transition-colors" />
                 </div>
 
-                <div className="flex items-center gap-4 mt-4">
-                    <button className="px-4 py-2 bg-gray-100 text-gray-900 rounded-lg font-medium hover:bg-gray-200 transition-colors">My Plans</button>
-                    <div className="flex-1 relative max-w-md">
-                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                        <input type="text" placeholder="Search events" className="w-full pl-10 pr-4 py-2 bg-white border border-gray-200 rounded-lg outline-none focus:border-gray-400 transition-colors" />
+                <div className="flex gap-2 ml-auto">
+                    <button onClick={startFakerLoop} className="px-4 py-2 bg-indigo-100 text-indigo-700 font-semibold rounded-lg hover:bg-indigo-200 transition">Start Faker Bot 🤖</button>
+                    <button onClick={stopFakerLoop} className="px-4 py-2 bg-red-100 text-red-700 font-semibold rounded-lg hover:bg-red-200 transition">Stop Bot 🛑</button>
+                </div>
+            </div>
+        </div>
+
+        <div className="flex-1 overflow-auto p-8">
+            {/* Quick Action Banner */}
+            <div className="bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl p-6 mb-6 shadow-lg">
+                <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                        <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
+                            <Zap className="w-8 h-8 text-white" />
+                        </div>
+                        <div className="text-white">
+                            <h3 className="text-xl font-bold mb-1">Free Today?</h3>
+                            <p className="text-white/90 text-sm">Let your friends know you're available to hang out!</p>
+                        </div>
+                    </div>
+                    <button onClick={markTodayFree} className="px-8 py-3 bg-white text-purple-600 rounded-xl font-semibold hover:bg-gray-50 transition-all shadow-lg">
+                        I'm Free Today!
+                    </button>
+                </div>
+            </div>
+
+            {/* Calendar Section */}
+            <div className="bg-white/60 backdrop-blur-md rounded-3xl shadow-xl mb-6">
+                <div className="p-8">
+                    <div className="flex items-center justify-between mb-8">
+                        <div>
+                            <h2 className="text-4xl font-bold text-gray-900">{monthName} {year}</h2>
+                            <p className="text-gray-600 text-lg">Mark your free days and see who's available</p>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <button onClick={() => setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1))} className="p-3 hover:bg-gray-100 rounded-lg transition-colors"><ChevronLeft className="w-6 h-6" /></button>
+                            <button onClick={() => setCurrentDate(new Date())} className="px-6 py-3 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium transition-colors text-lg">Today</button>
+                            <button onClick={() => setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1))} className="p-3 hover:bg-gray-100 rounded-lg transition-colors"><ChevronRight className="w-6 h-6" /></button>
+                        </div>
                     </div>
 
-                    <div className="flex gap-2 ml-auto">
-                        <button onClick={startFakerLoop} className="px-4 py-2 bg-indigo-100 text-indigo-700 font-semibold rounded-lg hover:bg-indigo-200 transition">Start Faker Bot 🤖</button>
-                        <button onClick={stopFakerLoop} className="px-4 py-2 bg-red-100 text-red-700 font-semibold rounded-lg hover:bg-red-200 transition">Stop Bot 🛑</button>
+                    <div className="grid grid-cols-7 gap-4">
+                        {['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'].map((day) => (
+                            <div key={day} className="text-center font-bold text-gray-700 py-3 text-base">{day}</div>
+                        ))}
+
+                        {days.map((day, index) => {
+                            if (!day) return <div key={`empty-${index}`} className="aspect-square" />;
+                            const status = getDayStatus(day);
+                            const eventsToday = getEventsOnDay(day);
+                            const today = isToday(day);
+
+                            return (
+                                <button key={day} onClick={() => handleDayClick(day)} className={`aspect-square rounded-2xl p-4 relative transition-all flex flex-col items-start ${today ? 'ring-4 ring-gray-900' : ''} ${status?.status === 'free' ? 'bg-green-100 hover:bg-green-200' : ''} ${status?.status === 'maybe' ? 'bg-yellow-100 hover:bg-yellow-200' : ''} ${!status ? 'hover:bg-gray-100' : ''}`}>
+                                    <div className="text-xl font-semibold text-gray-900 mb-1">{day}</div>
+                                    <div className="flex flex-col gap-1 w-full mt-auto">
+                                        {eventsToday.slice(0, 2).map(ev => (
+                                            <div key={ev.id} className={`w-full text-left truncate text-xs font-medium px-2 py-1 rounded-md text-white ${ev.color}`}>{ev.title}</div>
+                                        ))}
+                                    </div>
+                                    {status && (<div className="absolute top-2 right-2"><UserCheck className={`w-4 h-4 ${status.status === 'free' ? 'text-green-600' : 'text-yellow-600'}`} /></div>)}
+                                </button>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
 
-            <div className="flex-1 overflow-auto p-8">
-                {/* Quick Action Banner */}
-                <div className="bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl p-6 mb-6 shadow-lg">
-                    <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-4">
-                            <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
-                                <Zap className="w-8 h-8 text-white" />
-                            </div>
-                            <div className="text-white">
-                                <h3 className="text-xl font-bold mb-1">Free Today?</h3>
-                                <p className="text-white/90 text-sm">Let your friends know you're available to hang out!</p>
-                            </div>
-                        </div>
-                        <button onClick={markTodayFree} className="px-8 py-3 bg-white text-purple-600 rounded-xl font-semibold hover:bg-gray-50 transition-all shadow-lg">
-                            I'm Free Today!
-                        </button>
+            <div className="bg-white/60 backdrop-blur-md rounded-2xl shadow-lg p-6 mb-6">
+                <div className="flex items-center justify-center gap-8 text-base">
+                    <div className="flex items-center gap-2">
+                        <div className="w-5 h-5 bg-green-100 rounded border border-green-200" />
+                        <span className="text-gray-700 font-medium">I'm Free</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <div className="w-5 h-5 bg-yellow-100 rounded border border-yellow-200" />
+                        <span className="text-gray-700 font-medium">Maybe Free</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <div className="w-5 h-5 rounded border-4 border-gray-900" />
+                        <span className="text-gray-700 font-medium">Today</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <Users className="w-5 h-5 text-gray-600" />
+                        <span className="text-gray-700 font-medium">Friends Available</span>
                     </div>
                 </div>
+            </div>
 
-                {/* Calendar Section */}
-                <div className="bg-white/60 backdrop-blur-md rounded-3xl shadow-xl mb-6">
-                    <div className="p-8">
-                        <div className="flex items-center justify-between mb-8">
-                            <div>
-                                <h2 className="text-4xl font-bold text-gray-900">{monthName} {year}</h2>
-                                <p className="text-gray-600 text-lg">Mark your free days and see who's available</p>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <button onClick={() => setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1))} className="p-3 hover:bg-gray-100 rounded-lg transition-colors"><ChevronLeft className="w-6 h-6" /></button>
-                                <button onClick={() => setCurrentDate(new Date())} className="px-6 py-3 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium transition-colors text-lg">Today</button>
-                                <button onClick={() => setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1))} className="p-3 hover:bg-gray-100 rounded-lg transition-colors"><ChevronRight className="w-6 h-6" /></button>
+            {/* My Events Section */}
+            {myEvents.length > 0 && (
+                <div className="bg-white/60 backdrop-blur-md rounded-3xl shadow-xl p-8 mb-8 transition-all duration-500 hover:shadow-2xl">
+                    <div className="flex flex-col gap-4 mb-6">
+                        <div className="flex items-center justify-between">
+                            <h2 className="text-2xl font-bold text-gray-900">
+                                My Upcoming Events
+                                {isLoadingGql && <span className="text-sm font-normal text-gray-400 ml-2 animate-pulse">(GraphQL Syncing...)</span>}
+                            </h2>
+                            <div className="flex items-center bg-gray-100 p-1 rounded-lg">
+                                <button onClick={() => changeViewAndTrack('cards')} className={`p-2 rounded-md flex items-center gap-2 transition-all ${viewMode === 'cards' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>
+                                    <LayoutGrid className="w-4 h-4" /> <span className="text-sm font-medium hidden sm:block">Cards</span>
+                                </button>
+                                <button onClick={() => changeViewAndTrack('table')} className={`p-2 rounded-md flex items-center gap-2 transition-all ${viewMode === 'table' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>
+                                    <ListIcon className="w-4 h-4" /> <span className="text-sm font-medium hidden sm:block">Table</span>
+                                </button>
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-7 gap-4">
-                            {['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'].map((day) => (
-                                <div key={day} className="text-center font-bold text-gray-700 py-3 text-base">{day}</div>
+                        <div className="flex flex-wrap items-center gap-2">
+                            <button onClick={() => setRsvpFilter('all')} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${rsvpFilter === 'all' ? 'bg-gray-900 text-white shadow-md scale-105' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>All Events</button>
+                            <button onClick={() => setRsvpFilter('accepted')} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${rsvpFilter === 'accepted' ? 'bg-green-500 text-white shadow-md scale-105' : 'bg-green-100 text-green-700 hover:bg-green-200'}`}><CheckCircle className="w-4 h-4" /> Accepted</button>
+                            <button onClick={() => setRsvpFilter('pending')} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${rsvpFilter === 'pending' ? 'bg-yellow-500 text-white shadow-md scale-105' : 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200'}`}><HelpCircle className="w-4 h-4" /> Pending</button>
+                        </div>
+                    </div>
+
+                    {viewMode === 'cards' ? (
+                        <div className="grid gap-4">
+                            {visibleEvents.map((event) => (
+                                <MyEventCard key={event.id} event={event} onDelete={handleDeleteEvent} onEdit={handleOpenEdit} onViewDetails={setSelectedEvent} />
                             ))}
+                        </div>
+                    ) : (
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                            <div className="lg:col-span-2 overflow-hidden rounded-2xl border border-gray-100 bg-white/50 shadow-inner">
+                                <EventsTable events={visibleEvents} onEdit={handleOpenEdit} onDelete={handleDeleteEvent} onViewDetails={setSelectedEvent} onUpdateRsvp={handleUpdateRsvp} />
+                            </div>
+                            <div className="lg:col-span-1 flex flex-col items-center justify-center bg-white/80 p-6 rounded-2xl shadow-sm border border-gray-100 transition-all hover:shadow-lg">
+                                <h3 className="text-lg font-bold text-gray-800 mb-2">RSVP Overview</h3>
+                                <p className="text-sm text-gray-500 mb-6 text-center">Real-time status based on tabular data</p>
+                                {chartData.length > 0 ? (
+                                    <div className="w-full h-[250px]">
+                                        <ResponsiveContainer width="100%" height="100%">
+                                            <PieChart>
+                                                <Pie data={chartData} cx="50%" cy="50%" innerRadius={60} outerRadius={80} paddingAngle={5} dataKey="value" animationBegin={0} animationDuration={800}>
+                                                    {chartData.map((entry, index) => (<Cell key={`cell-${index}`} fill={entry.color} />))}
+                                                </Pie>
+                                                <Tooltip contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
+                                                <Legend verticalAlign="bottom" height={36} iconType="circle" />
+                                            </PieChart>
+                                        </ResponsiveContainer>
+                                    </div>
+                                ) : (
+                                    <div className="h-[250px] flex items-center justify-center text-gray-400 font-medium">No data to display</div>
+                                )}
+                            </div>
+                        </div>
+                    )}
 
-                            {days.map((day, index) => {
-                                if (!day) return <div key={`empty-${index}`} className="aspect-square" />;
-                                const status = getDayStatus(day);
-                                const eventsToday = getEventsOnDay(day);
-                                const today = isToday(day);
+                    {/* AICI ESTE FOLOSIT ELEMENTUL PENTRU INFINITE SCROLL */}
+                    <div ref={lastEventElementRef} className="h-4 w-full" />
+                </div>
+            )}
+        </div>
 
-                                return (
-                                    <button key={day} onClick={() => handleDayClick(day)} className={`aspect-square rounded-2xl p-4 relative transition-all flex flex-col items-start ${today ? 'ring-4 ring-gray-900' : ''} ${status?.status === 'free' ? 'bg-green-100 hover:bg-green-200' : ''} ${status?.status === 'maybe' ? 'bg-yellow-100 hover:bg-yellow-200' : ''} ${!status ? 'hover:bg-gray-100' : ''}`}>
-                                        <div className="text-xl font-semibold text-gray-900 mb-1">{day}</div>
-                                        <div className="flex flex-col gap-1 w-full mt-auto">
-                                            {eventsToday.slice(0, 2).map(ev => (
-                                                <div key={ev.id} className={`w-full text-left truncate text-xs font-medium px-2 py-1 rounded-md text-white ${ev.color}`}>{ev.title}</div>
-                                            ))}
+        {/* REPARATIE: Day Details Modal este acum complet si foloseste toggleFreeStatus */}
+        {selectedDayData && !showCreateModal && (
+            <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+                <div className="bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl max-w-md w-full max-h-[80vh] overflow-y-auto p-6">
+
+                    <div className="flex justify-between mb-6">
+                        <h2 className="text-3xl font-bold">{monthName} {selectedDayData.day}</h2>
+                        <button onClick={() => setSelectedDate(null)} className="p-2 hover:bg-gray-100 rounded-full"><span className="text-gray-500 hover:text-gray-700 text-2xl">✕</span></button>
+                    </div>
+
+                    {/* Butoanele de status (rezolva eroarea cu toggleFreeStatus unused) */}
+                    <div className="space-y-3 mb-6">
+                        <p className="text-sm font-semibold text-gray-700 mb-3">Mark Your Availability:</p>
+                        <button
+                            onClick={() => toggleFreeStatus('free', 'Who wants to hang out?')}
+                            className={`w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold transition-all text-lg ${selectedDayData.status?.status === 'free' ? 'bg-green-500 text-white shadow-lg' : 'bg-green-100 text-green-700 hover:bg-green-200'}`}
+                        >
+                            <UserCheck className="w-6 h-6" /> I'm Free
+                        </button>
+                        <button
+                            onClick={() => toggleFreeStatus('maybe')}
+                            className={`w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold transition-all text-lg ${selectedDayData.status?.status === 'maybe' ? 'bg-yellow-500 text-white shadow-lg' : 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200'}`}
+                        >
+                            Maybe Free
+                        </button>
+                        {selectedDayData.status && (
+                            <button onClick={() => { setFreeDays(freeDays.filter((fd) => fd.date !== selectedDate)); }} className="w-full px-4 py-3 text-sm text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-xl transition-all">
+                                Clear Status
+                            </button>
+                        )}
+                    </div>
+
+                    {/* Lista prietenilor */}
+                    {selectedDayData.friends.length > 0 && (
+                        <div className="mb-6">
+                            <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2 text-lg">
+                                <Users className="w-6 h-6" /> Friends Available ({selectedDayData.friends.length})
+                            </h3>
+                            <div className="space-y-3">
+                                {selectedDayData.friends.map((friend) => (
+                                    <div key={friend.id} className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all">
+                                        <div className="flex items-center gap-3">
+                                            <img src={friend.avatar} alt={friend.name} className="w-12 h-12 rounded-full object-cover" />
+                                            <div className="flex-1">
+                                                <div className="font-semibold text-gray-900">{friend.name}</div>
+                                                {friend.message && <div className="text-sm text-gray-600 mt-1">{friend.message}</div>}
+                                            </div>
+                                            <div className={`px-3 py-1 rounded-full text-xs font-semibold ${friend.status === 'free' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'}`}>
+                                                {friend.status === 'free' ? 'Free' : 'Maybe'}
+                                            </div>
                                         </div>
-                                        {status && (<div className="absolute top-2 right-2"><UserCheck className={`w-4 h-4 ${status.status === 'free' ? 'text-green-600' : 'text-yellow-600'}`} /></div>)}
-                                    </button>
-                                );
-                            })}
-                        </div>
-                    </div>
-                </div>
-
-                <div className="bg-white/60 backdrop-blur-md rounded-2xl shadow-lg p-6 mb-6">
-                    <div className="flex items-center justify-center gap-8 text-base">
-                        <div className="flex items-center gap-2">
-                            <div className="w-5 h-5 bg-green-100 rounded border border-green-200" />
-                            <span className="text-gray-700 font-medium">I'm Free</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <div className="w-5 h-5 bg-yellow-100 rounded border border-yellow-200" />
-                            <span className="text-gray-700 font-medium">Maybe Free</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <div className="w-5 h-5 rounded border-4 border-gray-900" />
-                            <span className="text-gray-700 font-medium">Today</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <Users className="w-5 h-5 text-gray-600" />
-                            <span className="text-gray-700 font-medium">Friends Available</span>
-                        </div>
-                    </div>
-                </div>
-
-                {/* My Events Section */}
-                {myEvents.length > 0 && (
-                    <div className="bg-white/60 backdrop-blur-md rounded-3xl shadow-xl p-8 mb-8 transition-all duration-500 hover:shadow-2xl">
-                        <div className="flex flex-col gap-4 mb-6">
-                            <div className="flex items-center justify-between">
-                                <h2 className="text-2xl font-bold text-gray-900">
-                                    My Upcoming Events
-                                    {isLoadingGql && <span className="text-sm font-normal text-gray-400 ml-2 animate-pulse">(GraphQL Syncing...)</span>}
-                                </h2>
-                                <div className="flex items-center bg-gray-100 p-1 rounded-lg">
-                                    <button onClick={() => changeViewAndTrack('cards')} className={`p-2 rounded-md flex items-center gap-2 transition-all ${viewMode === 'cards' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>
-                                        <LayoutGrid className="w-4 h-4" /> <span className="text-sm font-medium hidden sm:block">Cards</span>
-                                    </button>
-                                    <button onClick={() => changeViewAndTrack('table')} className={`p-2 rounded-md flex items-center gap-2 transition-all ${viewMode === 'table' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>
-                                        <ListIcon className="w-4 h-4" /> <span className="text-sm font-medium hidden sm:block">Table</span>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div className="flex flex-wrap items-center gap-2">
-                                <button onClick={() => setRsvpFilter('all')} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${rsvpFilter === 'all' ? 'bg-gray-900 text-white shadow-md scale-105' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>All Events</button>
-                                <button onClick={() => setRsvpFilter('accepted')} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${rsvpFilter === 'accepted' ? 'bg-green-500 text-white shadow-md scale-105' : 'bg-green-100 text-green-700 hover:bg-green-200'}`}><CheckCircle className="w-4 h-4" /> Accepted</button>
-                                <button onClick={() => setRsvpFilter('pending')} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${rsvpFilter === 'pending' ? 'bg-yellow-500 text-white shadow-md scale-105' : 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200'}`}><HelpCircle className="w-4 h-4" /> Pending</button>
-                            </div>
-                        </div>
-
-                        {viewMode === 'cards' ? (
-                            <div className="grid gap-4">
-                                {visibleEvents.map((event) => (
-                                    <MyEventCard key={event.id} event={event} onDelete={handleDeleteEvent} onEdit={handleOpenEdit} onViewDetails={setSelectedEvent} />
+                                    </div>
                                 ))}
                             </div>
-                        ) : (
-                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                                <div className="lg:col-span-2 overflow-hidden rounded-2xl border border-gray-100 bg-white/50 shadow-inner">
-                                    <EventsTable events={visibleEvents} onEdit={handleOpenEdit} onDelete={handleDeleteEvent} onViewDetails={setSelectedEvent} onUpdateRsvp={handleUpdateRsvp} />
-                                </div>
-                                <div className="lg:col-span-1 flex flex-col items-center justify-center bg-white/80 p-6 rounded-2xl shadow-sm border border-gray-100 transition-all hover:shadow-lg">
-                                    <h3 className="text-lg font-bold text-gray-800 mb-2">RSVP Overview</h3>
-                                    <p className="text-sm text-gray-500 mb-6 text-center">Real-time status based on tabular data</p>
-                                    {chartData.length > 0 ? (
-                                        <div className="w-full h-[250px]">
-                                            <ResponsiveContainer width="100%" height="100%">
-                                                <PieChart>
-                                                    <Pie data={chartData} cx="50%" cy="50%" innerRadius={60} outerRadius={80} paddingAngle={5} dataKey="value" animationBegin={0} animationDuration={800}>
-                                                        {chartData.map((entry, index) => (<Cell key={`cell-${index}`} fill={entry.color} />))}
-                                                    </Pie>
-                                                    <Tooltip contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
-                                                    <Legend verticalAlign="bottom" height={36} iconType="circle" />
-                                                </PieChart>
-                                            </ResponsiveContainer>
-                                        </div>
-                                    ) : (
-                                        <div className="h-[250px] flex items-center justify-center text-gray-400 font-medium">No data to display</div>
-                                    )}
-                                </div>
-                            </div>
-                        )}
+                        </div>
+                    )}
 
-                        {/* AICI ESTE FOLOSIT ELEMENTUL PENTRU INFINITE SCROLL */}
-                        <div ref={lastEventElementRef} className="h-4 w-full" />
-                    </div>
-                )}
+                    <button onClick={() => { setEventToEdit(null); setShowCreateModal(true); }} className="w-full flex items-center justify-center gap-2 py-4 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 shadow-md mt-6 border-t border-gray-100">
+                        <Plus className="w-6 h-6" /> Create Event on this Day
+                    </button>
+                </div>
             </div>
+        )}
 
-            {/* REPARATIE: Day Details Modal este acum complet si foloseste toggleFreeStatus */}
-            {selectedDayData && !showCreateModal && (
-                <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-                    <div className="bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl max-w-md w-full max-h-[80vh] overflow-y-auto p-6">
+        {/* --- ADMIN DASHBOARD MODAL --- */}
+        {showAdminLogs && (
+            <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+                <div className="bg-white rounded-3xl shadow-2xl max-w-4xl w-full max-h-[85vh] flex flex-col overflow-hidden border border-gray-100">
 
-                        <div className="flex justify-between mb-6">
-                            <h2 className="text-3xl font-bold">{monthName} {selectedDayData.day}</h2>
-                            <button onClick={() => setSelectedDate(null)} className="p-2 hover:bg-gray-100 rounded-full"><span className="text-gray-500 hover:text-gray-700 text-2xl">✕</span></button>
+                    <div className="bg-gray-900 px-6 py-4 flex justify-between items-center text-white">
+                        <div className="flex items-center gap-3">
+                            <Shield className="w-6 h-6 text-red-400" />
+                            <h2 className="text-xl font-bold">System Security & Audit</h2>
                         </div>
+                        <button onClick={() => setShowAdminLogs(false)} className="text-gray-400 hover:text-white text-2xl font-bold">✕</button>
+                    </div>
 
-                        {/* Butoanele de status (rezolva eroarea cu toggleFreeStatus unused) */}
-                        <div className="space-y-3 mb-6">
-                            <p className="text-sm font-semibold text-gray-700 mb-3">Mark Your Availability:</p>
-                            <button
-                                onClick={() => toggleFreeStatus('free', 'Who wants to hang out?')}
-                                className={`w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold transition-all text-lg ${selectedDayData.status?.status === 'free' ? 'bg-green-500 text-white shadow-lg' : 'bg-green-100 text-green-700 hover:bg-green-200'}`}
-                            >
-                                <UserCheck className="w-6 h-6" /> I'm Free
-                            </button>
-                            <button
-                                onClick={() => toggleFreeStatus('maybe')}
-                                className={`w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold transition-all text-lg ${selectedDayData.status?.status === 'maybe' ? 'bg-yellow-500 text-white shadow-lg' : 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200'}`}
-                            >
-                                Maybe Free
-                            </button>
-                            {selectedDayData.status && (
-                                <button onClick={() => { setFreeDays(freeDays.filter((fd) => fd.date !== selectedDate)); }} className="w-full px-4 py-3 text-sm text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-xl transition-all">
-                                    Clear Status
-                                </button>
-                            )}
-                        </div>
+                    <div className="flex-1 overflow-y-auto p-6 bg-gray-50 flex flex-col gap-6">
 
-                        {/* Lista prietenilor */}
-                        {selectedDayData.friends.length > 0 && (
-                            <div className="mb-6">
-                                <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2 text-lg">
-                                    <Users className="w-6 h-6" /> Friends Available ({selectedDayData.friends.length})
+                        {/* OBSERVATION LIST (Apare doar dacă sunt utilizatori suspecți) */}
+                        {suspiciousUsers.length > 0 && (
+                            <div className="bg-red-50 border border-red-200 rounded-2xl p-5 shadow-sm">
+                                <h3 className="text-red-800 font-bold text-lg mb-3 flex items-center gap-2">
+                                    <Zap className="w-5 h-5 animate-pulse" />
+                                    OBSERVATION LIST - MALEVOLENT BEHAVIOUR DETECTED
                                 </h3>
                                 <div className="space-y-3">
-                                    {selectedDayData.friends.map((friend) => (
-                                        <div key={friend.id} className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all">
-                                            <div className="flex items-center gap-3">
-                                                <img src={friend.avatar} alt={friend.name} className="w-12 h-12 rounded-full object-cover" />
-                                                <div className="flex-1">
-                                                    <div className="font-semibold text-gray-900">{friend.name}</div>
-                                                    {friend.message && <div className="text-sm text-gray-600 mt-1">{friend.message}</div>}
-                                                </div>
-                                                <div className={`px-3 py-1 rounded-full text-xs font-semibold ${friend.status === 'free' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'}`}>
-                                                    {friend.status === 'free' ? 'Free' : 'Maybe'}
-                                                </div>
+                                    {suspiciousUsers.map(suspect => (
+                                        <div key={suspect.id} className="bg-white border border-red-200 rounded-xl p-4 shadow-sm flex flex-col sm:flex-row justify-between sm:items-center gap-2 border-l-4 border-l-red-500">
+                                            <div>
+                                                <span className="font-mono text-sm font-bold text-gray-900 bg-gray-100 px-2 py-1 rounded">USER_ID: {suspect.userId}</span>
+                                                <p className="text-sm font-semibold text-red-600 mt-2">{suspect.reason}</p>
                                             </div>
+                                            <span className="text-xs text-gray-500 font-mono bg-white px-2 py-1 border rounded">{suspect.detectedAt}</span>
                                         </div>
                                     ))}
                                 </div>
                             </div>
                         )}
 
-                        <button onClick={() => { setEventToEdit(null); setShowCreateModal(true); }} className="w-full flex items-center justify-center gap-2 py-4 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 shadow-md mt-6 border-t border-gray-100">
-                            <Plus className="w-6 h-6" /> Create Event on this Day
-                        </button>
-                    </div>
-                </div>
-            )}
-
-            {/* --- ADMIN DASHBOARD MODAL --- */}
-            {showAdminLogs && (
-                <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-                    <div className="bg-white rounded-3xl shadow-2xl max-w-4xl w-full max-h-[85vh] flex flex-col overflow-hidden border border-gray-100">
-
-                        <div className="bg-gray-900 px-6 py-4 flex justify-between items-center text-white">
-                            <div className="flex items-center gap-3">
-                                <Shield className="w-6 h-6 text-red-400" />
-                                <h2 className="text-xl font-bold">System Security & Audit</h2>
-                            </div>
-                            <button onClick={() => setShowAdminLogs(false)} className="text-gray-400 hover:text-white text-2xl font-bold">✕</button>
-                        </div>
-
-                        <div className="flex-1 overflow-y-auto p-6 bg-gray-50 flex flex-col gap-6">
-
-                            {/* OBSERVATION LIST (Apare doar dacă sunt utilizatori suspecți) */}
-                            {suspiciousUsers.length > 0 && (
-                                <div className="bg-red-50 border border-red-200 rounded-2xl p-5 shadow-sm">
-                                    <h3 className="text-red-800 font-bold text-lg mb-3 flex items-center gap-2">
-                                        <Zap className="w-5 h-5 animate-pulse" />
-                                        OBSERVATION LIST - MALEVOLENT BEHAVIOUR DETECTED
-                                    </h3>
-                                    <div className="space-y-3">
-                                        {suspiciousUsers.map(suspect => (
-                                            <div key={suspect.id} className="bg-white border border-red-200 rounded-xl p-4 shadow-sm flex flex-col sm:flex-row justify-between sm:items-center gap-2 border-l-4 border-l-red-500">
-                                                <div>
-                                                    <span className="font-mono text-sm font-bold text-gray-900 bg-gray-100 px-2 py-1 rounded">USER_ID: {suspect.userId}</span>
-                                                    <p className="text-sm font-semibold text-red-600 mt-2">{suspect.reason}</p>
+                        {/* AUDIT LOGS NORMALE ÎN FORMAT STRICT */}
+                        <div>
+                            <h3 className="text-gray-800 font-bold text-lg mb-3">System Audit Trail</h3>
+                            {sysLogs.length === 0 ? (
+                                <p className="text-center text-gray-500 mt-4">No logs recorded yet.</p>
+                            ) : (
+                                <div className="space-y-3">
+                                    {sysLogs.map((log) => (
+                                        <div key={log.id} className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:border-gray-300 transition-colors">
+                                            <div className="flex flex-col gap-1">
+                                                {/* FORMATUL STRICT CERUT */}
+                                                <div className="font-mono text-xs sm:text-sm text-gray-700 bg-gray-100 p-3 rounded break-all border border-gray-200 shadow-inner">
+                                                    {log.details}
                                                 </div>
-                                                <span className="text-xs text-gray-500 font-mono bg-white px-2 py-1 border rounded">{suspect.detectedAt}</span>
                                             </div>
-                                        ))}
-                                    </div>
+                                        </div>
+                                    ))}
                                 </div>
                             )}
-
-                            {/* AUDIT LOGS NORMALE ÎN FORMAT STRICT */}
-                            <div>
-                                <h3 className="text-gray-800 font-bold text-lg mb-3">System Audit Trail</h3>
-                                {sysLogs.length === 0 ? (
-                                    <p className="text-center text-gray-500 mt-4">No logs recorded yet.</p>
-                                ) : (
-                                    <div className="space-y-3">
-                                        {sysLogs.map((log) => (
-                                            <div key={log.id} className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:border-gray-300 transition-colors">
-                                                <div className="flex flex-col gap-1">
-                                                    {/* FORMATUL STRICT CERUT */}
-                                                    <div className="font-mono text-xs sm:text-sm text-gray-700 bg-gray-100 p-3 rounded break-all border border-gray-200 shadow-inner">
-                                                        {log.details}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                )}
-                            </div>
-
                         </div>
+
                     </div>
                 </div>
-            )}
+            </div>
+        )}
 
-            <CreateEventModal isOpen={showCreateModal} onClose={() => { setShowCreateModal(false); setEventToEdit(null); setSelectedDate(null); }} onCreate={handleCreateOrEditEvent} groups={groups} eventToEdit={eventToEdit} initialDate={selectedDate} />
-            <EventDetailsModal event={selectedEvent} onClose={() => setSelectedEvent(null)} currentUserId="me" isCreator={selectedEvent?.attendees[0]?.id === 'me'} onJoin={handleJoinEvent} onLeave={handleLeaveEvent} friends={friends} />
-        </div>
-    );
+        <CreateEventModal isOpen={showCreateModal} onClose={() => { setShowCreateModal(false); setEventToEdit(null); setSelectedDate(null); }} onCreate={handleCreateOrEditEvent} groups={groups} eventToEdit={eventToEdit} initialDate={selectedDate} />
+        <EventDetailsModal event={selectedEvent} onClose={() => setSelectedEvent(null)} currentUserId="me" isCreator={selectedEvent?.attendees[0]?.id === 'me'} onJoin={handleJoinEvent} onLeave={handleLeaveEvent} friends={friends} />
+    </div>
+);
 }
+
