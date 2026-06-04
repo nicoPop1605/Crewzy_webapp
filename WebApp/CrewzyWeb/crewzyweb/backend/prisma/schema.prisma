@@ -1,5 +1,3 @@
-// prisma/schema.prisma
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -40,8 +38,14 @@ model User {
   id        String   @id @default(uuid())
   email     String   @unique
   name      String
-  password  String   // Necesar pentru implementarea login-ului (Silver)
+  password  String   
   createdAt DateTime @default(now())
+
+  // --- Câmpurile necesare pentru 3-Way Auth & Reset Password ---
+  otp               String?
+  otpExpires        DateTime?
+  resetToken        String?
+  resetTokenExpires DateTime?
 
   // Relatia catre Role (Silver Challenge)
   roleId    String
