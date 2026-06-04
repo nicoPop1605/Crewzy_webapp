@@ -1,21 +1,20 @@
+
+
+
+
 import express from 'express';
 import { ApolloServer, gql } from 'apollo-server-express';
-import { createServer } from 'http';
+import { createServer } from 'http'; // Schimbat aici
 import { Server } from 'socket.io';
 import { faker } from '@faker-js/faker';
 import cors from 'cors';
 import { GraphQLError } from 'graphql';
 import { connectMongo, getDb } from './src/data/mongoClient.js';
 
-import https from 'https';
-import fs from 'fs';
-
 // IMPORTĂM RUTELE REST PENTRU BRONZE & SILVER CHALLENGE
 import eventRoutes from './src/routes/events.js';
 import authRoutes from './src/routes/auth.js';
-
 import statsRoutes from './src/routes/stats.js';
-
 import monitorRoutes from './src/routes/monitor.js';
 
 // --- BAZĂ DE DATE SIMULATĂ ÎN MEMORIE (Pentru GraphQL / Faker) ---
@@ -352,34 +351,32 @@ const resolvers = {
 };
 
 // --- INITIALIZARE SERVER ---
+// --- INITIALIZARE SERVER ---
 const app = express();
 app.use(cors());
-app.use(express.json()); // NECESAR PENTRU REST POST (BRONZE)
+app.use(express.json());
 app.use('/api/monitor', monitorRoutes);
 
-let sslOptions = {};
-try {
-    sslOptions = {
-        key: fs.readFileSync('./key.pem'),
-        cert: fs.readFileSync('./cert.pem')
-    };
-} catch (err) {
-    console.error("🔴 EROARE SSL: Nu găsesc fișierele key.pem și cert.pem!");
-}
-
-// CREĂM SERVERUL HTTPS ÎN LOC DE HTTP
-const httpsServer = https.createServer(sslOptions, app);
+// Creăm server HTTP simplu (Render adaugă HTTPS automat)
+const httpServer = createServer(app);
 
 // --- CONECTĂM RUTELE REST ---
 app.use('/api/rest-events', eventRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/stats', statsRoutes);
 
-// --- SILVER CHALLENGE: WEBSOCKETS & NoSQL CHAT ---
-// Ne conectăm la baza de date MongoDB pentru chat
-connectMongo();
+// Comentăm TEMPORAR MongoDB pentru a permite deploy-ul inițial
+// connectMongo();
 
-const io = new Server(httpsServer, { cors: { origin: '*' } }); // <--- Socket.io pe HTTPS
+// Socket.io se conectează la noul httpServer
+// --- SILVER CHALLENGE: WEBSOCKETS & NoSQL CHAT ---
+// Temporarily suspended MongoDB connection for initial deployment
+// connectMongo();
+
+// Connect Socket.io to the new httpServer
+const io = new Server(httpServer, { cors: { origin: '*' } });
+
+
 io.on('connection', async (socket) => {
     console.log(`🔌 Client connected via WebSockets: ${socket.id}`);
 
@@ -515,17 +512,18 @@ async function startServer() {
     await apolloServer.start();
     apolloServer.applyMiddleware({ app });
 
-    httpsServer.listen(4000, '0.0.0.0', () => {
-        console.log(`🔒 SECURE HTTPS GraphQL Server ready at https://0.0.0.0:4000${apolloServer.graphqlPath}`);
-        console.log(`🔒 SECURE HTTPS REST API ready at https://0.0.0.0:4000/api/rest-events`);
-        console.log(`🔌 SECURE WebSockets ready on port 4000 (Network accessible)`);
+    // Preluăm portul setat de Render sau folosim 4000 local
+    const PORT = process.env.PORT || 4000;
+
+    httpServer.listen(PORT, '0.0.0.0', () => {
+        console.log(`🚀 Server running dynamically on port ${PORT}`);
+        console.log(`📡 GraphQL API ready at path: ${apolloServer.graphqlPath}`);
+        console.log(`🔌 WebSockets connection available`);
     });
 }
 
-// SOLUȚIA PENTRU EROAREA DE JEST: Pornim GraphQL-ul și serverul web DOAR dacă nu suntem în modul test.
 if (process.env.NODE_ENV !== 'test') {
     startServer();
 }
 
-// EXPORTAM PENTRU TESTELE JEST
 export default app;
