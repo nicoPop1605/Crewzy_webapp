@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/events")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 
 public class EventController {
 
@@ -45,4 +45,14 @@ public class EventController {
     }
 
 
+
+    @PostMapping("/{eventId}/join/{userId}")
+    public Event joinEvent(@PathVariable Long eventId, @PathVariable Long userId) {
+        return service.addParticipant(eventId, userId);
+    }
+
+    @PostMapping("/{eventId}/leave/{userId}")
+    public Event leaveEvent(@PathVariable Long eventId, @PathVariable Long userId) {
+        return service.removeParticipant(eventId, userId);
+    }
 }

@@ -17,11 +17,10 @@ import { io } from 'socket.io-client';
 import { Plus, Users, UserCheck, Zap, ChevronLeft, ChevronRight, Bell, Search, CheckCircle, HelpCircle, LayoutGrid, List as ListIcon, Shield } from 'lucide-react';
 
 // --- DEFINIM API_URL O SINGURĂ DATĂ GLOBAL ---
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+const API_URL = 'http://localhost:4000';
 
 // Conexiunea WebSocket pentru Silver Challenge
-const socket = io(API_URL);
-
+const socket = io('http://127.0.0.1:4000');
 let globalMyEvents: MyEvent[] = [
     {
         id: '1', title: 'Team Lunch', date: '2026-03-20', time: '12:00 PM', location: 'The Velvet Lounge', locationType: 'text', visibility: 'all-friends', description: 'Monthly team lunch gathering', color: 'bg-purple-500',

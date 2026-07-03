@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/users")
-@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
+@CrossOrigin(origins = "*", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 public class UserController {
 
     private final UserRepository repo;
@@ -24,7 +24,7 @@ public class UserController {
         return repo.findAll();
     }
 
-    @PostMapping
+    @PostMapping("/register")
     public User createUser(@RequestBody User user) {
         if (user.getFriends() == null) {
             user.setFriends(new ArrayList<>());
@@ -33,6 +33,13 @@ public class UserController {
             user.setPendingRequests(new ArrayList<>());
         }
         return repo.save(user);
+    }
+
+    @GetMapping("/login")
+    public ResponseEntity<?> login(@RequestParam String email) {
+        return repo.findByEmail(email)
+                .map(ResponseEntity::ok) // Returnează obiectul User cu ID dacă e găsit
+                .orElse(ResponseEntity.status(404).body(null)); // Returnează 404 dacă nu există
     }
 
     // 1. Trimite cererea

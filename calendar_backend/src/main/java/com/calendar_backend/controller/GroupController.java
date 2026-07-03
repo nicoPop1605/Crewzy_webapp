@@ -11,8 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/groups")
-@CrossOrigin(origins = "http://localhost:3000")
-public class GroupController {
+@CrossOrigin(origins = "*", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})public class GroupController {
 
     private final GroupRepository groupRepository;
     private final UserRepository userRepository;
@@ -69,4 +68,17 @@ public class GroupController {
     }
 
 
+    // 6. Actualizează un grup (necesar pentru Leave și Edit)
+    @PutMapping("/{id}")
+    public ResponseEntity<Group> updateGroup(@PathVariable Long id, @RequestBody Group groupDetails) {
+        return groupRepository.findById(id)
+                .map(group -> {
+                    group.setName(groupDetails.getName());
+                    group.setMembers(groupDetails.getMembers());
+                    group.setAdminId(groupDetails.getAdminId());
+                    Group updatedGroup = groupRepository.save(group);
+                    return ResponseEntity.ok(updatedGroup);
+                })
+                .orElse(ResponseEntity.notFound().build());
+    }
 }

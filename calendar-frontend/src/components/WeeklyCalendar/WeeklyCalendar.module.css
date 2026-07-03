@@ -1,107 +1,50 @@
-.calendarContainer {
-    display: flex;
-    border: 1px solid #ccc;
-    height: 800px;
-    font-family: Arial, sans-serif;
+.calendarWrapper { padding: 10px; }
+
+.navHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.monthName { font-weight: 700; font-size: 1.2rem; color: var(--text-main); }
+.navBtn { background: var(--glass-bg); border: 1px solid var(--glass-border); padding: 8px 12px; border-radius: 12px; cursor: pointer; }
+
+.datePicker { display: flex; gap: 12px; overflow-x: auto; padding: 10px 5px 20px; scrollbar-width: none; }
+.dateBtn {
+    min-width: 55px; height: 80px; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 18px; cursor: pointer; transition: 0.3s;
 }
 
-.hoursColumn {
-    width: 50px;
-    border-right: 1px solid #ccc;
-    position: relative;
-    background-color: #f7f7f7;
+.activeDate {
+    background: white !important;
+    border-color: white;
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
-.dayColumn {
-    flex: 1;
-    border-left: 1px solid #ccc;
-    position: relative;
-    overflow-y: scroll;
-    height: 100%;
-    background-color: #fff;
-}
+.activeDate .dateLabel { color: var(--primary); }
 
-.dayHeader {
-    text-align: center;
-    font-weight: bold;
-    position: sticky;
-    top: 0;
-    background-color: #f0f0f0;
-    border-bottom: 1px solid #ccc;
-    padding: 5px 0;
-    z-index: 2;
-}
+.dayLabel { font-size: 0.7rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600; }
+.dateLabel { font-size: 1.2rem; font-weight: 800; }
 
-.hourLine {
-    height: 60px;
-    border-bottom: 1px solid #eee;
-    font-size: 10px;
-    text-align: right;
-    padding-right: 2px;
-}
-
-.eventBlock {
-    position: absolute;
-    left: 5px;
-    right: 5px;
-    border-radius: 6px;
-    padding: 4px 2px;
-    font-size: 12px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-    transition: transform 0.1s;
-}
-
-.eventBlock:hover {
-    transform: scale(1.02);
-}
-
-.eventNormal {
-    background-color: #add8e6;
-    border: 1px solid #333;
-}
-
-.eventOverlap {
-    background-color: #ffcccc;
-    border: 1px solid #b00000;
-}
-
-.time {
-    font-size: 10px;
-    color: #333;
-}
-
-.buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2px;
-}
-
-.buttons button {
-    font-size: 10px;
-    padding: 1px 3px;
-    cursor: pointer;
-}
 .eventCard {
-    background: #e3f2fd;
-    border-left: 4px solid #2196f3; /* Linie de accent */
-    border-radius: 6px;
-    padding: 8px;
-    margin-bottom: 5px;
-    transition: transform 0.2s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--glass-border);
+    padding: 20px; border-radius: 22px; margin-bottom: 15px;
+    display: flex; flex-direction: column; gap: 12px;
 }
 
-.eventCard:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.eventInfo { display: flex; align-items: center; gap: 15px; }
+
+/* Iconiță în loc de emoji - cerc mic colorat */
+.eventEmoji {
+    width: 12px; height: 12px; background: var(--primary);
+    border-radius: 50%; box-shadow: 0 0 10px var(--primary);
 }
 
-.groupEvent {
-    background: #e8f5e9;
-    border-left: 4px solid #4caf50;
-}
+.eventTitle { font-weight: 700; font-size: 1.05rem; }
+.eventTime { color: var(--text-muted); font-size: 0.85rem; font-weight: 500; }
+
+.actionsGroup { display: flex; gap: 10px; padding-top: 10px; border-top: 1px solid rgba(0,0,0,0.05); }
+
+.joinBtn { background: var(--primary); color: white; border: none; padding: 8px 18px; border-radius: 12px; font-weight: 600; cursor: pointer; }
+.leaveBtn { background: white; color: var(--text-main); border: 1px solid var(--glass-border); padding: 8px 18px; border-radius: 12px; font-weight: 600; cursor: pointer; }

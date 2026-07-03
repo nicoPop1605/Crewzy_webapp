@@ -1,22 +1,26 @@
 import React, { useState, useEffect } from "react";
+import "./App.css";
 import AddEventForm from "./components/AddEventForm/AddEventForm";
 import WeeklyCalendar from "./components/WeeklyCalendar/WeeklyCalendar";
 import CreateGroupForm from "./components/CreateGroupForm/CreateGroupForm";
-import Modal from "./components/Modal/Modal"; // Presupunând că ai creat componenta Modal
+import Modal from "./components/Modal/Modal";
 
 function App() {
+    // 1. Toate stările necesare (Fixează erorile de 'not defined')
     const [events, setEvents] = useState([]);
-    const [users, setUsers] = useState([]);
+    const [users, setUsers] = useState([]); // Rezolvă eroarea de la linia 84 și 150
     const [currentUser, setCurrentUser] = useState(null);
-    const [editingEvent, setEditingEvent] = useState(null);
     const [groups, setGroups] = useState([]);
 
-    // Stări pentru Navigare și UI
-    const [activeView, setActiveView] = useState("calendar"); // calendar, friends, groups
+    const [activeView, setActiveView] = useState("calendar");
+    const [editingEvent, setEditingEvent] = useState(null);
+    const [editingGroup, setEditingGroup] = useState(null);
+    const [preselectedDate, setPreselectedDate] = useState("");
+
     const [isEventModalOpen, setIsEventModalOpen] = useState(false);
     const [isGroupModalOpen, setIsGroupModalOpen] = useState(false);
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+    // 2. Funcția de încărcare date
     const refreshAllData = async () => {
         try {
             const [evRes, userRes, groupRes] = await Promise.all([
@@ -24,7 +28,6 @@ function App() {
                 fetch("http://localhost:8080/users"),
                 fetch("http://localhost:8080/groups")
             ]);
-
             const evData = await evRes.json();
             const userData = await userRes.json();
             const groupData = await groupRes.json();
@@ -33,21 +36,25 @@ function App() {
             setUsers(Array.isArray(userData) ? userData : []);
             setGroups(Array.isArray(groupData) ? groupData : []);
 
-            if (currentUser) {
-                const updatedMe = userData.find(u => u.id === currentUser.id);
-                if (updatedMe) setCurrentUser(updatedMe);
-            } else if (userData.length > 0) {
+            if (userData.length > 0 && !currentUser) {
                 setCurrentUser(userData[0]);
             }
-        } catch (err) {
-            console.error("Error loading data:", err);
+        } catch (err) { console.error("Error loading data:", err); }
+    };
+
+    useEffect(() => { refreshAllData(); }, []);
+
+    // 3. Logica de Schimbare Cont (Switch Account)
+    const handleSwitchAccount = (userId) => {
+        const newUser = users.find(u => u.id === parseInt(userId));
+        if (newUser) {
+            setCurrentUser(newUser);
+            setActiveView("calendar");
+            refreshAllData();
         }
     };
 
-    useEffect(() => {
-        refreshAllData();
-    }, []);
-
+    // 4. Funcția de Creare Utilizator (Rezolvă eroarea de la linia 157)
     const handleCreateUser = async () => {
         const name = prompt("Username:");
         const email = prompt("Email:");
@@ -58,413 +65,215 @@ function App() {
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({name, email}),
             });
-            await res.json();
-            refreshAllData();
-        } catch (err) {
-            alert("Error creating user");
-        }
-    };
-
-    const handleRequestFriend = async () => {
-        const friendName = prompt("Username:");
-        if (!friendName || !currentUser) return;
-        try {
-            const res = await fetch(`http://localhost:8080/users/${currentUser.id}/request-friend?friendName=${encodeURIComponent(friendName)}`, {method: "POST"});
-            if (res.ok) alert("Request sent!");
-            else alert("Error on sending.");
-        } catch (err) {
-            alert("Network error!");
-        }
-    };
-
-    const handleResponse = async (requesterId, action) => {
-        try {
-            const res = await fetch(`http://localhost:8080/users/${currentUser.id}/${action}/${requesterId}`, {method: "POST"});
             if (res.ok) refreshAllData();
+        } catch (err) { alert("Error creating user"); }
+    };
+
+    // 5. Logica Leave Group (Necesită PUT în Backend)
+    const handleLeaveGroup = async (group) => {
+        if (group.adminId === currentUser.id) {
+            alert("Administratorii nu pot părăsi grupul. Șterge hub-ul.");
+            return;
+        }
+        if (!window.confirm(`Vrei să părăsești hub-ul ${group.name}?`)) return;
+
+        const updatedMembers = group.members
+            .filter(m => m.id !== currentUser.id)
+            .map(m => ({ id: m.id }));
+
+        try {
+            const res = await fetch(`http://localhost:8080/groups/${group.id}`, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ ...group, members: updatedMembers }),
+            });
+            if (res.ok) await refreshAllData();
+            else alert("Eroare Server: Verifică @PutMapping în Java");
+        } catch (err) { alert("Network Error!"); }
+    };
+
+    const handleDeleteGroup = async (groupId) => {
+        if (!window.confirm("Ștergi Hub-ul definitiv?")) return;
+        try {
+            await fetch(`http://localhost:8080/groups/${groupId}`, { method: "DELETE" });
+            refreshAllData();
+        } catch (err) { alert("Network Error la ștergere."); }
+    };
+
+    const handleDeleteEvent = async (eventId) => {
+        // Confirmare pentru a evita ștergerile accidentale
+        if (!window.confirm("Sigur vrei să ștergi acest plan?")) return;
+
+        try {
+            const res = await fetch(`http://localhost:8080/events/${eventId}`, {
+                method: "DELETE",
+            });
+
+            if (res.ok) {
+                // Reîncărcăm datele de la server pentru a actualiza calendarul
+                await refreshAllData();
+            } else {
+                const errorText = await res.text();
+                alert("Eroare la ștergere: " + errorText);
+            }
         } catch (err) {
-            alert("Processing error.");
+            console.error("Network Error:", err);
+            alert("Eroare de rețea! Verifică dacă backend-ul rulează.");
         }
     };
 
     const handleAddOrUpdateEvent = async (eventData) => {
         try {
-            let url = "http://localhost:8080/events";
-            let method = "POST";
-            if (editingEvent) {
-                url += `/${editingEvent.id}`;
-                method = "PUT";
-            }
+            // Determinăm dacă este POST (nou) sau PUT (update)
+            const isUpdate = !!editingEvent;
+            const url = isUpdate
+                ? `http://localhost:8080/events/${editingEvent.id}`
+                : "http://localhost:8080/events";
+
             const res = await fetch(url, {
-                method,
-                headers: {"Content-Type": "application/json"},
+                method: isUpdate ? "PUT" : "POST",
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(eventData),
             });
+
             if (res.ok) {
-                refreshAllData();
+                // 1. Închidem modalul imediat
                 setIsEventModalOpen(false);
+                // 2. Curățăm starea de editare
                 setEditingEvent(null);
+                // 3. Forțăm reîncărcarea listei din backend
+                await refreshAllData();
+            } else {
+                const errorText = await res.text();
+                alert("Eroare server: " + errorText);
             }
         } catch (err) {
-            alert("Error saving event");
+            alert("Network Error! Verifică dacă backend-ul este pornit.");
         }
     };
 
-    const handleDeleteEvent = async (id) => {
+    const handleJoinEvent = async (eventId) => {
         try {
-            await fetch(`http://localhost:8080/events/${id}`, {method: "DELETE"});
-            setEvents(events.filter((e) => e.id !== id));
-        } catch (err) {
-            alert("Delete failed");
-        }
+            const res = await fetch(`http://localhost:8080/events/${eventId}/join/${currentUser.id}`, {
+                method: "POST"
+            });
+            if (res.ok) refreshAllData();
+        } catch (err) { console.error("Join error:", err); }
     };
 
-    const openEditModal = (ev) => {
-        setEditingEvent(ev);
-        setIsEventModalOpen(true);
+    const handleLeaveEvent = async (eventId) => {
+        try {
+            const res = await fetch(`http://localhost:8080/events/${eventId}/leave/${currentUser.id}`, {
+                method: "POST"
+            });
+            if (res.ok) refreshAllData();
+        } catch (err) { console.error("Leave error:", err); }
     };
+
+
 
     return (
-        <div style={{
-            minHeight: "100vh",
-            background: "linear-gradient(135deg, #FFDEE9 0%, #B5FFFC 100%)", // Fundal colorat vesel
-            fontFamily: "'Segoe UI', Roboto, sans-serif",
-            paddingBottom: "100px" // Spațiu pentru navigarea de jos pe viitor
-        }}>
-            {/* Header cu efect de sticlă */}
-            <header style={{
-                display: "flex", justifyContent: "space-between", alignItems: "center",
-                padding: "15px 25px", background: "rgba(255, 255, 255, 0.7)",
-                backdropFilter: "blur(12px)", position: "sticky", top: 0, zIndex: 100,
-                boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)", borderBottom: "1px solid rgba(255, 255, 255, 0.3)"
-            }}>
-                <button onClick={() => setIsSidebarOpen(true)} style={{
-                    fontSize: "28px",
-                    background: "none",
-                    border: "none",
-                    cursor: "pointer",
-                    color: "#333"
-                }}>☰
-                </button>
-                <h1 style={{
-                    margin: 0,
-                    fontSize: "1.5rem",
-                    color: "#333",
-                    fontWeight: "800",
-                    letterSpacing: "-1px"
-                }}>Social Calendar 🥂</h1>
-                <select
-                    value={currentUser?.id || ""}
-                    onChange={(e) => {
-                        const selected = users.find(u => u.id === Number(e.target.value));
-                        setCurrentUser(selected);
-                    }}
-                    style={{
-                        padding: "8px",
-                        borderRadius: "12px",
-                        border: "1px solid #ccc",
-                        background: "#fff",
-                        cursor: "pointer",
-                        fontWeight: "bold"
-                    }}
-                >
-                    {users.map(u => <option key={u.id} value={u.id}>{u.name}</option>)}
-                </select>
+        <div className="app-container">
+            <header className="glass-header">
+                <h1>Hangout Planner 🥂</h1>
             </header>
 
-            {/* Meniul Lateral (Sidebar) */}
-            {isSidebarOpen && (
-                <div onClick={() => setIsSidebarOpen(false)} style={{
-                    position: "fixed",
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    background: "rgba(0,0,0,0.3)",
-                    zIndex: 200,
-                    backdropFilter: "blur(4px)"
-                }}>
-                    <aside onClick={e => e.stopPropagation()} style={{
-                        width: "280px",
-                        height: "100%",
-                        background: "rgba(255, 255, 255, 0.95)",
-                        padding: "30px 20px",
-                        boxShadow: "10px 0 30px rgba(0,0,0,0.1)",
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: "20px"
-                    }}>
-                        <button onClick={() => setIsSidebarOpen(false)} style={{
-                            alignSelf: "flex-end",
-                            border: "none",
-                            background: "none",
-                            fontSize: "24px",
-                            cursor: "pointer"
-                        }}>✕
-                        </button>
-                        <h2 style={{color: "#FF6B6B"}}>Meniu 🍕</h2>
-                        <nav style={{display: "flex", flexDirection: "column", gap: "10px"}}>
-                            <button onClick={() => {
-                                setActiveView("calendar");
-                                setIsSidebarOpen(false);
-                            }} style={playfulNavStyle}>🚀 Our plans
-                            </button>
-                            <button onClick={() => {
-                                setActiveView("friends");
-                                setIsSidebarOpen(false);
-                            }} style={playfulNavStyle}>🌈 My people
-                            </button>
-                            <button onClick={() => {
-                                setActiveView("groups");
-                                setIsSidebarOpen(false);
-                            }} style={playfulNavStyle}>🏘️ Hangout Hubs
-                            </button>
-                            <hr style={{opacity: 0.2, margin: "10px 0"}}/>
-                            <button onClick={handleCreateUser} style={{...playfulNavStyle, color: "#4ECDC4"}}>✨ Create
-                                a new account
-                            </button>
-                        </nav>
-                    </aside>
-                </div>
-            )}
+            <main className="view-section">
+                {currentUser ? (
+                    <>
+                        {activeView === "discovery" && <div className="view-animate"><h2>🔎 Discovery</h2><p>Coming Soon...</p></div>}
 
-            {currentUser ? (
-                <main style={{padding: "20px", maxWidth: "900px", margin: "0 auto"}}>
-                    {activeView === "calendar" && (
-                        <div style={{animation: "fadeIn 0.5s ease"}}>
-                            <div style={{display: "flex", justifyContent: "center", marginBottom: "25px"}}>
-                                <button onClick={() => {
-                                    setEditingEvent(null);
-                                    setIsEventModalOpen(true);
-                                }} style={mainFabStyle}>
-                                    🔥 Plan something!
-                                </button>
+                        {activeView === "calendar" && (
+                            <div className="view-animate">
+                                <WeeklyCalendar
+                                    events={events}
+                                    currentUser={currentUser}
+                                    onDelete={handleDeleteEvent}
+                                    onEdit={(ev) => { setEditingEvent(ev); setIsEventModalOpen(true); }}
+                                    onQuickAdd={(date) => { setPreselectedDate(date); setIsEventModalOpen(true); }}
+                                    onJoin={handleJoinEvent}
+                                    onLeave={handleLeaveEvent}
+                                />
                             </div>
-                            <div style={{
-                                background: "rgba(255, 255, 255, 0.6)",
-                                borderRadius: "24px",
-                                padding: "10px",
-                                backdropFilter: "blur(5px)"
-                            }}>
-                                <WeeklyCalendar events={events} onDelete={handleDeleteEvent} onEdit={openEditModal}/>
-                            </div>
-                        </div>
-                    )}
+                        )}
 
-                    {activeView === "friends" && (
-                        <div style={{animation: "fadeIn 0.5s ease"}}>
-                            {currentUser.pendingRequests?.length > 0 && (
-                                <div style={{
-                                    background: "#FFD93D",
-                                    padding: "20px",
-                                    borderRadius: "20px",
-                                    marginBottom: "20px",
-                                    boxShadow: "0 10px 0 #333",
-                                    border: "2px solid #333"
-                                }}>
-                                    <h4 style={{margin: "0 0 15px 0"}}>🔔 Someone wants to hangout:</h4>
-                                    {currentUser.pendingRequests.map(req => (
-                                        <div key={req.id} style={{
-                                            display: "flex",
-                                            justifyContent: "space-between",
-                                            alignItems: "center",
-                                            background: "white",
-                                            padding: "10px",
-                                            borderRadius: "12px",
-                                            marginBottom: "10px"
-                                        }}>
-                                            <span style={{fontWeight: "bold"}}>{req.name}</span>
-                                            <div>
-                                                <button onClick={() => handleResponse(req.id, "accept-friend")} style={{
-                                                    background: "#4CAF50",
-                                                    color: "#fff",
-                                                    border: "none",
-                                                    padding: "8px 15px",
-                                                    borderRadius: "10px",
-                                                    marginRight: "5px",
-                                                    cursor: "pointer"
-                                                }}>Yeah!
-                                                </button>
-                                                <button onClick={() => handleResponse(req.id, "decline-friend")}
-                                                        style={{
-                                                            background: "#f44336",
-                                                            color: "#fff",
-                                                            border: "none",
-                                                            padding: "8px 15px",
-                                                            borderRadius: "10px",
-                                                            cursor: "pointer"
-                                                        }}>Not today
-                                                </button>
+                        {activeView === "social" && (
+                            <div className="view-animate">
+                                <div className="social-card">
+                                    <div className="card-header">
+                                        <h3>Hub-urile Mele 🏘️</h3>
+                                        <button className="btn-add" onClick={() => { setEditingGroup(null); setIsGroupModalOpen(true); }}>+ Nou</button>
+                                    </div>
+                                    <div className="group-list">
+                                        {groups?.filter(g => g.members?.some(m => m.id === currentUser.id)).map(g => (
+                                            <div key={g.id} className="group-row">
+                                                <div className="group-info">
+                                                    <span className="group-name">{g.name}</span>
+                                                    <span className="group-meta">{g.members?.length} participanți</span>
+                                                </div>
+                                                <div className="group-actions">
+                                                    {g.adminId === currentUser.id ? (
+                                                        <>
+                                                            <button onClick={() => { setEditingGroup(g); setIsGroupModalOpen(true); }}>✏️</button>
+                                                            <button className="danger" onClick={() => handleDeleteGroup(g.id)}>🗑️</button>
+                                                        </>
+                                                    ) : (
+                                                        <button className="leave-link" onClick={() => handleLeaveGroup(g)}>Leave</button>
+                                                    )}
+                                                </div>
                                             </div>
-                                        </div>
-                                    ))}
+                                        ))}
+                                    </div>
                                 </div>
-                            )}
-                            <div style={{
-                                background: "white",
-                                padding: "25px",
-                                borderRadius: "24px",
-                                boxShadow: "0 10px 30px rgba(0,0,0,0.05)"
-                            }}>
-                                <div style={{
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    alignItems: "center",
-                                    marginBottom: "20px"
-                                }}>
-                                    <h2 style={{margin: 0}}>👥 Group ({currentUser.friends?.length || 0})</h2>
-                                    <button onClick={handleRequestFriend} style={{
-                                        background: "#4ECDC4",
-                                        color: "white",
-                                        border: "none",
-                                        padding: "10px 20px",
-                                        borderRadius: "15px",
-                                        fontWeight: "bold",
-                                        cursor: "pointer"
-                                    }}>+ Add Friend
-                                    </button>
-                                </div>
-                                {currentUser.friends?.length === 0 ? (
-                                    <p style={{textAlign: "center", color: "#666"}}>It's a bit quiet here... Invite the crew!
-                                         🍕</p>
-                                ) : (
-                                    currentUser.friends?.map(f => (
-                                        <div key={f.id} style={{
-                                            padding: "15px",
-                                            borderBottom: "1px solid #f0f0f0",
-                                            display: "flex",
-                                            alignItems: "center",
-                                            gap: "10px"
-                                        }}>
-                                            <div style={{
-                                                width: "40px",
-                                                height: "40px",
-                                                background: "#FF6B6B",
-                                                borderRadius: "50%",
-                                                display: "flex",
-                                                alignItems: "center",
-                                                justifyContent: "center",
-                                                color: "white",
-                                                fontWeight: "bold"
-                                            }}>{f.name[0]}</div>
-                                            <span style={{fontWeight: "bold"}}>{f.name}</span>
-                                        </div>
-                                    ))
-                                )}
                             </div>
-                        </div>
-                    )}
+                        )}
 
-                    {activeView === "groups" && (
-                        <div style={{
-                            animation: "fadeIn 0.5s ease",
-                            background: "white",
-                            padding: "25px",
-                            borderRadius: "24px"
-                        }}>
-                            <div style={{
-                                display: "flex",
-                                justifyContent: "space-between",
-                                alignItems: "center",
-                                marginBottom: "20px"
-                            }}>
-                                <h2>🏘️ Hub-uri de Hangout</h2>
-                                <button onClick={() => setIsGroupModalOpen(true)} style={{
-                                    background: "#A594F9",
-                                    color: "white",
-                                    border: "none",
-                                    padding: "10px 20px",
-                                    borderRadius: "15px",
-                                    fontWeight: "bold",
-                                    cursor: "pointer"
-                                }}>Creează Hub
-                                </button>
-                            </div>
-                            {groups.map(g => (
-                                <div key={g.id} style={{
-                                    padding: "15px",
-                                    background: "#f8f9fa",
-                                    borderRadius: "15px",
-                                    marginBottom: "10px",
-                                    border: "1px solid #eee"
-                                }}>
-                                    <strong style={{fontSize: "1.1rem"}}>✨ {g.name}</strong>
+                        {activeView === "profile" && (
+                            <div className="view-animate">
+                                <div className="social-card profile-card">
+                                    <div className="profile-avatar">{currentUser.name[0]}</div>
+                                    <h2>{currentUser.name}</h2>
+                                    <div className="switch-section">
+                                        <label>Switch Account 🔄</label>
+                                        <select
+                                            className="modern-select"
+                                            value={currentUser.id}
+                                            onChange={(e) => handleSwitchAccount(e.target.value)}
+                                        >
+                                            {users.map(u => (
+                                                <option key={u.id} value={u.id}>{u.name}</option>
+                                            ))}
+                                        </select>
+                                        <button onClick={handleCreateUser} className="btn-add-account">+ New Account</button>
+                                    </div>
                                 </div>
-                            ))}
-                        </div>
-                    )}
-                </main>
-            ) : (
-                <div style={{textAlign: "center", paddingTop: "100px", color: "#333"}}>
-                    <h1 style={{fontSize: "3rem"}}>🍹 Chill & Plan</h1>
-                    <p>Create a user!</p>
-                </div>
-            )}
+                            </div>
+                        )}
+                    </>
+                ) : <div className="loader">Connecting...</div>}
+            </main>
 
-            {/* MODALELE */}
-            <Modal isOpen={isEventModalOpen} onClose={() => setIsEventModalOpen(false)}
-                   title={editingEvent ? "Edit plan ✏️" : "What's the plan? 🔥"}>
-                <AddEventForm onAdd={handleAddOrUpdateEvent} editingEvent={editingEvent} groups={groups}/>
+            <nav className="bottom-nav">
+                <button className={`nav-item ${activeView === 'discovery' ? 'active' : ''}`} onClick={() => setActiveView("discovery")}>🔎</button>
+                <button className={`nav-item ${activeView === 'calendar' ? 'active' : ''}`} onClick={() => setActiveView("calendar")}>📅</button>
+                <button className="plan-center-btn" onClick={() => { setEditingEvent(null); setPreselectedDate(new Date().toISOString().slice(0, 16)); setIsEventModalOpen(true); }}>🔥</button>
+                <button className={`nav-item ${activeView === 'social' ? 'active' : ''}`} onClick={() => setActiveView("social")}>👥</button>
+                <button className={`nav-item ${activeView === 'profile' ? 'active' : ''}`} onClick={() => setActiveView("profile")}>👤</button>
+            </nav>
+
+            <Modal isOpen={isEventModalOpen} onClose={() => {setIsEventModalOpen(false); setEditingEvent(null);}} title="Plan">
+                <AddEventForm
+                    onAdd={handleAddOrUpdateEvent} // Schimbă de la () => refresh... la funcția de salvare
+                    editingEvent={editingEvent}
+                    preselectedDate={preselectedDate}
+                    groups={groups}
+                />
             </Modal>
-
-            <Modal isOpen={isGroupModalOpen} onClose={() => setIsGroupModalOpen(false)} title="New hangout group 🏘️">
-                <CreateGroupForm currentUser={currentUser} onGroupCreated={() => {
-                    refreshAllData();
-                    setIsGroupModalOpen(false);
-                }}/>
+            <Modal isOpen={isGroupModalOpen} onClose={() => {setIsGroupModalOpen(false); setEditingGroup(null);}} title="Hub">
+                <CreateGroupForm currentUser={currentUser} editingGroup={editingGroup} onGroupCreated={() => { refreshAllData(); setIsGroupModalOpen(false); }} />
             </Modal>
         </div>
     );
-
-// Stiluri ajutătoare
-    const playfulNavStyle = {
-        padding: "15px",
-        textAlign: "left",
-        background: "none",
-        border: "none",
-        fontSize: "1.1rem",
-        cursor: "pointer",
-        borderRadius: "15px",
-        transition: "all 0.2s",
-        fontWeight: "600",
-        color: "#444"
-    };
-    const mainFabStyle = {
-        background: "#FF6B6B",
-        color: "#fff",
-        border: "none",
-        padding: "18px 35px",
-        borderRadius: "50px",
-        fontWeight: "800",
-        fontSize: "1.1rem",
-        cursor: "pointer",
-        boxShadow: "0 10px 20px rgba(255,107,107,0.3)",
-        transition: "transform 0.2s"
-    };
 }
-// Stiluri ajutătoare pentru vibe-ul de "Hang Out"
-const playfulNavStyle = {
-    padding: "15px",
-    textAlign: "left",
-    background: "none",
-    border: "none",
-    fontSize: "1.1rem",
-    cursor: "pointer",
-    borderRadius: "15px",
-    transition: "all 0.2s",
-    fontWeight: "600",
-    color: "#444"
-};
 
-const mainFabStyle = {
-    background: "#FF6B6B",
-    color: "#fff",
-    border: "none",
-    padding: "18px 35px",
-    borderRadius: "50px",
-    fontWeight: "800",
-    fontSize: "1.1rem",
-    cursor: "pointer",
-    boxShadow: "0 10px 20px rgba(255,107,107,0.3)",
-    transition: "transform 0.2s"
-};
 export default App;

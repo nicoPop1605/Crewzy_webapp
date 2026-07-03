@@ -1,0 +1,6 @@
+{
+    "appId": "com.crewzy.app",
+    "appName": "Crewzy",
+    "webDir": "dist",
+    "bundledWebRuntime": false
+}

@@ -1,71 +1,114 @@
 import React, { useState } from "react";
+import styles from "./CreateGroupForm.module.css";
 
-function CreateGroupForm({ currentUser, onGroupCreated }) {
-    const [groupName, setGroupName] = useState("");
-    const [selectedMembers, setSelectedMembers] = useState([]);
-
-    const handleCheckboxChange = (friend) => {
-        if (selectedMembers.find(m => m.id === friend.id)) {
-            setSelectedMembers(selectedMembers.filter(m => m.id !== friend.id));
-        } else {
-            setSelectedMembers([...selectedMembers, friend]);
-        }
-    };
+function CreateGroupForm({ currentUser, onGroupCreated, editingGroup }) {
+    const [step, setStep] = useState(1);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [groupName, setGroupName] = useState(editingGroup ? editingGroup.name : "");
+    const [selectedFriends, setSelectedFriends] = useState(
+        editingGroup ? editingGroup.members.filter(m => m.id !== currentUser.id).map(m => m.id) : []
+    );
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // Construim grupul folosind numele și lista de membri selectați plus creatorul
-        const newGroup = {
-            name: groupName,
-            members: [...selectedMembers, currentUser]
-        };
+        const allMembers = [{ id: currentUser.id }, ...selectedFriends.map(id => ({ id }))];
 
-        const res = await fetch("http://localhost:8080/groups", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(newGroup)
-        });
+        const url = editingGroup ? `http://localhost:8080/groups/${editingGroup.id}` : "http://localhost:8080/groups";
+        const method = editingGroup ? "PUT" : "POST";
 
-        if (res.ok) {
-            alert("Grup creat!");
-            setGroupName("");
-            setSelectedMembers([]);
-            onGroupCreated();
+        try {
+            const response = await fetch(url, {
+                method: method,
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: groupName,
+                    adminId: currentUser.id,
+                    members: allMembers
+                }),
+            });
+            if (response.ok) onGroupCreated();
+        } catch (err) { alert("Eroare!"); }
+    };
+
+    // Funcție pentru a bifa/debifa un prieten
+    const toggleFriend = (friendId) => {
+        if (selectedFriends.includes(friendId)) {
+            setSelectedFriends(selectedFriends.filter(id => id !== friendId));
+        } else {
+            setSelectedFriends([...selectedFriends, friendId]);
         }
     };
 
+
+
     return (
-        <div style={{ border: "1px solid #ccc", padding: "15px", borderRadius: "8px", margin: "10px 0", backgroundColor: "#fff" }}>
-            <h3>Creează un Grup Nou</h3>
+        <div className={styles.container}>
+            {/* Bara de Progres */}
+            <div className={styles.progressContainer}>
+                <div className={styles.progressBar} style={{ width: step === 1 ? "50%" : "100%" }}></div>
+            </div>
+
             <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    placeholder="Nume Grup"
-                    value={groupName}
-                    onChange={(e) => setGroupName(e.target.value)}
-                    required
-                    style={{ marginBottom: "10px", padding: "5px", width: "100%" }}
-                />
-                <h4>Invită prieteni:</h4>
-                <div style={{ maxHeight: "150px", overflowY: "auto", marginBottom: "10px", border: "1px solid #eee", padding: "5px" }}>
-                    {/* Filtrare: Afișăm doar prietenii utilizatorului logat */}
-                    {currentUser.friends && currentUser.friends.length > 0 ? (
-                        currentUser.friends.map(friend => (
-                            <div key={friend.id} style={{ marginBottom: "5px" }}>
-                                <input
-                                    type="checkbox"
-                                    checked={selectedMembers.some(m => m.id === friend.id)}
-                                    onChange={() => handleCheckboxChange(friend)}
-                                /> {friend.name}
-                            </div>
-                        ))
-                    ) : (
-                        <p style={{ fontSize: "0.9em", color: "#666" }}>Nu ai niciun prieten adăugat încă.</p>
-                    )}
-                </div>
-                <button type="submit" disabled={!groupName} style={{ cursor: "pointer" }}>
-                    Creează grupul
-                </button>
+                {step === 1 && (
+                    <div className={styles.stepAnimate}>
+                        <label className={styles.label}>Cum se numește Hub-ul? 🏘️</label>
+                        <input
+                            type="text"
+                            placeholder="Ex: Echipa de Fotbal / Family"
+                            value={groupName}
+                            onChange={(e) => setGroupName(e.target.value)}
+                            className={styles.input}
+                            autoFocus
+                        />
+                        <button
+                            type="button"
+                            onClick={() => setStep(2)}
+                            disabled={!groupName.trim()}
+                            className={styles.button}
+                            style={{ marginTop: "10px" }}
+                        >
+                            Continuă la invitații
+                        </button>
+                    </div>
+                )}
+
+                {step === 2 && (
+                    <div className={styles.stepAnimate}>
+                        <label className={styles.label}>Cine face parte din grup? 👥</label>
+                        <div className={styles.friendsList}>
+                            {currentUser.friends && currentUser.friends.length > 0 ? (
+                                currentUser.friends.map(friend => (
+                                    <div
+                                        key={friend.id}
+                                        className={`${styles.friendItem} ${selectedFriends.includes(friend.id) ? styles.selectedFriend : ""}`}
+                                        onClick={() => toggleFriend(friend.id)}
+                                    >
+                                        <span className={styles.avatar}>{friend.name[0]}</span>
+                                        <span className={styles.friendName}>{friend.name}</span>
+                                        <input
+                                            type="checkbox"
+                                            readOnly
+                                            checked={selectedFriends.includes(friend.id)}
+                                        />
+                                    </div>
+                                ))
+                            ) : (
+                                <p className={styles.emptyText}>Nu ai prieteni în listă pentru a-i adăuga.</p>
+                            )}
+                        </div>
+
+                        <div className={styles.buttonRow}>
+                            <button type="button" onClick={() => setStep(1)} className={styles.backBtn}>Înapoi</button>
+                            <button
+                                type="submit"
+                                className={styles.buttonSubmit}
+                                disabled={isSubmitting}
+                            >
+                                {isSubmitting ? "Se creează..." : "Finalizează Hub ✨"}
+                            </button>
+                        </div>
+                    </div>
+                )}
             </form>
         </div>
     );

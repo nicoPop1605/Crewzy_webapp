@@ -23,15 +23,14 @@ public class Event {
     private String description;
     private String location;
 
-    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm")
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime startDateTime;
 
-    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm")
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime endDateTime;
 
     @ManyToOne
-    @JoinColumn(name = "group_id")
-    @JsonIgnore
+    @JoinColumn(name = "group_id", nullable = true)
     private Group group;
 
     @ManyToMany

@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\crewzyweb",
+    "\\crewzyweb\\backend",
+    "\\crewzyweb\\backend\\prisma",
+    "\\crewzyweb\\backend\\prisma\\migrations",
+    "\\crewzyweb\\backend\\src",
+    "\\crewzyweb\\backend\\src\\data",
+    "\\crewzyweb\\backend\\src\\middleware",
+    "\\crewzyweb\\backend\\src\\routes",
+    "\\crewzyweb\\backend\\src\\services"
+  ],
+  "SelectedNode": "\\crewzyweb\\backend\\src\\controllers\\authController.js",
+  "PreviewInSolutionExplorer": false
+}

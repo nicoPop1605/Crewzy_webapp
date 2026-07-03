@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.11.8",
+    "@faker-js/faker": "^8.4.1",
+    "apollo-server-express": "^3.13.0",
+    "cors": "^2.8.6",
+    "express": "^4.22.1",
+    "graphql": "^16.8.1",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "jest": "^30.3.0",
+    "supertest": "^7.2.2"
+  }
+}

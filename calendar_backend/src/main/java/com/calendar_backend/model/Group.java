@@ -31,4 +31,18 @@ public class Group {
     @OneToMany(mappedBy = "group", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Event> events;
+
+    // În Group.java
+
+    private Long adminId; // Câmpul care va stoca ID-ul administratorului
+
+    // Getter pentru adminId
+    public Long getAdminId() {
+        return adminId;
+    }
+
+    // Setter pentru adminId
+    public void setAdminId(Long adminId) {
+        this.adminId = adminId;
+    }
 }

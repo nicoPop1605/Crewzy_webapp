@@ -1,0 +1,1853 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\calendar_project\\WebApp\\CrewzyWeb\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\chatwindow.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\chatwindow.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\pages\\loginpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\pages\\loginpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\pages\\calendarpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\pages\\calendarpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\.env||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\pages\\profilepage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\pages\\profilepage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\pages\\discoverpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\pages\\discoverpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\.env||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\prisma\\schema.prisma||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\prisma\\schema.prisma||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\controllers\\authcontroller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\controllers\\authcontroller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\backend\\server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\backend\\server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\CalendarPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\pages\\CalendarPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\build.gradle||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\android\\app\\build.gradle||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\MainActivity.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\MainActivity.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\res\\layout\\activity_main.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\android\\app\\src\\main\\res\\layout\\activity_main.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatSocketManager.kt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatSocketManager.kt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatActivity.kt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatActivity.kt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\AndroidManifest.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\android\\app\\src\\main\\AndroidManifest.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\res\\layout\\activity_chat.xml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\android\\app\\src\\main\\res\\layout\\activity_chat.xml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\AppDatabase.kt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\AppDatabase.kt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatDao.kt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatDao.kt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatMessageEntity.kt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatMessageEntity.kt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\routes.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\routes.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\App.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\App.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\backend\\src\\routes\\events.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\backend\\src\\routes\\events.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\backend\\coverage\\lcov-report\\backend\\server.js.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\backend\\coverage\\lcov-report\\backend\\server.js.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\crewzyweb.esproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\crewzyweb.esproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\setupTests.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\setupTests.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\Logo.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\components\\Logo.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\eslint.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\eslint.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\BusinessEventPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\pages\\BusinessEventPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\Sidebar.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\components\\Sidebar.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\LoginPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\pages\\LoginPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\HomePage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\pages\\HomePage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\EventCard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\components\\EventCard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\DiscoverPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\pages\\DiscoverPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\FriendsPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\pages\\FriendsPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\ProfilePage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\pages\\ProfilePage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\Calendar.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\components\\Calendar.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\CalendarView.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\components\\CalendarView.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\CalendarHeader.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\components\\CalendarHeader.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\Layout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\components\\Layout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\CreateEventModal.test.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\components\\CreateEventModal.test.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\capacitor.config.json||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\capacitor.config.json||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|d:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\node_modules\\vite\\dist\\client\\env.mjs||{14D17961-FE51-464D-9111-C4AF11D7D99A}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\node_modules\\vite\\dist\\client\\env.mjs||{14D17961-FE51-464D-9111-C4AF11D7D99A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nicoleta\\AppData\\Local\\Temp\\tmp61B8.tmp.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\vercel.json||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\vercel.json||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\routes\\monitor.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\routes\\monitor.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\services\\aimonitor.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\services\\aimonitor.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\routes\\stats.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\routes\\stats.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\middleware\\authmiddleware.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\middleware\\authmiddleware.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\layout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\layout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\sessiontimeout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\sessiontimeout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\gen-cert.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\gen-cert.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\crewzyweb.esproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\crewzyweb.esproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\data\\mongoclient.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\data\\mongoclient.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\routes\\auth.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\routes\\auth.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\seed.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\seed.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\controllers\\eventscontroller.test.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\controllers\\eventscontroller.test.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\data\\prismamock.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\data\\prismamock.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\tests\\events.integration.skip.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\tests\\events.integration.skip.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\routes\\events.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\routes\\events.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\controllers\\eventscontroller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\controllers\\eventscontroller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\data\\memorystore.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\data\\memorystore.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\utils\\offlinesync.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\utils\\offlinesync.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\vite-env.d.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\vite-env.d.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\playwright-report\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\playwright-report\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\playwright.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\playwright.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\tests\\crewzy-scenarios.spec.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\tests\\crewzy-scenarios.spec.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\createeventmodal.test.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\createeventmodal.test.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\setuptests.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\setuptests.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\eventstable.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\eventstable.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\styles\\theme.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\styles\\theme.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\styles\\fonts.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\styles\\fonts.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\styles\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\styles\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\eslint.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\eslint.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\postcss.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\postcss.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\logo.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\logo.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\managemembersmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\managemembersmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\myeventcard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\myeventcard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\sidebar.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\sidebar.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\pages\\homepage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\pages\\homepage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\pages\\friendspage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\pages\\friendspage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\tsconfig.node.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\tsconfig.node.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\eventdetailsmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\eventdetailsmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\friendcard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\friendcard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\groupcard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\groupcard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\tsconfig.app.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\tsconfig.app.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\eventdetailmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\eventdetailmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\eventcard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\eventcard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\creategroupmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\creategroupmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\createeventmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\createeventmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\calendarview.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\calendarview.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\addfriendmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\addfriendmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\calendarheader.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\calendarheader.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\routes.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\routes.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\calendar.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\calendar.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 100,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 24,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "vercel.json",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\vercel.json",
+              "RelativeDocumentMoniker": "crewzyweb\\vercel.json",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\vercel.json",
+              "RelativeToolTip": "crewzyweb\\vercel.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-04T10:47:09.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": ".env",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\.env",
+              "RelativeDocumentMoniker": "crewzyweb\\backend\\.env",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\.env",
+              "RelativeToolTip": "crewzyweb\\backend\\.env",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-04T10:00:45.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": ".env",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\.env",
+              "RelativeDocumentMoniker": "crewzyweb\\.env",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\.env",
+              "RelativeToolTip": "crewzyweb\\.env",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-04T00:46:57.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": ".gitignore",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\.gitignore",
+              "RelativeDocumentMoniker": "crewzyweb\\.gitignore",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\.gitignore",
+              "RelativeToolTip": "crewzyweb\\.gitignore",
+              "ViewState": "AgIAABkAAAAAAAAAAADwvxwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-03T23:17:24.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "monitor.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\routes\\monitor.js",
+              "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\routes\\monitor.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\routes\\monitor.js",
+              "RelativeToolTip": "crewzyweb\\backend\\src\\routes\\monitor.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-19T14:36:59.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "aiMonitor.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\services\\aiMonitor.js",
+              "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\services\\aiMonitor.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\services\\aiMonitor.js",
+              "RelativeToolTip": "crewzyweb\\backend\\src\\services\\aiMonitor.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-19T14:35:18.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "stats.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\routes\\stats.js",
+              "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\routes\\stats.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\routes\\stats.js",
+              "RelativeToolTip": "crewzyweb\\backend\\src\\routes\\stats.js",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-19T14:19:58.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "authMiddleware.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\middleware\\authMiddleware.js",
+              "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\middleware\\authMiddleware.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\middleware\\authMiddleware.js",
+              "RelativeToolTip": "crewzyweb\\backend\\src\\middleware\\authMiddleware.js",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-19T13:54:06.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "Layout.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\Layout.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\components\\Layout.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\Layout.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\components\\Layout.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-05-19T10:13:37.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "SessionTimeout.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\SessionTimeout.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\components\\SessionTimeout.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\SessionTimeout.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\components\\SessionTimeout.tsx",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-05-19T09:58:25.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "gen-cert.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\gen-cert.js",
+              "RelativeDocumentMoniker": "crewzyweb\\backend\\gen-cert.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\gen-cert.js",
+              "RelativeToolTip": "crewzyweb\\backend\\gen-cert.js",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAuwAkAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-19T08:57:47.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "crewzyweb.esproj",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\CrewzyWeb\\crewzyweb.esproj",
+              "RelativeDocumentMoniker": "CrewzyWeb\\crewzyweb.esproj",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\CrewzyWeb\\crewzyweb.esproj",
+              "RelativeToolTip": "CrewzyWeb\\crewzyweb.esproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-12T06:12:19.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "activity_main.xml",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\res\\layout\\activity_main.xml",
+              "RelativeDocumentMoniker": "crewzy-mobile\\android\\app\\src\\main\\res\\layout\\activity_main.xml",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\res\\layout\\activity_main.xml",
+              "RelativeToolTip": "crewzy-mobile\\android\\app\\src\\main\\res\\layout\\activity_main.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-05-05T14:22:49.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ChatSocketManager.kt",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatSocketManager.kt",
+              "RelativeDocumentMoniker": "crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatSocketManager.kt",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatSocketManager.kt",
+              "RelativeToolTip": "crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatSocketManager.kt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-05T14:17:51.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AndroidManifest.xml",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\AndroidManifest.xml",
+              "RelativeDocumentMoniker": "crewzy-mobile\\android\\app\\src\\main\\AndroidManifest.xml",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\AndroidManifest.xml",
+              "RelativeToolTip": "crewzy-mobile\\android\\app\\src\\main\\AndroidManifest.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-05-05T14:16:35.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MainActivity.java",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\MainActivity.java",
+              "RelativeDocumentMoniker": "crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\MainActivity.java",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\MainActivity.java",
+              "RelativeToolTip": "crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\MainActivity.java",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001630|",
+              "WhenOpened": "2026-05-05T14:15:27.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "activity_chat.xml",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\res\\layout\\activity_chat.xml",
+              "RelativeDocumentMoniker": "crewzy-mobile\\android\\app\\src\\main\\res\\layout\\activity_chat.xml",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\res\\layout\\activity_chat.xml",
+              "RelativeToolTip": "crewzy-mobile\\android\\app\\src\\main\\res\\layout\\activity_chat.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-05-05T14:07:04.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ChatActivity.kt",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatActivity.kt",
+              "RelativeDocumentMoniker": "crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatActivity.kt",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatActivity.kt",
+              "RelativeToolTip": "crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatActivity.kt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-05T14:01:11.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AppDatabase.kt",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\AppDatabase.kt",
+              "RelativeDocumentMoniker": "crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\AppDatabase.kt",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\AppDatabase.kt",
+              "RelativeToolTip": "crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\AppDatabase.kt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-05T13:59:59.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ChatDao.kt",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatDao.kt",
+              "RelativeDocumentMoniker": "crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatDao.kt",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatDao.kt",
+              "RelativeToolTip": "crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatDao.kt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-05T13:59:12.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ChatMessageEntity.kt",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatMessageEntity.kt",
+              "RelativeDocumentMoniker": "crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatMessageEntity.kt",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatMessageEntity.kt",
+              "RelativeToolTip": "crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatMessageEntity.kt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-05T13:58:14.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "build.gradle",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\build.gradle",
+              "RelativeDocumentMoniker": "crewzy-mobile\\android\\app\\build.gradle",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\build.gradle",
+              "RelativeToolTip": "crewzy-mobile\\android\\app\\build.gradle",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-05T13:52:09.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "tailwind.config.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\tailwind.config.js",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\tailwind.config.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\tailwind.config.js",
+              "RelativeToolTip": "crewzy-mobile\\src\\tailwind.config.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-05T13:51:39.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChatWindow.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\ChatWindow.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\components\\ChatWindow.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\ChatWindow.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\components\\ChatWindow.tsx",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA7wAkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-05-04T17:45:58.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "mongoClient.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\data\\mongoClient.js",
+              "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\data\\mongoClient.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\data\\mongoClient.js",
+              "RelativeToolTip": "crewzyweb\\backend\\src\\data\\mongoClient.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-04T17:23:54.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "auth.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\routes\\auth.js",
+              "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\routes\\auth.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\routes\\auth.js",
+              "RelativeToolTip": "crewzyweb\\backend\\src\\routes\\auth.js",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAuwKAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-04T16:53:58.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "authController.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\controllers\\authController.js",
+              "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\controllers\\authController.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\controllers\\authController.js",
+              "RelativeToolTip": "crewzyweb\\backend\\src\\controllers\\authController.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-04T16:53:30.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "seed.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\seed.js",
+              "RelativeDocumentMoniker": "crewzyweb\\backend\\seed.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\seed.js",
+              "RelativeToolTip": "crewzyweb\\backend\\seed.js",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAQwEcAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-04T16:51:12.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "eventsController.test.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\controllers\\eventsController.test.js",
+              "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\controllers\\eventsController.test.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\controllers\\eventsController.test.js",
+              "RelativeToolTip": "crewzyweb\\backend\\src\\controllers\\eventsController.test.js",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAGEAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-04T16:36:45.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "package-lock.json",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\package-lock.json",
+              "RelativeDocumentMoniker": "crewzyweb\\backend\\package-lock.json",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\package-lock.json",
+              "RelativeToolTip": "crewzyweb\\backend\\package-lock.json",
+              "ViewState": "AgIAAE0AAAAAAAAAAABRwFEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-04T16:35:50.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "prismaMock.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\data\\prismaMock.js",
+              "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\data\\prismaMock.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\data\\prismaMock.js",
+              "RelativeToolTip": "crewzyweb\\backend\\src\\data\\prismaMock.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-04T16:35:10.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "crewzyweb.esproj.user",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\crewzyweb.esproj.user",
+              "RelativeDocumentMoniker": "crewzy-mobile\\crewzyweb.esproj.user",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\crewzyweb.esproj.user",
+              "RelativeToolTip": "crewzy-mobile\\crewzyweb.esproj.user",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAowAwAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
+              "WhenOpened": "2026-05-04T15:13:35.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "schema.prisma",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\prisma\\schema.prisma",
+              "RelativeDocumentMoniker": "crewzyweb\\backend\\prisma\\schema.prisma",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\prisma\\schema.prisma",
+              "RelativeToolTip": "crewzyweb\\backend\\prisma\\schema.prisma",
+              "ViewState": "AgIAADkAAAAAAAAAAAAiwEMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-04T14:24:08.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "server.js.html",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\backend\\coverage\\lcov-report\\backend\\server.js.html",
+              "RelativeDocumentMoniker": "crewzy-mobile\\backend\\coverage\\lcov-report\\backend\\server.js.html",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\backend\\coverage\\lcov-report\\backend\\server.js.html",
+              "RelativeToolTip": "crewzy-mobile\\backend\\coverage\\lcov-report\\backend\\server.js.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-28T06:12:51.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "setupTests.ts",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\setupTests.ts",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\setupTests.ts",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\setupTests.ts",
+              "RelativeToolTip": "crewzy-mobile\\src\\setupTests.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-27T20:13:20.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Logo.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\Logo.tsx",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\components\\Logo.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\Logo.tsx",
+              "RelativeToolTip": "crewzy-mobile\\src\\components\\Logo.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-27T20:12:59.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "eslint.config.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\eslint.config.js",
+              "RelativeDocumentMoniker": "crewzy-mobile\\eslint.config.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\eslint.config.js",
+              "RelativeToolTip": "crewzy-mobile\\eslint.config.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-04-27T20:12:40.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "index.html",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\index.html",
+              "RelativeDocumentMoniker": "crewzy-mobile\\index.html",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\index.html",
+              "RelativeToolTip": "crewzy-mobile\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-27T20:12:38.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "index.css",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\index.css",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\index.css",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\index.css",
+              "RelativeToolTip": "crewzy-mobile\\src\\index.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-27T20:10:04.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "main.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\main.tsx",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\main.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\main.tsx",
+              "RelativeToolTip": "crewzy-mobile\\src\\main.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-27T20:09:56.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "App.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\App.tsx",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\App.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\App.tsx",
+              "RelativeToolTip": "crewzy-mobile\\src\\App.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-27T20:09:41.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "BusinessEventPage.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\BusinessEventPage.tsx",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\pages\\BusinessEventPage.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\BusinessEventPage.tsx",
+              "RelativeToolTip": "crewzy-mobile\\src\\pages\\BusinessEventPage.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-27T20:09:02.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "LoginPage.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\LoginPage.tsx",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\pages\\LoginPage.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\LoginPage.tsx",
+              "RelativeToolTip": "crewzy-mobile\\src\\pages\\LoginPage.tsx",
+              "ViewState": "AgIAABcBAAAAAAAAAAAQwCcBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-27T20:01:09.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "tsconfig.json",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\tsconfig.json",
+              "RelativeDocumentMoniker": "crewzy-mobile\\tsconfig.json",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\tsconfig.json",
+              "RelativeToolTip": "crewzy-mobile\\tsconfig.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-27T20:00:56.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "HomePage.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\HomePage.tsx",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\pages\\HomePage.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\HomePage.tsx",
+              "RelativeToolTip": "crewzy-mobile\\src\\pages\\HomePage.tsx",
+              "ViewState": "AgIAAPgAAAAAAAAAAAAAAPoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-27T19:41:39.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "EventCard.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\EventCard.tsx",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\components\\EventCard.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\EventCard.tsx",
+              "RelativeToolTip": "crewzy-mobile\\src\\components\\EventCard.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-27T19:39:11.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "FriendsPage.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\FriendsPage.tsx",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\pages\\FriendsPage.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\FriendsPage.tsx",
+              "RelativeToolTip": "crewzy-mobile\\src\\pages\\FriendsPage.tsx",
+              "ViewState": "AgIAACABAAAAAAAAAAAIwDIBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-27T19:33:51.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ProfilePage.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\ProfilePage.tsx",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\pages\\ProfilePage.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\ProfilePage.tsx",
+              "RelativeToolTip": "crewzy-mobile\\src\\pages\\ProfilePage.tsx",
+              "ViewState": "AgIAANAAAAAAAAAAAAAIwN8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-27T19:29:41.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "DiscoverPage.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\DiscoverPage.tsx",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\pages\\DiscoverPage.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\DiscoverPage.tsx",
+              "RelativeToolTip": "crewzy-mobile\\src\\pages\\DiscoverPage.tsx",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAIwKsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-27T19:27:07.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "CalendarHeader.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\CalendarHeader.tsx",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\components\\CalendarHeader.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\CalendarHeader.tsx",
+              "RelativeToolTip": "crewzy-mobile\\src\\components\\CalendarHeader.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-27T18:39:11.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "CreateEventModal.test.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\CreateEventModal.test.tsx",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\components\\CreateEventModal.test.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\CreateEventModal.test.tsx",
+              "RelativeToolTip": "crewzy-mobile\\src\\components\\CreateEventModal.test.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-27T18:30:38.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "CalendarView.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\CalendarView.tsx",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\components\\CalendarView.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\CalendarView.tsx",
+              "RelativeToolTip": "crewzy-mobile\\src\\components\\CalendarView.tsx",
+              "ViewState": "AgIAAO0AAAAAAAAAAADwvwgBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-27T18:30:26.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Calendar.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\Calendar.tsx",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\components\\Calendar.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\Calendar.tsx",
+              "RelativeToolTip": "crewzy-mobile\\src\\components\\Calendar.tsx",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAgwJIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-27T18:30:23.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Sidebar.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\Sidebar.tsx",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\components\\Sidebar.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\Sidebar.tsx",
+              "RelativeToolTip": "crewzy-mobile\\src\\components\\Sidebar.tsx",
+              "ViewState": "AgIAADMAAAAAAAAAAAAQwEMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-27T18:26:20.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Layout.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\Layout.tsx",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\components\\Layout.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\Layout.tsx",
+              "RelativeToolTip": "crewzy-mobile\\src\\components\\Layout.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-27T13:01:25.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "routes.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\routes.tsx",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\routes.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\routes.tsx",
+              "RelativeToolTip": "crewzy-mobile\\src\\routes.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-27T12:55:58.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "events.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\backend\\src\\routes\\events.js",
+              "RelativeDocumentMoniker": "crewzy-mobile\\backend\\src\\routes\\events.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\backend\\src\\routes\\events.js",
+              "RelativeToolTip": "crewzy-mobile\\backend\\src\\routes\\events.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-04-27T12:53:56.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "capacitor.config.json",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\capacitor.config.json",
+              "RelativeDocumentMoniker": "crewzy-mobile\\capacitor.config.json",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\capacitor.config.json",
+              "RelativeToolTip": "crewzy-mobile\\capacitor.config.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-27T12:52:10.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "server.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\backend\\server.js",
+              "RelativeDocumentMoniker": "crewzy-mobile\\backend\\server.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\backend\\server.js",
+              "RelativeToolTip": "crewzy-mobile\\backend\\server.js",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAcwJgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-04-27T12:46:44.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CalendarPage.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\CalendarPage.tsx",
+              "RelativeDocumentMoniker": "crewzy-mobile\\src\\pages\\CalendarPage.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\CalendarPage.tsx",
+              "RelativeToolTip": "crewzy-mobile\\src\\pages\\CalendarPage.tsx",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAcwIQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-27T12:45:27.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "events.integration.skip.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\tests\\events.integration.skip.js",
+              "RelativeDocumentMoniker": "crewzyweb\\backend\\tests\\events.integration.skip.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\tests\\events.integration.skip.js",
+              "RelativeToolTip": "crewzyweb\\backend\\tests\\events.integration.skip.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-04-27T10:42:47.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "events.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\routes\\events.js",
+              "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\routes\\events.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\routes\\events.js",
+              "RelativeToolTip": "crewzyweb\\backend\\src\\routes\\events.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-04-27T10:37:45.58Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "eventsController.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\controllers\\eventsController.js",
+              "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\controllers\\eventsController.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\controllers\\eventsController.js",
+              "RelativeToolTip": "crewzyweb\\backend\\src\\controllers\\eventsController.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-04-27T10:36:16.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "memoryStore.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\data\\memoryStore.js",
+              "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\data\\memoryStore.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\data\\memoryStore.js",
+              "RelativeToolTip": "crewzyweb\\backend\\src\\data\\memoryStore.js",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAswAYAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-04-27T10:34:24.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "offlineSync.ts",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\utils\\offlineSync.ts",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\utils\\offlineSync.ts",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\utils\\offlineSync.ts",
+              "RelativeToolTip": "crewzyweb\\src\\utils\\offlineSync.ts",
+              "ViewState": "AgIAAA4AAAAAAAAAAADwvx8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-21T05:46:21.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "server.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\server.js",
+              "RelativeDocumentMoniker": "crewzyweb\\backend\\server.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\server.js",
+              "RelativeToolTip": "crewzyweb\\backend\\server.js",
+              "ViewState": "AgIAANYAAAAAAAAAAAAAAPAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-04-21T05:42:54.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "package.json",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\package.json",
+              "RelativeDocumentMoniker": "crewzyweb\\backend\\package.json",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\package.json",
+              "RelativeToolTip": "crewzyweb\\backend\\package.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-21T05:41:29.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "package-lock.json",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\package-lock.json",
+              "RelativeDocumentMoniker": "crewzyweb\\package-lock.json",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\package-lock.json",
+              "RelativeToolTip": "crewzyweb\\package-lock.json",
+              "ViewState": "AgIAALgAAAAAAAAAAAAYwDoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-21T05:40:49.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "vite-env.d.ts",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\vite-env.d.ts",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\vite-env.d.ts",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\vite-env.d.ts",
+              "RelativeToolTip": "crewzyweb\\src\\vite-env.d.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-06T11:47:11.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "index.html",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\playwright-report\\index.html",
+              "RelativeDocumentMoniker": "crewzyweb\\playwright-report\\index.html",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\playwright-report\\index.html",
+              "RelativeToolTip": "crewzyweb\\playwright-report\\index.html",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAwAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-02T15:49:36.902Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "index.html",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\index.html",
+              "RelativeDocumentMoniker": "crewzyweb\\index.html",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\index.html",
+              "RelativeToolTip": "crewzyweb\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-02T15:48:05.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "playwright.config.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\playwright.config.js",
+              "RelativeDocumentMoniker": "crewzyweb\\playwright.config.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\playwright.config.js",
+              "RelativeToolTip": "crewzyweb\\playwright.config.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-30T15:07:06.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "crewzy-scenarios.spec.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\tests\\crewzy-scenarios.spec.js",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\tests\\crewzy-scenarios.spec.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\tests\\crewzy-scenarios.spec.js",
+              "RelativeToolTip": "crewzyweb\\src\\tests\\crewzy-scenarios.spec.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-30T14:49:46.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "CreateEventModal.test.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\CreateEventModal.test.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\components\\CreateEventModal.test.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\CreateEventModal.test.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\components\\CreateEventModal.test.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-23T19:41:57.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "setupTests.ts",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\setupTests.ts",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\setupTests.ts",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\setupTests.ts",
+              "RelativeToolTip": "crewzyweb\\src\\setupTests.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-23T19:37:38.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "EventsTable.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\EventsTable.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\components\\EventsTable.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\EventsTable.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\components\\EventsTable.tsx",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAiwJIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-23T11:50:18.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "vite.config.ts",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\vite.config.ts",
+              "RelativeDocumentMoniker": "crewzyweb\\vite.config.ts",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\vite.config.ts",
+              "RelativeToolTip": "crewzyweb\\vite.config.ts",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAYwCAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T15:49:04.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "theme.css",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\styles\\theme.css",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\styles\\theme.css",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\styles\\theme.css",
+              "RelativeToolTip": "crewzyweb\\src\\styles\\theme.css",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-21T15:08:27.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "fonts.css",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\styles\\fonts.css",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\styles\\fonts.css",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\styles\\fonts.css",
+              "RelativeToolTip": "crewzyweb\\src\\styles\\fonts.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-21T15:08:22.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "index.css",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\styles\\index.css",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\styles\\index.css",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\styles\\index.css",
+              "RelativeToolTip": "crewzyweb\\src\\styles\\index.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-21T15:08:20.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "tailwind.config.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\tailwind.config.js",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\tailwind.config.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\tailwind.config.js",
+              "RelativeToolTip": "crewzyweb\\src\\tailwind.config.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-21T15:06:16.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "eslint.config.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\eslint.config.js",
+              "RelativeDocumentMoniker": "crewzyweb\\eslint.config.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\eslint.config.js",
+              "RelativeToolTip": "crewzyweb\\eslint.config.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-21T15:03:51.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "postcss.config.js",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\postcss.config.js",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\postcss.config.js",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\postcss.config.js",
+              "RelativeToolTip": "crewzyweb\\src\\postcss.config.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-21T15:00:33.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "index.css",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\index.css",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\index.css",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\index.css",
+              "RelativeToolTip": "crewzyweb\\src\\index.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-21T14:38:37.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "Logo.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\Logo.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\components\\Logo.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\Logo.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\components\\Logo.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T14:32:48.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
+              "Title": "ManageMembersModal.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\ManageMembersModal.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\components\\ManageMembersModal.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\ManageMembersModal.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\components\\ManageMembersModal.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T14:32:45.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "MyEventCard.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\MyEventCard.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\components\\MyEventCard.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\MyEventCard.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\components\\MyEventCard.tsx",
+              "ViewState": "AgIAADYAAAAAAAAAAAAYwAAAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T14:32:24.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 93,
+              "Title": "Sidebar.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\Sidebar.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\components\\Sidebar.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\Sidebar.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\components\\Sidebar.tsx",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAwAEAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T14:32:17.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 94,
+              "Title": "package.json",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\package.json",
+              "RelativeDocumentMoniker": "crewzyweb\\package.json",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\package.json",
+              "RelativeToolTip": "crewzyweb\\package.json",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-21T14:22:10.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "env.mjs",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\node_modules\\vite\\dist\\client\\env.mjs",
+              "RelativeDocumentMoniker": "crewzyweb\\node_modules\\vite\\dist\\client\\env.mjs",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\node_modules\\vite\\dist\\client\\env.mjs",
+              "RelativeToolTip": "crewzyweb\\node_modules\\vite\\dist\\client\\env.mjs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-21T14:10:47.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 95,
+              "Title": "main.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\main.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\main.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\main.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\main.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T14:01:42.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProfilePage.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\ProfilePage.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\pages\\ProfilePage.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\ProfilePage.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\pages\\ProfilePage.tsx",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAwAIAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T13:52:07.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 96,
+              "Title": "HomePage.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\HomePage.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\pages\\HomePage.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\HomePage.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\pages\\HomePage.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T13:51:55.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginPage.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\LoginPage.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\pages\\LoginPage.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\LoginPage.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\pages\\LoginPage.tsx",
+              "ViewState": "AgIAAE0BAAAAAAAAAAAAAGgBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T13:51:53.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 97,
+              "Title": "FriendsPage.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\FriendsPage.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\pages\\FriendsPage.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\FriendsPage.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\pages\\FriendsPage.tsx",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAAwNEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T13:51:51.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DiscoverPage.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\DiscoverPage.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\pages\\DiscoverPage.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\DiscoverPage.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\pages\\DiscoverPage.tsx",
+              "ViewState": "AgIAAMYAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T13:51:23.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CalendarPage.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\CalendarPage.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\pages\\CalendarPage.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\CalendarPage.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\pages\\CalendarPage.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T13:41:29.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 98,
+              "Title": "tsconfig.node.json",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\tsconfig.node.json",
+              "RelativeDocumentMoniker": "crewzyweb\\tsconfig.node.json",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\tsconfig.node.json",
+              "RelativeToolTip": "crewzyweb\\tsconfig.node.json",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-21T13:31:00.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "tmp61B8.tmp.tsx",
+              "DocumentMoniker": "C:\\Users\\Nicoleta\\AppData\\Local\\Temp\\tmp61B8.tmp.tsx",
+              "ToolTip": "C:\\Users\\Nicoleta\\AppData\\Local\\Temp\\tmp61B8.tmp.tsx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T13:27:08.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 99,
+              "Title": "EventDetailsModal.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\EventDetailsModal.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\components\\EventDetailsModal.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\EventDetailsModal.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\components\\EventDetailsModal.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T13:22:40.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 100,
+              "Title": "FriendCard.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\FriendCard.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\components\\FriendCard.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\FriendCard.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\components\\FriendCard.tsx",
+              "ViewState": "AgIAACsAAAAAAAAAAAAowFUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T13:22:38.231Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 101,
+              "Title": "GroupCard.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\GroupCard.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\components\\GroupCard.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\GroupCard.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\components\\GroupCard.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T13:22:10.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 102,
+              "Title": "tsconfig.app.json",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\tsconfig.app.json",
+              "RelativeDocumentMoniker": "crewzyweb\\tsconfig.app.json",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\tsconfig.app.json",
+              "RelativeToolTip": "crewzyweb\\tsconfig.app.json",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-21T13:20:28.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 103,
+              "Title": "tsconfig.json",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\tsconfig.json",
+              "RelativeDocumentMoniker": "crewzyweb\\tsconfig.json",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\tsconfig.json",
+              "RelativeToolTip": "crewzyweb\\tsconfig.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-21T13:20:20.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 104,
+              "Title": "EventDetailModal.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\EventDetailModal.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\components\\EventDetailModal.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\EventDetailModal.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\components\\EventDetailModal.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T13:17:56.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 105,
+              "Title": "EventCard.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\EventCard.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\components\\EventCard.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\EventCard.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\components\\EventCard.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T13:17:55.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 106,
+              "Title": "CreateGroupModal.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\CreateGroupModal.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\components\\CreateGroupModal.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\CreateGroupModal.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\components\\CreateGroupModal.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T13:17:52.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 107,
+              "Title": "CreateEventModal.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\CreateEventModal.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\components\\CreateEventModal.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\CreateEventModal.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\components\\CreateEventModal.tsx",
+              "ViewState": "AgIAAOUAAAAAAAAAAAAowPIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T13:17:02.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 108,
+              "Title": "CalendarView.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\CalendarView.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\components\\CalendarView.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\CalendarView.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\components\\CalendarView.tsx",
+              "ViewState": "AgIAANQAAAAAAAAAAADgv6cAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T13:16:53.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 109,
+              "Title": "AddFriendModal.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\AddFriendModal.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\components\\AddFriendModal.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\AddFriendModal.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\components\\AddFriendModal.tsx",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T13:16:44.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 110,
+              "Title": "CalendarHeader.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\CalendarHeader.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\components\\CalendarHeader.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\CalendarHeader.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\components\\CalendarHeader.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T13:14:37.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 111,
+              "Title": "routes.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\routes.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\routes.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\routes.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\routes.tsx",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T12:28:34.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 112,
+              "Title": "App.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\App.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\App.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\App.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\App.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T12:28:30.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 113,
+              "Title": "Calendar.tsx",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\Calendar.tsx",
+              "RelativeDocumentMoniker": "crewzyweb\\src\\components\\Calendar.tsx",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\Calendar.tsx",
+              "RelativeToolTip": "crewzyweb\\src\\components\\Calendar.tsx",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAAwAAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-21T12:23:47.182Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

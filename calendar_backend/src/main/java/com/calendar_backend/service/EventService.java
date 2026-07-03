@@ -1,7 +1,9 @@
 package com.calendar_backend.service;
 
 import com.calendar_backend.model.Event;
+import com.calendar_backend.model.User;
 import com.calendar_backend.repository.EventRepository;
+import com.calendar_backend.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,9 +12,11 @@ import java.util.List;
 public class EventService {
 
     private final EventRepository repo;
+    private final UserRepository userRepository;
 
-    public EventService(EventRepository repo) {
+    public EventService(EventRepository repo, UserRepository userRepository) {
         this.repo = repo;
+        this.userRepository = userRepository;
     }
 
     public List<Event> getAll() {
@@ -50,9 +54,28 @@ public class EventService {
         existing.setStartDateTime(updatedEvent.getStartDateTime());
         existing.setEndDateTime(updatedEvent.getEndDateTime());
         existing.setLocation(updatedEvent.getLocation());
+        existing.setGroup(updatedEvent.getGroup());
 
         return repo.save(existing);
     }
 
 
+    // În EventService.java
+// Ai nevoie de UserRepository injectat aici pentru a găsi utilizatorul
+
+    public Event addParticipant(Long eventId, Long userId) {
+        Event event = repo.findById(eventId).orElseThrow();
+        User user = userRepository.findById(userId).orElseThrow();
+
+        if (!event.getParticipants().contains(user)) {
+            event.getParticipants().add(user);
+        }
+        return repo.save(event);
+    }
+
+    public Event removeParticipant(Long eventId, Long userId) {
+        Event event = repo.findById(eventId).orElseThrow();
+        event.getParticipants().removeIf(u -> u.getId().equals(userId));
+        return repo.save(event);
+    }
 }
