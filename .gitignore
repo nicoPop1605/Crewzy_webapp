@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/calendar-frontend/node_modules
+/calendar_backend/.idea
+/calendar-frontend/.idea
+/calendar_backend/target/classes
