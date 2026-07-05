@@ -13,6 +13,23 @@
 
 ## 🛠️ Tech Stack
 
-* **Frontend:** React, TypeScript
-* **Backend:** Node.js, GraphQL, Prisma
+* **Frontend:** React, TypeScript, Tailwind CSS, Recharts
+* **Backend:** Node.js, Express, GraphQL, Apollo Server
+* **Database:** MongoDB
+* **Real-Time Communication:** WebSockets (Socket.io)
 * **Testing & Security:** Faker (utilized to simulate data and test application resilience against bot attacks)
+
+* ### Prerequisites
+* [Node.js](https://nodejs.org/) installed on your machine.
+* A running **MongoDB** instance (either installed locally or via MongoDB Atlas).
+
+
+1. Clone the repository
+2. run: npm install
+3. cd WebApp/CrewzyWeb/crewzyweb/backend
+4. run: node server.js
+5. cd WebApp/CrewzyWeb/crewzyweb
+6. run: npm run dev
+7. create an account and login
+8. you will recive a security code in your terminal, paste it
+9. Done! Now you can test Crewzy!
