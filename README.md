@@ -15,14 +15,13 @@
 
 * **Frontend:** React, TypeScript, Tailwind CSS, Recharts
 * **Backend:** Node.js, Express, GraphQL, Apollo Server
-* **Database:** MongoDB
+* **Database:** PostgreSQL via Supabase
 * **Real-Time Communication:** WebSockets (Socket.io)
 * **Testing & Security:** Faker (utilized to simulate data and test application resilience against bot attacks)
 
 * ### Prerequisites
 * [Node.js](https://nodejs.org/) installed on your machine.
-* A running **MongoDB** instance (either installed locally or via MongoDB Atlas).
-
+* A [Supabase](https://supabase.com/) account and project.
 
 1. Clone the repository
 2. run: npm install
