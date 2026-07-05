@@ -493,8 +493,7 @@
               "RelativeToolTip": "crewzyweb\\backend\\.env",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-06-04T10:00:45.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T10:00:45.353Z"
             },
             {
               "$type": "Document",
@@ -506,8 +505,7 @@
               "RelativeToolTip": "crewzyweb\\.env",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-06-04T00:46:57.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T00:46:57.837Z"
             },
             {
               "$type": "Document",
@@ -615,7 +613,8 @@
               "RelativeToolTip": "CrewzyWeb\\crewzyweb.esproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-12T06:12:19.395Z"
+              "WhenOpened": "2026-05-12T06:12:19.395Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -757,7 +756,7 @@
               "RelativeDocumentMoniker": "crewzyweb\\src\\components\\ChatWindow.tsx",
               "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\ChatWindow.tsx",
               "RelativeToolTip": "crewzyweb\\src\\components\\ChatWindow.tsx",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA7wAkAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAkwAkAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2026-05-04T17:45:58.855Z",
               "EditorCaption": ""
@@ -796,8 +795,7 @@
               "RelativeToolTip": "crewzyweb\\backend\\src\\controllers\\authController.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-05-04T16:53:30.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-04T16:53:30.46Z"
             },
             {
               "$type": "Document",
@@ -869,8 +867,7 @@
               "RelativeToolTip": "crewzyweb\\backend\\prisma\\schema.prisma",
               "ViewState": "AgIAADkAAAAAAAAAAAAiwEMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-04T14:24:08.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-04T14:24:08.068Z"
             },
             {
               "$type": "Document",
@@ -1266,8 +1263,7 @@
               "RelativeToolTip": "crewzyweb\\backend\\server.js",
               "ViewState": "AgIAANYAAAAAAAAAAAAAAPAAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-04-21T05:42:54.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-21T05:42:54.372Z"
             },
             {
               "$type": "Document",
@@ -1578,8 +1574,7 @@
               "RelativeToolTip": "crewzyweb\\src\\pages\\ProfilePage.tsx",
               "ViewState": "AgIAAEQAAAAAAAAAAAAAwAIAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-21T13:52:07.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T13:52:07.429Z"
             },
             {
               "$type": "Document",
@@ -1603,8 +1598,7 @@
               "RelativeToolTip": "crewzyweb\\src\\pages\\LoginPage.tsx",
               "ViewState": "AgIAAE0BAAAAAAAAAAAAAGgBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-21T13:51:53.904Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T13:51:53.904Z"
             },
             {
               "$type": "Document",
@@ -1628,8 +1622,7 @@
               "RelativeToolTip": "crewzyweb\\src\\pages\\DiscoverPage.tsx",
               "ViewState": "AgIAAMYAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-21T13:51:23.298Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T13:51:23.298Z"
             },
             {
               "$type": "Document",
@@ -1641,8 +1634,7 @@
               "RelativeToolTip": "crewzyweb\\src\\pages\\CalendarPage.tsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-21T13:41:29.186Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T13:41:29.186Z"
             },
             {
               "$type": "Document",

@@ -3,144 +3,52 @@
   "WorkspaceRootPath": "D:\\calendar_project\\WebApp\\CrewzyWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\controllers\\authController.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\backend\\src\\controllers\\authController.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\chatwindow.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\chatwindow.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\vercel.json||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\vercel.json||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\pages\\loginpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\pages\\loginpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\backend\\.env||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\pages\\calendarpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\pages\\calendarpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\backend\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\.env||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\LoginPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\pages\\LoginPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\pages\\profilepage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\pages\\profilepage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\prisma\\schema.prisma||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\backend\\prisma\\schema.prisma||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\pages\\discoverpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\pages\\discoverpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\.env||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\.env||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\backend\\server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\prisma\\schema.prisma||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\prisma\\schema.prisma||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\routes\\auth.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\backend\\src\\routes\\auth.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\ChatWindow.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\components\\ChatWindow.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\controllers\\authcontroller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\controllers\\authcontroller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\backend\\server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\backend\\server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\SessionTimeout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\components\\SessionTimeout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\seed.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\backend\\seed.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\App.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\App.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\CalendarPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\pages\\CalendarPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\CalendarPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\src\\pages\\CalendarPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\playwright-report\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\playwright-report\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\data\\memoryStore.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\backend\\src\\data\\memoryStore.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\vite-env.d.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\vite-env.d.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\Layout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\components\\Layout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\services\\aiMonitor.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\backend\\src\\services\\aiMonitor.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\routes\\stats.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\backend\\src\\routes\\stats.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\routes\\monitor.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\backend\\src\\routes\\monitor.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\routes\\events.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\backend\\src\\routes\\events.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\DiscoverPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\pages\\DiscoverPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\routes.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\routes.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\middleware\\authMiddleware.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\backend\\src\\middleware\\authMiddleware.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\backend\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\gen-cert.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\backend\\gen-cert.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\crewzyweb.esproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\crewzyweb.esproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\build.gradle||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -291,171 +199,263 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzy-mobile\\capacitor.config.json||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\node_modules\\vite\\dist\\client\\env.mjs||{14D17961-FE51-464D-9111-C4AF11D7D99A}|",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|d:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\node_modules\\vite\\dist\\client\\env.mjs||{14D17961-FE51-464D-9111-C4AF11D7D99A}|",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\node_modules\\vite\\dist\\client\\env.mjs||{14D17961-FE51-464D-9111-C4AF11D7D99A}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nicoleta\\AppData\\Local\\Temp\\tmp61B8.tmp.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\data\\mongoClient.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\backend\\src\\data\\mongoClient.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\vercel.json||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\vercel.json||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\controllers\\eventsController.test.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\backend\\src\\controllers\\eventsController.test.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\data\\prismaMock.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\backend\\src\\data\\prismaMock.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\routes\\monitor.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\routes\\monitor.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\tests\\events.integration.skip.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\backend\\tests\\events.integration.skip.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\services\\aimonitor.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\services\\aimonitor.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\controllers\\eventsController.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\backend\\src\\controllers\\eventsController.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\routes\\stats.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\routes\\stats.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\utils\\offlineSync.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\utils\\offlineSync.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\middleware\\authmiddleware.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\middleware\\authmiddleware.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\layout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\layout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\sessiontimeout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\sessiontimeout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\playwright.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\playwright.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\gen-cert.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\gen-cert.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\tests\\crewzy-scenarios.spec.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\tests\\crewzy-scenarios.spec.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\crewzyweb.esproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\crewzyweb.esproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\CreateEventModal.test.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\components\\CreateEventModal.test.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\data\\mongoclient.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\data\\mongoclient.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\setupTests.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\setupTests.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\routes\\auth.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\routes\\auth.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\EventsTable.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\components\\EventsTable.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\seed.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\seed.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\styles\\theme.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\styles\\theme.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\controllers\\eventscontroller.test.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\controllers\\eventscontroller.test.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\styles\\fonts.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\styles\\fonts.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\styles\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\styles\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\data\\prismamock.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\data\\prismamock.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\tests\\events.integration.skip.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\tests\\events.integration.skip.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\eslint.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\eslint.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\routes\\events.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\routes\\events.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\postcss.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\postcss.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\controllers\\eventscontroller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\controllers\\eventscontroller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\Logo.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\components\\Logo.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\src\\data\\memorystore.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\src\\data\\memorystore.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\ManageMembersModal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\components\\ManageMembersModal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\utils\\offlinesync.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\utils\\offlinesync.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\MyEventCard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\components\\MyEventCard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\backend\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\backend\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\Sidebar.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\components\\Sidebar.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\vite-env.d.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\vite-env.d.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\ProfilePage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\pages\\ProfilePage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\playwright-report\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\playwright-report\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\HomePage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\pages\\HomePage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\FriendsPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\pages\\FriendsPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\playwright.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\playwright.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\tsconfig.node.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\tsconfig.node.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\tests\\crewzy-scenarios.spec.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\tests\\crewzy-scenarios.spec.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\EventDetailsModal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\components\\EventDetailsModal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\createeventmodal.test.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\createeventmodal.test.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\FriendCard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\components\\FriendCard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\setuptests.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\setuptests.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\GroupCard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\components\\GroupCard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\eventstable.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\eventstable.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\tsconfig.app.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\tsconfig.app.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\EventDetailModal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\components\\EventDetailModal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\styles\\theme.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\styles\\theme.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\EventCard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\components\\EventCard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\styles\\fonts.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\styles\\fonts.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\CreateGroupModal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\components\\CreateGroupModal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\styles\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\styles\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\CreateEventModal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\components\\CreateEventModal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\CalendarView.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\components\\CalendarView.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\eslint.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\eslint.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\AddFriendModal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\components\\AddFriendModal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\postcss.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\postcss.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\CalendarHeader.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\components\\CalendarHeader.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\Calendar.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crewzyweb\\src\\components\\Calendar.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\logo.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\logo.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\managemembersmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\managemembersmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\myeventcard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\myeventcard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\sidebar.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\sidebar.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\pages\\homepage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\pages\\homepage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\pages\\friendspage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\pages\\friendspage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\tsconfig.node.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\tsconfig.node.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\eventdetailsmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\eventdetailsmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\friendcard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\friendcard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\groupcard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\groupcard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\tsconfig.app.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\tsconfig.app.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\eventdetailmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\eventdetailmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\eventcard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\eventcard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\creategroupmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\creategroupmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\createeventmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\createeventmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\calendarview.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\calendarview.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\addfriendmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\addfriendmodal.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\calendarheader.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\calendarheader.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\routes.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\routes.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|d:\\calendar_project\\webapp\\crewzyweb\\crewzyweb\\src\\components\\calendar.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E285981C-8891-1B75-DFD5-C69EDD3B78DB}|CrewzyWeb\\crewzyweb.esproj|solutionrelative:crewzyweb\\src\\components\\calendar.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -465,7 +465,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 27,
+          "SelectedChildIndex": 24,
           "Children": [
             {
               "$type": "Bookmark",
@@ -473,7 +473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 51,
               "Title": "vercel.json",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\vercel.json",
               "RelativeDocumentMoniker": "crewzyweb\\vercel.json",
@@ -481,20 +481,20 @@
               "RelativeToolTip": "crewzyweb\\vercel.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-04T10:47:09.184Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T10:47:09.184Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": ".env",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\.env",
               "RelativeDocumentMoniker": "crewzyweb\\backend\\.env",
               "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\.env",
               "RelativeToolTip": "crewzyweb\\backend\\.env",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-06-04T10:00:45.353Z"
+              "WhenOpened": "2026-06-04T10:00:45.353Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -504,13 +504,14 @@
               "RelativeDocumentMoniker": "crewzyweb\\.env",
               "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\.env",
               "RelativeToolTip": "crewzyweb\\.env",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-06-04T00:46:57.837Z"
+              "WhenOpened": "2026-06-04T00:46:57.837Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 52,
               "Title": ".gitignore",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\.gitignore",
               "RelativeDocumentMoniker": "crewzyweb\\.gitignore",
@@ -522,7 +523,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 53,
               "Title": "monitor.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\routes\\monitor.js",
               "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\routes\\monitor.js",
@@ -534,7 +535,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 54,
               "Title": "aiMonitor.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\services\\aiMonitor.js",
               "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\services\\aiMonitor.js",
@@ -546,7 +547,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 55,
               "Title": "stats.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\routes\\stats.js",
               "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\routes\\stats.js",
@@ -558,7 +559,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 56,
               "Title": "authMiddleware.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\middleware\\authMiddleware.js",
               "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\middleware\\authMiddleware.js",
@@ -570,7 +571,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 57,
               "Title": "Layout.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\Layout.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\components\\Layout.tsx",
@@ -582,7 +583,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 58,
               "Title": "SessionTimeout.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\SessionTimeout.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\components\\SessionTimeout.tsx",
@@ -594,7 +595,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 59,
               "Title": "gen-cert.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\gen-cert.js",
               "RelativeDocumentMoniker": "crewzyweb\\backend\\gen-cert.js",
@@ -606,19 +607,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 60,
               "Title": "crewzyweb.esproj",
-              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\crewzyweb.esproj",
-              "RelativeDocumentMoniker": "crewzyweb\\crewzyweb.esproj",
-              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\crewzyweb.esproj",
-              "RelativeToolTip": "crewzyweb\\crewzyweb.esproj",
+              "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\CrewzyWeb\\crewzyweb.esproj",
+              "RelativeDocumentMoniker": "CrewzyWeb\\crewzyweb.esproj",
+              "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\CrewzyWeb\\crewzyweb.esproj",
+              "RelativeToolTip": "CrewzyWeb\\crewzyweb.esproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-05-12T06:12:19.395Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 14,
               "Title": "activity_main.xml",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\res\\layout\\activity_main.xml",
               "RelativeDocumentMoniker": "crewzy-mobile\\android\\app\\src\\main\\res\\layout\\activity_main.xml",
@@ -630,7 +631,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 15,
               "Title": "ChatSocketManager.kt",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatSocketManager.kt",
               "RelativeDocumentMoniker": "crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatSocketManager.kt",
@@ -642,7 +643,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 17,
               "Title": "AndroidManifest.xml",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\AndroidManifest.xml",
               "RelativeDocumentMoniker": "crewzy-mobile\\android\\app\\src\\main\\AndroidManifest.xml",
@@ -654,7 +655,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 13,
               "Title": "MainActivity.java",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\MainActivity.java",
               "RelativeDocumentMoniker": "crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\MainActivity.java",
@@ -666,7 +667,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 18,
               "Title": "activity_chat.xml",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\res\\layout\\activity_chat.xml",
               "RelativeDocumentMoniker": "crewzy-mobile\\android\\app\\src\\main\\res\\layout\\activity_chat.xml",
@@ -678,7 +679,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 16,
               "Title": "ChatActivity.kt",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatActivity.kt",
               "RelativeDocumentMoniker": "crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatActivity.kt",
@@ -690,7 +691,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 19,
               "Title": "AppDatabase.kt",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\AppDatabase.kt",
               "RelativeDocumentMoniker": "crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\AppDatabase.kt",
@@ -702,7 +703,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 20,
               "Title": "ChatDao.kt",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatDao.kt",
               "RelativeDocumentMoniker": "crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatDao.kt",
@@ -714,7 +715,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 21,
               "Title": "ChatMessageEntity.kt",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatMessageEntity.kt",
               "RelativeDocumentMoniker": "crewzy-mobile\\android\\app\\src\\main\\java\\com\\crewzy\\app\\ChatMessageEntity.kt",
@@ -726,7 +727,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 12,
               "Title": "build.gradle",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\android\\app\\build.gradle",
               "RelativeDocumentMoniker": "crewzy-mobile\\android\\app\\build.gradle",
@@ -738,7 +739,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 22,
               "Title": "tailwind.config.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\tailwind.config.js",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\tailwind.config.js",
@@ -750,19 +751,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
               "Title": "ChatWindow.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\ChatWindow.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\components\\ChatWindow.tsx",
               "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\ChatWindow.tsx",
               "RelativeToolTip": "crewzyweb\\src\\components\\ChatWindow.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA7wAkAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-05-04T17:45:58.855Z"
+              "WhenOpened": "2026-05-04T17:45:58.855Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 61,
               "Title": "mongoClient.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\data\\mongoClient.js",
               "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\data\\mongoClient.js",
@@ -774,7 +776,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 62,
               "Title": "auth.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\routes\\auth.js",
               "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\routes\\auth.js",
@@ -786,7 +788,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "authController.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\controllers\\authController.js",
               "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\controllers\\authController.js",
@@ -799,7 +801,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 63,
               "Title": "seed.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\seed.js",
               "RelativeDocumentMoniker": "crewzyweb\\backend\\seed.js",
@@ -811,7 +813,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 64,
               "Title": "eventsController.test.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\controllers\\eventsController.test.js",
               "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\controllers\\eventsController.test.js",
@@ -823,7 +825,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 65,
               "Title": "package-lock.json",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\package-lock.json",
               "RelativeDocumentMoniker": "crewzyweb\\backend\\package-lock.json",
@@ -835,7 +837,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 66,
               "Title": "prismaMock.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\data\\prismaMock.js",
               "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\data\\prismaMock.js",
@@ -847,7 +849,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 28,
               "Title": "crewzyweb.esproj.user",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\crewzyweb.esproj.user",
               "RelativeDocumentMoniker": "crewzy-mobile\\crewzyweb.esproj.user",
@@ -859,19 +861,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "schema.prisma",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\prisma\\schema.prisma",
               "RelativeDocumentMoniker": "crewzyweb\\backend\\prisma\\schema.prisma",
               "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\prisma\\schema.prisma",
               "RelativeToolTip": "crewzyweb\\backend\\prisma\\schema.prisma",
-              "ViewState": "AgIAADsAAAAAAAAAAAAIwEMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAiwEMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-04T14:24:08.068Z"
+              "WhenOpened": "2026-05-04T14:24:08.068Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 27,
               "Title": "server.js.html",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\backend\\coverage\\lcov-report\\backend\\server.js.html",
               "RelativeDocumentMoniker": "crewzy-mobile\\backend\\coverage\\lcov-report\\backend\\server.js.html",
@@ -883,7 +886,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 29,
               "Title": "setupTests.ts",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\setupTests.ts",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\setupTests.ts",
@@ -895,7 +898,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 30,
               "Title": "Logo.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\Logo.tsx",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\components\\Logo.tsx",
@@ -907,7 +910,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 31,
               "Title": "eslint.config.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\eslint.config.js",
               "RelativeDocumentMoniker": "crewzy-mobile\\eslint.config.js",
@@ -919,7 +922,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 32,
               "Title": "index.html",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\index.html",
               "RelativeDocumentMoniker": "crewzy-mobile\\index.html",
@@ -931,7 +934,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 33,
               "Title": "index.css",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\index.css",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\index.css",
@@ -943,7 +946,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 24,
               "Title": "main.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\main.tsx",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\main.tsx",
@@ -955,7 +958,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 25,
               "Title": "App.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\App.tsx",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\App.tsx",
@@ -967,7 +970,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 34,
               "Title": "BusinessEventPage.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\BusinessEventPage.tsx",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\pages\\BusinessEventPage.tsx",
@@ -979,7 +982,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 36,
               "Title": "LoginPage.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\LoginPage.tsx",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\pages\\LoginPage.tsx",
@@ -991,7 +994,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 37,
               "Title": "tsconfig.json",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\tsconfig.json",
               "RelativeDocumentMoniker": "crewzy-mobile\\tsconfig.json",
@@ -1003,7 +1006,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 38,
               "Title": "HomePage.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\HomePage.tsx",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\pages\\HomePage.tsx",
@@ -1015,7 +1018,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 39,
               "Title": "EventCard.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\EventCard.tsx",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\components\\EventCard.tsx",
@@ -1027,7 +1030,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 41,
               "Title": "FriendsPage.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\FriendsPage.tsx",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\pages\\FriendsPage.tsx",
@@ -1039,7 +1042,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 42,
               "Title": "ProfilePage.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\ProfilePage.tsx",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\pages\\ProfilePage.tsx",
@@ -1051,7 +1054,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 40,
               "Title": "DiscoverPage.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\DiscoverPage.tsx",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\pages\\DiscoverPage.tsx",
@@ -1063,7 +1066,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 45,
               "Title": "CalendarHeader.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\CalendarHeader.tsx",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\components\\CalendarHeader.tsx",
@@ -1075,7 +1078,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 47,
               "Title": "CreateEventModal.test.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\CreateEventModal.test.tsx",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\components\\CreateEventModal.test.tsx",
@@ -1087,7 +1090,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 44,
               "Title": "CalendarView.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\CalendarView.tsx",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\components\\CalendarView.tsx",
@@ -1099,7 +1102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 43,
               "Title": "Calendar.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\Calendar.tsx",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\components\\Calendar.tsx",
@@ -1111,7 +1114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 35,
               "Title": "Sidebar.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\Sidebar.tsx",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\components\\Sidebar.tsx",
@@ -1123,7 +1126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 46,
               "Title": "Layout.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\components\\Layout.tsx",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\components\\Layout.tsx",
@@ -1135,7 +1138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 23,
               "Title": "routes.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\routes.tsx",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\routes.tsx",
@@ -1147,7 +1150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 26,
               "Title": "events.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\backend\\src\\routes\\events.js",
               "RelativeDocumentMoniker": "crewzy-mobile\\backend\\src\\routes\\events.js",
@@ -1159,7 +1162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 48,
               "Title": "capacitor.config.json",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\capacitor.config.json",
               "RelativeDocumentMoniker": "crewzy-mobile\\capacitor.config.json",
@@ -1171,7 +1174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "server.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\backend\\server.js",
               "RelativeDocumentMoniker": "crewzy-mobile\\backend\\server.js",
@@ -1183,7 +1186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 11,
               "Title": "CalendarPage.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzy-mobile\\src\\pages\\CalendarPage.tsx",
               "RelativeDocumentMoniker": "crewzy-mobile\\src\\pages\\CalendarPage.tsx",
@@ -1195,7 +1198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 67,
               "Title": "events.integration.skip.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\tests\\events.integration.skip.js",
               "RelativeDocumentMoniker": "crewzyweb\\backend\\tests\\events.integration.skip.js",
@@ -1207,7 +1210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 68,
               "Title": "events.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\routes\\events.js",
               "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\routes\\events.js",
@@ -1219,7 +1222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 69,
               "Title": "eventsController.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\controllers\\eventsController.js",
               "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\controllers\\eventsController.js",
@@ -1231,7 +1234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 70,
               "Title": "memoryStore.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\src\\data\\memoryStore.js",
               "RelativeDocumentMoniker": "crewzyweb\\backend\\src\\data\\memoryStore.js",
@@ -1243,7 +1246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 71,
               "Title": "offlineSync.ts",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\utils\\offlineSync.ts",
               "RelativeDocumentMoniker": "crewzyweb\\src\\utils\\offlineSync.ts",
@@ -1255,19 +1258,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "server.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\server.js",
               "RelativeDocumentMoniker": "crewzyweb\\backend\\server.js",
               "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\server.js",
               "RelativeToolTip": "crewzyweb\\backend\\server.js",
-              "ViewState": "AgIAANAAAAAAAAAAAAAuwPAAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAANYAAAAAAAAAAAAAAPAAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-04-21T05:42:54.372Z"
+              "WhenOpened": "2026-04-21T05:42:54.372Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 72,
               "Title": "package.json",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\backend\\package.json",
               "RelativeDocumentMoniker": "crewzyweb\\backend\\package.json",
@@ -1279,7 +1283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 73,
               "Title": "package-lock.json",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\package-lock.json",
               "RelativeDocumentMoniker": "crewzyweb\\package-lock.json",
@@ -1291,7 +1295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 74,
               "Title": "vite-env.d.ts",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\vite-env.d.ts",
               "RelativeDocumentMoniker": "crewzyweb\\src\\vite-env.d.ts",
@@ -1303,7 +1307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 75,
               "Title": "index.html",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\playwright-report\\index.html",
               "RelativeDocumentMoniker": "crewzyweb\\playwright-report\\index.html",
@@ -1315,7 +1319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 76,
               "Title": "index.html",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\index.html",
               "RelativeDocumentMoniker": "crewzyweb\\index.html",
@@ -1327,7 +1331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 77,
               "Title": "playwright.config.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\playwright.config.js",
               "RelativeDocumentMoniker": "crewzyweb\\playwright.config.js",
@@ -1339,7 +1343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 78,
               "Title": "crewzy-scenarios.spec.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\tests\\crewzy-scenarios.spec.js",
               "RelativeDocumentMoniker": "crewzyweb\\src\\tests\\crewzy-scenarios.spec.js",
@@ -1351,7 +1355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 79,
               "Title": "CreateEventModal.test.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\CreateEventModal.test.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\components\\CreateEventModal.test.tsx",
@@ -1363,7 +1367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 80,
               "Title": "setupTests.ts",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\setupTests.ts",
               "RelativeDocumentMoniker": "crewzyweb\\src\\setupTests.ts",
@@ -1375,7 +1379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 81,
               "Title": "EventsTable.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\EventsTable.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\components\\EventsTable.tsx",
@@ -1387,7 +1391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 82,
               "Title": "vite.config.ts",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\vite.config.ts",
               "RelativeDocumentMoniker": "crewzyweb\\vite.config.ts",
@@ -1399,7 +1403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 83,
               "Title": "theme.css",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\styles\\theme.css",
               "RelativeDocumentMoniker": "crewzyweb\\src\\styles\\theme.css",
@@ -1411,7 +1415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 84,
               "Title": "fonts.css",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\styles\\fonts.css",
               "RelativeDocumentMoniker": "crewzyweb\\src\\styles\\fonts.css",
@@ -1423,7 +1427,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 85,
               "Title": "index.css",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\styles\\index.css",
               "RelativeDocumentMoniker": "crewzyweb\\src\\styles\\index.css",
@@ -1435,7 +1439,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 86,
               "Title": "tailwind.config.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\tailwind.config.js",
               "RelativeDocumentMoniker": "crewzyweb\\src\\tailwind.config.js",
@@ -1447,7 +1451,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 87,
               "Title": "eslint.config.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\eslint.config.js",
               "RelativeDocumentMoniker": "crewzyweb\\eslint.config.js",
@@ -1459,7 +1463,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 88,
               "Title": "postcss.config.js",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\postcss.config.js",
               "RelativeDocumentMoniker": "crewzyweb\\src\\postcss.config.js",
@@ -1471,7 +1475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 89,
               "Title": "index.css",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\index.css",
               "RelativeDocumentMoniker": "crewzyweb\\src\\index.css",
@@ -1483,7 +1487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 90,
               "Title": "Logo.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\Logo.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\components\\Logo.tsx",
@@ -1495,7 +1499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 91,
               "Title": "ManageMembersModal.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\ManageMembersModal.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\components\\ManageMembersModal.tsx",
@@ -1507,7 +1511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 92,
               "Title": "MyEventCard.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\MyEventCard.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\components\\MyEventCard.tsx",
@@ -1519,7 +1523,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 93,
               "Title": "Sidebar.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\Sidebar.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\components\\Sidebar.tsx",
@@ -1531,7 +1535,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 94,
               "Title": "package.json",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\package.json",
               "RelativeDocumentMoniker": "crewzyweb\\package.json",
@@ -1543,7 +1547,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 49,
               "Title": "env.mjs",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\node_modules\\vite\\dist\\client\\env.mjs",
               "RelativeDocumentMoniker": "crewzyweb\\node_modules\\vite\\dist\\client\\env.mjs",
@@ -1554,7 +1558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 95,
               "Title": "main.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\main.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\main.tsx",
@@ -1566,19 +1570,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 5,
               "Title": "ProfilePage.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\ProfilePage.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\pages\\ProfilePage.tsx",
               "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\ProfilePage.tsx",
               "RelativeToolTip": "crewzyweb\\src\\pages\\ProfilePage.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAwAIAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-21T13:52:07.429Z"
+              "WhenOpened": "2026-03-21T13:52:07.429Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 96,
               "Title": "HomePage.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\HomePage.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\pages\\HomePage.tsx",
@@ -1590,19 +1595,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "LoginPage.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\LoginPage.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\pages\\LoginPage.tsx",
               "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\LoginPage.tsx",
               "RelativeToolTip": "crewzyweb\\src\\pages\\LoginPage.tsx",
-              "ViewState": "AgIAAEgBAAAAAAAAAAAuwE8BAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAE0BAAAAAAAAAAAAAGgBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-21T13:51:53.904Z"
+              "WhenOpened": "2026-03-21T13:51:53.904Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 97,
               "Title": "FriendsPage.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\FriendsPage.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\pages\\FriendsPage.tsx",
@@ -1614,31 +1620,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 6,
               "Title": "DiscoverPage.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\DiscoverPage.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\pages\\DiscoverPage.tsx",
               "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\DiscoverPage.tsx",
               "RelativeToolTip": "crewzyweb\\src\\pages\\DiscoverPage.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAMYAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-21T13:51:23.298Z"
+              "WhenOpened": "2026-03-21T13:51:23.298Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 3,
               "Title": "CalendarPage.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\CalendarPage.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\pages\\CalendarPage.tsx",
               "ToolTip": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\pages\\CalendarPage.tsx",
               "RelativeToolTip": "crewzyweb\\src\\pages\\CalendarPage.tsx",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAcwBgAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-21T13:41:29.186Z"
+              "WhenOpened": "2026-03-21T13:41:29.186Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 98,
               "Title": "tsconfig.node.json",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\tsconfig.node.json",
               "RelativeDocumentMoniker": "crewzyweb\\tsconfig.node.json",
@@ -1650,7 +1658,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 50,
               "Title": "tmp61B8.tmp.tsx",
               "DocumentMoniker": "C:\\Users\\Nicoleta\\AppData\\Local\\Temp\\tmp61B8.tmp.tsx",
               "ToolTip": "C:\\Users\\Nicoleta\\AppData\\Local\\Temp\\tmp61B8.tmp.tsx",
@@ -1659,7 +1667,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 99,
               "Title": "EventDetailsModal.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\EventDetailsModal.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\components\\EventDetailsModal.tsx",
@@ -1671,7 +1679,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 100,
               "Title": "FriendCard.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\FriendCard.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\components\\FriendCard.tsx",
@@ -1683,7 +1691,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 101,
               "Title": "GroupCard.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\GroupCard.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\components\\GroupCard.tsx",
@@ -1695,7 +1703,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 102,
               "Title": "tsconfig.app.json",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\tsconfig.app.json",
               "RelativeDocumentMoniker": "crewzyweb\\tsconfig.app.json",
@@ -1707,7 +1715,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 103,
               "Title": "tsconfig.json",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\tsconfig.json",
               "RelativeDocumentMoniker": "crewzyweb\\tsconfig.json",
@@ -1719,7 +1727,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 104,
               "Title": "EventDetailModal.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\EventDetailModal.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\components\\EventDetailModal.tsx",
@@ -1731,7 +1739,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 105,
               "Title": "EventCard.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\EventCard.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\components\\EventCard.tsx",
@@ -1743,7 +1751,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 106,
               "Title": "CreateGroupModal.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\CreateGroupModal.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\components\\CreateGroupModal.tsx",
@@ -1755,7 +1763,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 107,
               "Title": "CreateEventModal.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\CreateEventModal.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\components\\CreateEventModal.tsx",
@@ -1767,7 +1775,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 108,
               "Title": "CalendarView.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\CalendarView.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\components\\CalendarView.tsx",
@@ -1779,7 +1787,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 109,
               "Title": "AddFriendModal.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\AddFriendModal.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\components\\AddFriendModal.tsx",
@@ -1791,7 +1799,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 110,
               "Title": "CalendarHeader.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\components\\CalendarHeader.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\components\\CalendarHeader.tsx",
@@ -1803,7 +1811,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 111,
               "Title": "routes.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\routes.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\routes.tsx",
@@ -1815,7 +1823,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 112,
               "Title": "App.tsx",
               "DocumentMoniker": "D:\\calendar_project\\WebApp\\CrewzyWeb\\crewzyweb\\src\\App.tsx",
               "RelativeDocumentMoniker": "crewzyweb\\src\\App.tsx",
