@@ -78,11 +78,29 @@ export function LoginPage() {
             const data = await response.json();
 
             if (response.ok) {
-                // Succes deplin: Salvăm token-ul de permisiuni și user-ul
+                // 1. Extragem rolul inteligent (poate fi obiect din Prisma sau string simplu)
+                const extrageRol = data.user.role?.name || data.user.role || 'USER';
+                const userRole = typeof extrageRol === 'string' ? extrageRol.toUpperCase() : 'USER';
+
+                // 2. Salvăm user-ul curat, cu rolul ca text simplu, pentru restul aplicației
+                const userDataToSave = {
+                    ...data.user,
+                    role: userRole
+                };
+
+                // Succes deplin: Salvăm token-ul și user-ul modificat
                 localStorage.setItem('jwt_token', data.token);
-                localStorage.setItem('currentUser', JSON.stringify(data.user));
+                localStorage.setItem('user', JSON.stringify(userDataToSave));
                 alert('Autentificare completă! Bine ai venit.');
-                navigate('/');
+
+                // 3. Facem redirecționarea corectă folosind variabila curățată
+                if (userRole === 'ADMIN') {
+                    alert("BUN! ACUM APLICAȚIA ÎNCEARCĂ SĂ TE DUCĂ PE /admin !");
+                    navigate('/admin'); // Redirecționează către ruta de admin
+                } else {
+                    alert("NASOL! SERVERUL TE VEDE DOAR CA 'USER', TE TRIMIT PE / !");
+                    navigate('/'); // Redirecționează către ruta standard de user
+                }
             } else {
                 setError(data.error || 'Cod OTP incorect.');
             }

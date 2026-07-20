@@ -79,7 +79,7 @@ router.post('/verify-otp', async (req, res) => {
     const { email, otp } = req.body;
 
     try {
-        // Am adăugat include: { role: true } ca să putem accesa numele rolului pentru Token
+        // Aducem și rolul pentru a ști unde redirecționăm
         const user = await prisma.user.findUnique({
             where: { email },
             include: { role: true }
@@ -94,13 +94,26 @@ router.post('/verify-otp', async (req, res) => {
             data: { otp: null, otpExpires: null }
         });
 
+        // 1. Extragem rolul în siguranță (dacă ceva merge prost în DB, punem default pe USER)
+        const roleName = user.role ? user.role.name : 'USER';
+
         const token = jwt.sign(
-            { userId: user.id, role: user.role.name, email: user.email },
+            { userId: user.id, role: roleName, email: user.email },
             SECRET_KEY,
             { expiresIn: '1h' }
         );
 
-        res.json({ message: "Login finalizat cu succes!", token, user: { name: user.name, email: user.email, role: user.role.name } });
+        // 2. AICI ERA PROBLEMA! Acum trimitem și ID-ul, și rolul curățat.
+        res.json({
+            message: "Login finalizat cu succes!",
+            token,
+            user: {
+                id: user.id,          // <--- FĂRĂ ASTA NU MERGEA ADĂUGAREA DE PRIETENI!
+                name: user.name,
+                email: user.email,
+                role: roleName        // <--- ASTA REPARĂ REDIRECȚIONAREA CĂTRE /admin
+            }
+        });
     } catch (error) {
         console.error("🔥 EROARE INTERNA LA VERIFY OTP: ", error);
         res.status(500).json({ error: "Eroare internă" });

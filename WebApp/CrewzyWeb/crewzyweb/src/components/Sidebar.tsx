@@ -14,7 +14,7 @@ export function Sidebar() {
   ];
 
   return (
-    <div className="w-20 bg-white/80 backdrop-blur-md flex flex-col items-center py-8 gap-8 border-r border-gray-200/50 shadow-sm">
+      <div className="sticky top-0 w-20 bg-white/80 backdrop-blur-md flex h-screen flex-col items-center py-8 gap-8 border-r border-gray-200/50 shadow-sm">
       {/* Logo */}
       <Link to="/" className="transition-transform hover:scale-110">
         <Logo size={48} />

@@ -5,6 +5,7 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL") 
 }
 
 // ==========================================
@@ -39,6 +40,7 @@ model User {
   email     String   @unique
   name      String
   password  String   
+  avatar    String?  // <-- Adăugat pentru interfața de admin/chat
   createdAt DateTime @default(now())
 
   // --- Câmpurile necesare pentru 3-Way Auth & Reset Password ---
@@ -51,9 +53,25 @@ model User {
   roleId    String
   role      Role     @relation(fields: [roleId], references: [id])
 
-  // Relatii (Bronze)
+  // Relatii 
   venues    Venue[]  
   rsvps     RSVP[]   
+
+  sentRequests     Friendship[] @relation("SentRequests")
+  receivedRequests Friendship[] @relation("ReceivedRequests")
+}
+
+model Friendship {
+  id        String   @id @default(uuid())
+  userId    String   // Cel care trimite cererea
+  friendId  String   // Cel care o primește
+  status    String   @default("PENDING") // Statusul inițial
+  createdAt DateTime @default(now())
+
+  sender    User     @relation("SentRequests", fields: [userId], references: [id])
+  receiver  User     @relation("ReceivedRequests", fields: [friendId], references: [id])
+
+  @@unique([userId, friendId]) // Previne trimiterea de cereri multiple către aceeași persoană
 }
 
 model Venue {
@@ -68,16 +86,24 @@ model Venue {
 }
 
 model Event {
-  id       String @id @default(uuid())
-  title    String
-  location String 
-  date     String
-  status   String @default("pending")
+  id          String   @id @default(uuid())
+  title       String
+  location    String?  // <-- Făcut opțional pentru flexibilitate
+  date        String?  
+  time        String?  // <-- Adăugat pentru formularul tău
+  description String?  // <-- Adăugat
+  color       String?  // <-- Adăugat pentru design-ul din dashboard
+  capacity    Int?     // <-- Adăugat pentru statisticile de RSVP
+  status      String   @default("active") // <-- Modificat default pentru admin
+  ownerId     String?  // ID-ul utilizatorului/adminului care l-a creat
+  type        String   @default("PERSONAL") // "PERSONAL" sau "COMPANY"
+  createdAt   DateTime @default(now())
 
   // Relatii
-  rsvps    RSVP[] 
-  venueId  String? 
-  venue    Venue?  @relation(fields: [venueId], references: [id])
+  rsvps       RSVP[] 
+  venueId     String? 
+  venue       Venue?   @relation(fields: [venueId], references: [id])
+  comments    Comment[]
 }
 
 model RSVP {
@@ -91,4 +117,38 @@ model RSVP {
   event     Event    @relation(fields: [eventId], references: [id])
 
   @@unique([userId, eventId]) 
+}
+
+// ==========================================
+// NEW: CHAT, LOGS & MONITORING (ADMIN DASHBOARD)
+// ==========================================
+
+model Message {
+  id        String   @id @default(uuid())
+  userId    String
+  userName  String
+  text      String
+  timestamp DateTime @default(now())
+}
+
+model Log {
+  id        String   @id @default(uuid())
+  action    String
+  details   String
+  timestamp DateTime @default(now())
+}
+
+model ObservationList {
+  id         String   @id @default(uuid())
+  userId     String
+  reason     String
+  detectedAt DateTime @default(now())
+}
+
+model Comment {
+  id      String @id @default(uuid())
+  text    String
+  author  String
+  eventId String
+  event   Event  @relation(fields: [eventId], references: [id])
 }
